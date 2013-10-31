@@ -36,7 +36,7 @@
 			        </div><!-- end right -->
 		        ";
 				}
-				if($state==1) { //state 1 is page 2 of Yunping's prototype
+				if($state==1) { //state 1 is page 2 of Yunping's prototype, this will contain the table listing all the items and the shopping card in the right hand column
 				echo "state is 1";
 				}
 				if($state==2) {
