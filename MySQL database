@@ -1,0 +1,42 @@
+CREATE DATABASE connections;
+
+use connections;
+show tables;
+describe PureVida;
+
+CREATE TABLE PureVida (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     item_name CHAR(30) NOT NULL,
+     category CHAR(30) NOT NULL,
+     description CHAR(100),
+     PRIMARY KEY (id)
+);
+
+CREATE TABLE Connections (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     item_name CHAR(30) NOT NULL,
+     category CHAR(30) NOT NULL,
+     description CHAR(100),
+     PRIMARY KEY (id)
+);
+
+CREATE TABLE Student_Info (
+     student_id MEDIUMINT NOT NULL,
+     password CHAR(20) NOT NULL,
+     PRIMARY KEY (student_id)
+);
+
+CREATE TABLE Order_Info (
+     order_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     student_id MEDIUMINT NOT NULL,
+     order_time DATETIME NOT NULL,
+     complete_time DATETIME NOT NULL,
+     location CHAR(60),
+     PRIMARY KEY (order_id)
+);
+
+CREATE TABLE Orders (
+     order_id MEDIUMINT NOT NULL,
+     item_id MEDIUMINT NOT NULL,
+     quantity SMALLINT NOT NULL
+);
