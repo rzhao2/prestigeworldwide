@@ -139,6 +139,94 @@
 					</ul>
 					</p>
 				<h3>System</h3>
+					<p>
+					We propose a website that lets UofR users login and place an order with declining (the payment is online, no swiping if possible)
+					along with a time for pickup that expedites the process so users can get their food more quickly between classes. If time allows, 
+					we will propose an app for Android/iOS as well.
+					</p>
+					<p>
+					Finding a way to pay with declining online.
+					</p>
+					<p>
+					How do users pay for the food online?
+					<ul>
+					<li>If users cannot pay for the food online, then there’s no insurance that the customer will actually pay for the food that the restaurant has prepared. So there HAS to be a way for users to pay online. (Otherwise the food is prepared only once the customer has shown up and the app is pointless).</li>
+					<li>Flex should definitely be possible but declining (while the ideal case) is uncertain.</li>
+					<li>We can find out how feasible paying for food online with declining is and the sort of system/back-end that would be used by discussing the possibility with dining services.</li>
+					<li>If Connections cannot work with us until the prototype is finished, we will not implement this part.</li>
+					</ul>
+					</p>
+					<p>
+					Coordinating with Connections
+					<p>
+					How do we figure out how Connections will interact with this application and the feasibility of it on their end?
+					<ul>
+					<li>The cashiers/workers can pull orders from a database which will display the time the order is expected to be done and then make it so that the order can be picked up when the customer arrives.</li>
+					<li>The orders could be placed in bags with the customer’s name on it. When they come to pick it up, they could get in an “express line” (which should be empty for the most part) to simply give their name and get their food right away.</li>
+						<ol>
+						<li>Maybe they have to swipe their card to verify identity?</li>
+						</ol>
+					<li>We can talk to the general manager of Connections who can discuss how it would be implemented on his end and share these ideas with him. This part is not essential to the prototype.</li>
+					</ul>
+					<p>
+					Designing and releasing the app
+					</p>
+					<ul>
+					<li>Ideally this would be an actual application for release on Android/iOS as well as a website that users could use but our prototype will just be the website first and the Android/iOS if we have time.</li>
+						<ol>
+						<li>We need to figure out how to get a domain for this website (and pay for it?). We can talk to dining services to see if they’d be willing to fund the website if this goes live.</li>
+						<li>We need to figure out how to release this app for Android/iOS. Research this on our own or talk to someone in class with experience here.</li>
+						</ol>
+					</ul>
+					<p>
+					Back-end side for Connections taking orders, editing website, etc.
+					</p>
+					<ul>
+					<li>How does Connections maintain what food is and is not available?</li>
+						<ul>
+						<li>Most people working at Connections do not know how to manually edit source code online that displays what food is and is not available.</li>
+						<li>A worker from Connections should not HAVE to edit this code. There should be a way for Connections to have full control of the website but through drop-down menus and a log-in that allows (only) them to update what food is and is not available.</li>
+						<li>This should be achievable, because the vast majority of connection’s menu is standardized (ie, they sell the same baked goods every day) or semi-standardized (they rotate types of coffee and soup).</li>
+						<li>We will use a MySQL database to store the available food.</li>
+						</ul>
+					<li>How does Connections get orders online and prepare them?</li>
+						<ul>
+						<li>There should be a cashier interface that allows the workers to see when the customer is expecting to pick up the food so they can prepare it on time.</li>
+						<li>There should be a way for a cashier to “complete” the order and remove it from the queue.</li>
+						</ul>
+					</ul>
+					<p>
+					Possible Features?
+					</p>
+					<ul>
+					<li>Recurring orders for customers</li>
+						<ul>
+						<li>Suppose I always want a bagel with cream-cheese between my 1:45 and 2:00 class. I should be able to save past orders and order it again through just a few clicks/screen taps</li>
+						<li>Even better, a way to AUTOMATICALLY order the same order many times over a semester.</li>
+						</ul>
+					<li>Far-in-advance orders?</li>
+						<ul>
+						<li>U of R would not like it if students were able to pay for a meal next semester with declining that is only available for this semester so there has to be at least that limit in advance orders.</li>
+						<li>Can we make orders days, weeks, or months in advance? Talk about this with Connections/Dining Services</li>
+						</ul>
+					<li>Orders for other people</li>
+						<ul>
+						<li>An issue is that this process might possibly allow someone to make an order for food with another student’s declining, simply using their log-in and password but not their physical card.</li>
+						<li>If Connections sees this as a not-allowable issue, it might require that users must swipe to pick up their food.</li>
+						<li>Otherwise, this is a feature and users can place an order with their card for someone else and this would also have to be coordinated with Connections.</li>
+						<li>Perhaps, on the order placement screen, have a check-box that says “this order is for someone else” and then all of that info put in by the user.</li>
+						</ul>
+					<li>Orders with flex</li>
+						<ul>
+						<li>Users should be able to pay with flex online as well as with declining. This possibility could also be discussed with dining services.</li>
+						</ul>
+					<li>Orders with Credit Card</li>
+						<ul>
+						<li>Users should be able to pay with a credit card online. This possibility could also be discussed with dining services
+						</ul>
+					</li>
+					</ul>
+				</p>
 				<h3>Evaluation</h3>
 				<h3>Act</h3>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
