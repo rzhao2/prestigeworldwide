@@ -2,7 +2,9 @@
 html, body {
 //CSS properties for html and body
 	padding: 0;
-	margin: 0px 0px 0px 0px;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-family: tahoma, verdana, sans-serif;
 	height: 100%;
 }
 
@@ -39,6 +41,11 @@ html, body {
 	width: 50%;
 	background-color: white;
 	border: 0px;
+}
+
+#table {
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .login_input {
@@ -119,3 +126,8 @@ html, body {
 #left_inner {
 	margin-top:50px;
 }
+
+td img{
+    display: block;
+    float: left;
+} 
