@@ -57,3 +57,11 @@ TED's ACTUAL IMPLEMENTATION:
      `password` CHAR( 32 ) NOT NULL ,
      PRIMARY KEY ( `student_id` )
 ) ENGINE = MYISAM COMMENT = 'student ids and passwords(hashed)' 
+
+ CREATE TABLE `theccdb`.`Order_info` (
+     `Order_id` MEDIUMINT NOT NULL ,
+     `Student_id` MEDIUMINT NOT NULL ,
+     `Order_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+     `Complete_time` TIME NOT NULL ,
+     PRIMARY KEY ( `Order_id` )
+) ENGINE = MYISAM 
