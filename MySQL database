@@ -12,6 +12,15 @@ CREATE TABLE PureVida (
      PRIMARY KEY (id)
 );
 
+CREATE TABLE ConnectionsMenu (          <-----------Ted's implementation
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     item_name CHAR(30) NOT NULL,
+     category CHAR(30) NOT NULL,
+     description CHAR(100),
+     price DECIMAL(4),
+     PRIMARY KEY (id)
+);
+
 CREATE TABLE Connections (
      id MEDIUMINT NOT NULL AUTO_INCREMENT,
      item_name CHAR(30) NOT NULL,
