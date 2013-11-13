@@ -65,3 +65,10 @@ TED's ACTUAL IMPLEMENTATION:
      `Complete_time` TIME NOT NULL ,
      PRIMARY KEY ( `Order_id` )
 ) ENGINE = MYISAM 
+
+ CREATE TABLE `theccdb`.`Order` (
+     `order_id` MEDIUMINT NOT NULL ,
+     `item_id` MEDIUMINT NOT NULL ,
+     `quantity` SMALLINT NOT NULL ,
+     PRIMARY KEY ( `order_id` )
+) ENGINE = MYISAM 
