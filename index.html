@@ -3,47 +3,41 @@
 	<head>
 		<title>The Connections Connection</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="script.js"></script>
 	</head>
 	<body>
+		<?php ?>
 			<div id="banner">
 				<div id="banner_left">
-					The Connections Connection<!--<img src="OUR_LOGO_GOES_HERE.jpg" />-->
+					<img src="logo.png">
 				</div>
 				<div id="banner_right">
 					<div id="login">
 						<form name="login_form"><!--method="POST" action="process login php"-->
-							<input type="text" class="login_input" />
-							<input type="password" class="login_input" />
-							<input type="button" id="login_submit" />
+							<p>Login with your University of Rochester credentials.</p></br>
+							Net Id: <input type="text" class="login_input" /></br></br>
+							Password: <input type="password" class="login_input" /></br>
+							<button type="button">Login</button>
 						</form>
 					</div><!-- end login -->
 				</div><!-- end banner right -->
 			</div><!-- end banner -->
-			<div id="content">
-				<div id="left" class="main_content">
-					<div id="left_inner">
-						<table width="420px" border="1px solid black">
-							<tr height="44px">
-								<td width="90px"><a href="choose_cafe.php">Go to choose cafe</a></td>
-								<td width="330px">box2</td>
-							</tr>
-							<tr height="40px">
-								<td width="90px">stuff on right and left yay!</td>
-								<td width="330px">box4</td>
-							</tr>
-							<tr height="40">
-								<td width="90px">box5</td>
-								<td width="330px">stuff here</td>
-							</tr>
-							<tr height="44px">
-								<td width="90px">box7</td>
-								<td width="330px">box8</td>
-							</tr>
-						</table>
-					</div><!--end left_inner -->
-				</div><!-- end left -->
-				<div id="right" class="main_content">
-					<div id="right_inner">
+			<div id="nav_bar">
+				<p>Home   |   About Us   |   Menus   |   Nutritional Info   |   Contact   |   Cart</p>
+			</div>
+			<div id="header">
+				<p>Choose your cafe</p>
+			</div>
+			<div id='left' class='main_content'>
+				<div id='left_inner'>
+					<a href='orderform.php?location=connections'>Click here for Connections<center><img height="500px" src="ConnectionsLogo.png"</center></a>
+				</div><!--end left_inner -->
+			</div><!-- end left -->
+			<div id='right' class='main_content'>
+				<div id='right_inner'>
+					<center><a href='orderform.php?location=puravida'>Coming Soon<img height="200px" src="PuraVidaLogo.png"></a></center>
+				</div><!--end right_inner -->
+			</div><!-- end right -->
 
 					</div><!-- end right_inner -->
 				</div><!-- end right -->
