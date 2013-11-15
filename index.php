@@ -1,5 +1,4 @@
 <?php
-	session_start();
     /*echo "http://" . $_SERVER['HTTP_HOST'];*/
     if ("http://" . $_SERVER['HTTP_HOST'] == "http://earthftw.com") {
         echo '<script type="text/javascript">
@@ -21,8 +20,9 @@
 	</head>
 	<body>
 		<div id="container">
-			<?php include('banner.php')
-
+			
+			<?php
+				include 'banner.php';
 			?>
             
 			<nav id="nav_bar">
