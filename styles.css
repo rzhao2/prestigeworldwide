@@ -17,10 +17,31 @@ html, body {
 
 #banner {
 	width: 100%;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	height: 200px;
+	/*position: fixed;*/
+	overflow: hidden;
+	background-color: #acacac;
+=======
 	height: 120px;
 	overflow: hidden;
 	background-color: #acacac;
     margin: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	height: 120px;
+	overflow: hidden;
+	background-color: #acacac;
+    margin: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	height: 120px;
+	overflow: hidden;
+	background-color: #acacac;
+    margin: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -29,13 +50,34 @@ html, body {
 	float: left;
 	background-color: #acacac;
 	width: 65%;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	border: 0px;
+=======
 	border: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	border: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	border: 0;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 }
 
 #banner_right {
 	float: right;
 	width: 35%;
 	background-color: #acacac;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	border: 0px;
+=======
+=======
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 	border: 0;
 }
 
@@ -54,6 +96,30 @@ html, body {
 	width: 100%;
 	height: 70px;
 	background-color: #a8b8e9;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+}
+
+#nav_bar{
+	font-size: 30px;
+	width: 100%;
+	height: 40px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+#header{
+	text-align: center;
+	font-size: 50px;
+	width: 100%;
+	height: 70px;
+	background-color: #a8b8e9;
+=======
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 }
 
 #table {
@@ -88,7 +154,20 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	background-color: #562500;
+	text-align: center;
+=======
 	background-color: #562500;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	background-color: #562500;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	background-color: #562500;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 }
 
 #left {
@@ -99,7 +178,20 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+	background-color: #7aa019;
+	text-align: center;
+=======
 	background-color: #7aa019;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	background-color: #7aa019;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
+=======
+	background-color: #7aa019;;
+>>>>>>> ff154813d43b89c2573ce3eeb04b8be3082b857e
 }
 
 #right_small {
