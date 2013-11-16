@@ -1,9 +1,9 @@
 <div id="banner">
         <div id="banner_left">
-        <img src="images/logo.png"><!-- logo -->
+        <a href = "index.php"><img src="images/logo.png"></a><!-- logo -->
         </div>
         <div id="banner_right">
-                <?php if(!isset($_SESSION['username'])){ ?>
+        <?php if(!isset($_SESSION['username'])){ ?>
                 <div id="login">
                         <form name="login_form" method ="POST" action ="login.php"><!--method="POST" action="process login php"-->
                                 <table id="login_table">
@@ -24,12 +24,24 @@
                                 </table>
                         </form>
                 </div><!-- end login -->
-                <?php }else{?>
-                <form name="logout_form" method ="POST" action ="logout.php">
-                        Welcome, <?php echo($_SESSION['username']); ?>! <br />
-                        <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
-                </form>
-
-                <?php }?>
+                <?php }
+                else{ //logged in user
+                    if( $_SESSION['username'] != "admin")
+                    { ?>
+                        <form name="logout_form" method ="POST" action ="logout.php">
+                                Welcome, <?php echo($_SESSION['username']); ?>! <br />
+                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
+                        </form>
+               <?php }else{//admin
+                        ?>
+                        <form name="logout_form" method ="POST" action ="logout.php">
+                                Welcome, <?php echo($_SESSION['username']); ?>! <br />
+                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
+                        </form>
+                        <div>
+                                <a href="index.php"> Employee page </a>
+                        </div>
+                      <?php }
+              }?>
         </div><!-- end banner right -->
 </div><!-- end banner -->
