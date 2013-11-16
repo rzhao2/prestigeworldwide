@@ -1,0 +1,74 @@
+CREATE DATABASE connections;
+
+use connections;
+show tables;
+describe PureVida;
+
+CREATE TABLE PureVida (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     item_name CHAR(30) NOT NULL,
+     category CHAR(30) NOT NULL,
+     description CHAR(100),
+     PRIMARY KEY (id)
+);
+
+CREATE TABLE Connections (
+     id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     item_name CHAR(30) NOT NULL,
+     category CHAR(30) NOT NULL,
+     description CHAR(100),
+     PRIMARY KEY (id)
+);
+
+CREATE TABLE Student_Info (
+     student_id MEDIUMINT NOT NULL,
+     password CHAR(20) NOT NULL,
+     PRIMARY KEY (student_id)
+);
+
+CREATE TABLE Order_Info (
+     order_id MEDIUMINT NOT NULL AUTO_INCREMENT,
+     student_id MEDIUMINT NOT NULL,
+     order_time DATETIME NOT NULL,
+     complete_time DATETIME NOT NULL,
+     location CHAR(60),
+     PRIMARY KEY (order_id)
+);
+
+CREATE TABLE Orders (
+     order_id MEDIUMINT NOT NULL,
+     item_id MEDIUMINT NOT NULL,
+     quantity SMALLINT NOT NULL
+);
+
+
+TED's ACTUAL IMPLEMENTATION:
+
+ CREATE TABLE `theccdb`.`ConnectionsMenu` (
+     `id` MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+     `item_name` VARCHAR( 30 ) NOT NULL ,
+     `category` VARCHAR( 30 ) NOT NULL ,
+     `description` VARCHAR( 100 ) NOT NULL ,
+     `price` DECIMAL( 5 ) NOT NULL
+) ENGINE = MYISAM COMMENT = 'This table stores the menu items for connections' 
+
+ CREATE TABLE `theccdb`.`Student_info` (
+     `student_id` MEDIUMINT NOT NULL ,
+     `password` CHAR( 32 ) NOT NULL ,
+     PRIMARY KEY ( `student_id` )
+) ENGINE = MYISAM COMMENT = 'student ids and passwords(hashed)' 
+
+ CREATE TABLE `theccdb`.`Order_info` (
+     `Order_id` MEDIUMINT NOT NULL ,
+     `Student_id` MEDIUMINT NOT NULL ,
+     `Order_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
+     `Complete_time` TIME NOT NULL ,
+     PRIMARY KEY ( `Order_id` )
+) ENGINE = MYISAM 
+
+ CREATE TABLE `theccdb`.`Order` (
+     `order_id` MEDIUMINT NOT NULL ,
+     `item_id` MEDIUMINT NOT NULL ,
+     `quantity` SMALLINT NOT NULL ,
+     PRIMARY KEY ( `order_id` )
+) ENGINE = MYISAM 
