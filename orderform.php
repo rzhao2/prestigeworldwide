@@ -1,18 +1,49 @@
-$db_hostname = "theccdb.db.12066565.hostedresource.com";
-$db_username = "theccdb";
-$db_password = "Q!@Wq12w";
-			
-$db = mysql_connect($db_hostname, $db_username, $db_password);
-			
-if(!$db) { die("Unable to conect to MySQL: " . mysql_error()); }
-
-
-
-
-
-
 <?php
 	session_start();
+	
+	function getItems()
+	{
+		$db_hostname = "theccdb.db.12066565.hostedresource.com";
+		$db_username = "theccdb";
+		$db_password = "Q!@Wq12w";
+		$db_name = "theccdb";
+				
+		$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
+		if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
+				
+		$query = "SELECT * FROM ConnectionsMenu";
+		$result = mysqli_query($db, $query);
+		if(!$result) { die("Database access failed: " . mysql_error()); }
+				
+		$rows = mysqli_num_rows($result);
+
+		for($j = 0; $j < $rows; $j++)
+		{
+			$row = mysqli_fetch_row($result);
+			echo "<div class='simpleCart_shelfItem'>
+					<h2 class='item_name'>$row[1]</h2>
+						<p>
+							<input type='text' value='1' class='item_Quantity'>
+							<span class='item_price'>$row[4]</span>
+							<a class='item_add' href='javascript:;'> Add to Cart </a>
+						</p>
+				</div>";
+			
+		}
+		
+	}
+	/*for($j = 0; $j < $rows; $j++)
+	{
+		$row = mysqli_fetch_row($result);
+			echo '<span>Name</span>: ' . $row[1] . '<br/ >';
+			echo '<span>Category</span>: ' . $row[2] . '<br/ >';
+			echo '<span>Description</span>: ' . $row[3] . '<br/ >';
+			cho '<span>Price</span>: ' . $row[4] . '<br/ >';
+			echo '<br />';
+		}
+	}*/
+	
+	
 ?>
 
 <!DOCTYPE html>
@@ -34,13 +65,19 @@ if(!$db) { die("Unable to conect to MySQL: " . mysql_error()); }
 			        { view: "remove" , text: "Remove" , label: false }
 			    ]
 			});
+			
+			$(function() {
+    $( "#tabs" ).tabs();
+  });
+			
         </script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		
+		  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	</head>
 	<body>
-		<?php
-			include 'database_admin.php';
-		?>
 		<div id="container">
 			
 			<?php
@@ -51,39 +88,41 @@ if(!$db) { die("Unable to conect to MySQL: " . mysql_error()); }
                 <a href="">Home</a> | <a href="final_report.php">About Us</a> | <a href="">Menus</a> | <a href="">Nutritional Info</a>
             </nav><!-- end nav_bar -->
 			
+			<div id='left_large'>
+			
+			<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+    <li><a href="#tabs-3">Aenean lacinia</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+  </div>
+  <div id="tabs-2">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+  <div id="tabs-3">
+    <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+    <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+  </div>
+</div>
+			
+			
 			<?php
 				$location = $_GET['location'];
 
 				if($location == connections) { //location 1 is page 2 of Yunping's prototype
 					//echo "location is connections";
     //<!--------------------------------------------------------------------------------------------------------------------->
-                   echo "
-                    	<div id='left_large'>
-                        <div class='simpleCart_shelfItem'>
-    						<h2 class='item_name'> Awesome T-shirt </h2>
-    						<p>
-    							<input type='text' value='1' class='item_Quantity'>
-    							<span class='item_price'>$35.99</span>
-    							<a class='item_add' href='javascript:;'> Add to Cart </a>
-    						</p>
-                        </div>
-                        <div class='simpleCart_shelfItem'>
-                            <h2 class='item_name'> Awesome underwear </h2>
-        					<p>
-    							<input type='text' value='1' class='item_Quantity'>
-    							<span class='item_price'>$12.99</span>
-    							<a class='item_add' href='javascript:;'> Add to Cart </a>
-    						</p>
-                        </div>
-                        <div class='simpleCart_shelfItem'>
-                            <h2 class='item_name'> Awesome pants </h2>
-        					<p>
-    							<input type='text' value='1' class='item_Quantity'>
-    							<span class='item_price'>$67.50</span>
-    							<a class='item_add' href='javascript:;'> Add to Cart </a>
-    						</p>
-                        </div>
-					    </div><!-- emd left_large -->
+	
+					
+					
+					getItems();
+					
+					
+					
+					echo "</div><!-- emd left_large -->
                         
                        <div id='right_small'><!-- SHOPPING CART -->
 						   <!-- show the cart -->

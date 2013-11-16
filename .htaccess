@@ -1,0 +1,5 @@
+AuthType basic
+AuthName "Restricted Area"
+AuthGroupFile /dev/null
+AuthUserFile /home/content/65/12066565/htconfig/.htpassword.ghtpassword
+Require user prestige
