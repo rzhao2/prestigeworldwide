@@ -39,7 +39,7 @@
                                 <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
                         </form>
                         <div>
-                                <a href="index.php"> Employee page </a>
+                                <a href="employee.php"> Employee page </a>
                         </div>
                       <?php }
               }?>

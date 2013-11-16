@@ -7,6 +7,14 @@ html, body {
 	background-color: #acacac;
 }
 
+.simpleCart_items {
+	display: inline-block;
+}
+
+.headerRow {
+	display: inline-block;
+}
+
 #container {
 	width: 100%;
 	border: 0;

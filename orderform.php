@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +11,15 @@
         <script src="simpleCart.js"></script>
         <script>
         	simpleCart({
-			    cartStyle: "table";
+			    cartColumns: [
+			        { attr: "name" , label: "" } ,
+			        { attr: "price" , label: "", view: 'currency' } ,
+			        { view: "decrement" , label: false , text: "-" } ,
+			        { attr: "quantity" , label: "" } ,
+			        { view: "increment" , label: false , text: "+" } ,
+			        { attr: "total" , label: "", view: 'currency' } ,
+			        { view: "remove" , text: "Remove" , label: false }
+			    ]
 			});
         </script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -17,21 +29,19 @@
 		?>
 		<div id="container">
 			
-			<div id="banner">
-				<div id="banner_left">
-					The Connections Connection<!--<img src="OUR_LOGO_GOES_HERE.jpg" />-->
-				</div><!--end banner left-->
-				<div id="banner_right">
-					something else decorative goes here, yay!
-				</div><!-- end banner right -->
-			</div><!-- end banner -->
+			<?php
+				include 'banner.php';
+			?>
+            
+			<nav id="nav_bar">
+                <a href="">Home</a> | <a href="final_report.php">About Us</a> | <a href="">Menus</a> | <a href="">Nutritional Info</a>
+            </nav><!-- end nav_bar -->
 			
 			<?php
 				$location = $_GET['location'];
-				echo $location;
 
-				if($location == connections) {//location 1 is page 2 of Yunping's prototype
-					echo "location is connections";
+				if($location == connections) { //location 1 is page 2 of Yunping's prototype
+					//echo "location is connections";
     //<!--------------------------------------------------------------------------------------------------------------------->
                    echo "
                     	<div id='left_large'>
@@ -64,14 +74,12 @@
                        <div id='right_small'><!-- SHOPPING CART -->
 						   <!-- show the cart -->
 						   <div class='simpleCart_items'></div>
-						   
-						   <!-- cart total (ex. $23.11)-->
-						   <div class='simpleCart_total'></div>
-						   
-						   <!-- cart quantity (ex. 3) -->
-						   <div class='simpleCart_quantity'></div>
-						   
-						   <span class='simpleCart_quantity'></span> items - <span class='simpleCart_total'></span><a href='javascript:;' class='simpleCart_checkout'>Checkout</a>
+						   <br />
+                        -----------------------------
+                        <br />
+                        Final Total: <span id='simpleCart_grandTotal' class='simpleCart_grandTotal'></span>
+                        <br />
+                        <a href='javascript:;' class='simpleCart_checkout'>checkout</a>
 						</div><!--end right small-->
                    ";        
     //<!--------------------------------------------------------------------------------------------------------------------->
