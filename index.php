@@ -32,7 +32,11 @@
             </nav><!-- end nav_bar -->
 			
 			<?php
+			if($_SESSION['username'] != "admin")
 				include 'cafechooser.php';
+			else{
+				include 'adminpage.php';
+			}
 			?>  
 
 		</div><!-- end container -->

@@ -38,9 +38,6 @@
                                 Welcome, <?php echo($_SESSION['username']); ?>! <br />
                                 <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
                         </form>
-                        <div>
-                                <a href="employee.php"> Employee page </a>
-                        </div>
                       <?php }
               }?>
         </div><!-- end banner right -->
