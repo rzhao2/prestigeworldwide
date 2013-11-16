@@ -1,3 +1,16 @@
+$db_hostname = "theccdb.db.12066565.hostedresource.com";
+$db_username = "theccdb";
+$db_password = "Q!@Wq12w";
+			
+$db = mysql_connect($db_hostname, $db_username, $db_password);
+			
+if(!$db) { die("Unable to conect to MySQL: " . mysql_error()); }
+
+
+
+
+
+
 <?php
 	session_start();
 ?>
@@ -26,6 +39,7 @@
 	</head>
 	<body>
 		<?php
+			include 'database_admin.php';
 		?>
 		<div id="container">
 			
