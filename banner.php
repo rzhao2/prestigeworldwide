@@ -12,7 +12,7 @@
                                         </tr>
                                         <tr>
                                                 <td class="align_right">Net ID:</td>
-                                                <td class="align_left"><input type="text" class="login_input" name = "user"/></td>
+                                                <td class="align_left"><input type="text" class="login_input" name = "username"/></td>
                                         </tr>
                                         <tr>
                                                 <td class="align_right">Password:</td>
@@ -25,10 +25,10 @@
                         </form>
                 </div><!-- end login -->
                 <?php }else{?>
-                <div>
+                <form name="logout_form" method ="POST" action ="logout.php">
                         Welcome, <?php echo($_SESSION['username']); ?>! <br />
                         <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
-                </div>
+                </form>
 
                 <?php }?>
         </div><!-- end banner right -->

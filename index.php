@@ -1,5 +1,7 @@
 <?php
     /*echo "http://" . $_SERVER['HTTP_HOST'];*/
+    session_start();
+    //echo("Session started");
     if ("http://" . $_SERVER['HTTP_HOST'] == "http://earthftw.com") {
         echo '<script type="text/javascript">
         <!--

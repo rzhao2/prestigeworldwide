@@ -2,6 +2,6 @@
 //test
 session_start();
 $_SESSION['username'] = $_POST['username'];
-echo "success!";
+//echo "success!";
 header('Location: index.php');
 ?>
