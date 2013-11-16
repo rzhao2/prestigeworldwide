@@ -15,8 +15,27 @@
 	
 			<div id="content">
 				<h1>PRESTIGE WORLDWIDE - FINAL REPORT</h1>
+
+				<h2 class = "centered"> Table of Contents </h2>
+				<ul class = "centered">
+					<li><a href="final_report.php#team">The Team</a></li>
+					<li><a href="final_report.php#mentor">Our Mentor</a></li>
+					<li><a href="final_report.php#proposal">Proposal</a></li>
+					<ul>
+						<li><a href="final_report.php#definition">Definition</a></li>
+						<li><a href="final_report.php#requirements">Requirements</a></li>
+						<li><a href="final_report.php#system">System</a></li>
+						<li><a href="final_report.php#evaluation">Evaluation</a></li>
+						<li><a href="final_report.php#act">Act</a></li>
+					</ul>
+					<li><a href="final_report.php#needfinding">Needfinding</a></li>
+					<li><a href="final_report.php#prototypes">Prototypes</a></li>
+					<li><a href="final_report.php#video">Video</a></li>
+					<li><a href="final_report.php#evaluations">Evaluations</a></li>
+				</ul>
 				
-				<table id=table border="1" bordercolor="#FFFFFF" style="background-color:#FFFFFF" width="100%">
+				<h2 id="team"> The Team </h2>
+				<table table border="1" bordercolor="#FFFFFF" style="background-color:#FFFFFF" width="100%">
 				<tr>
 					<td style="vertical-align:top;">
 						<img style="display: inline-block; vertical-align: middle; margin-right: 10px;" width="120px"; height="160px"; src="images/MattDeMartino.jpg">
@@ -45,7 +64,7 @@
 						<span style="display: inline-block; vertical-align: middle;">
 						<h3>CAROLYN SOHMER</h3>
 						<b>Class Year:</b> Sophomore</br>
-						<b>Major:</b> Computer Science & Digital Media</br>
+						<b>Major:</b> Computer Science &amp; Digital Media</br>
 						<b>Title:</b> Operations Manager</br>
 						<b>Contribution:</b> Design, writing, quality assurance
 						</span>
@@ -55,7 +74,7 @@
 						<span style="display: inline-block; vertical-align: middle;">
 						<h3>ZACH TAYLOR</h3>
 						<b>Class Year:</b> Junior </br>
-						<b>Major:</b> Computer Science, Economics, & International Relations</br>
+						<b>Major:</b> Computer Science, Economics, &amp; International Relations</br>
 						<b>Title:</b> Junior Account Executive</br>
 						<b>Contribution:</b> Corporate Relations, front-end development</br>
 						</span>
@@ -67,7 +86,7 @@
 						<span style="display: inline-block; vertical-align: middle;">
 						<h3>TED TEUMER</h3>
 						<b>Class Year:</b> Senior </br>
-						<b>Major:</b> Computer Science & Statistics</br>
+						<b>Major:</b> Computer Science &amp; Statistics</br>
 						<b>Title:</b> Business Intelligence Developer</br>
 						<b>Contribution:</b> Development, data integrity</br>
 						</span>
@@ -84,7 +103,7 @@
 					</td>
 				</tr>
 			</table>
-			<h2>Mentor</h2>
+			<h2 id="mentor">Mentor</h2>
 			<table id="table" border="1" bordercolor="#FFFFFF" style="background-color:#FFFFFF" width="100%">
 				<tr>
 					<td style="vertical-align:top;">
@@ -96,14 +115,14 @@
 					</td>
 				</tr>
 			</table>
-			<h2>Project Proposal</h2>
-				<h3>Definition</h3>
+			<h2 id="proposal">Project Proposal</h2>
+				<h3 id = "definition">Definition</h3>
 					<p>
 					On campus there's a restaurant located near the IT center called "Connections" that sells mainly breakfast-type food items. 
 					We like to go there a lot but find that the time many students want to go is in between classes and often they don't have the 
 					time to go, because the line is too long.
 					</p>
-				<h3>Requirements</h3>
+				<h3 id = "requirements">Requirements</h3>
 					<p>
 					<ul>
 					<li>Needfinding survey</li>
@@ -137,7 +156,7 @@
 						</ul>
 					</ul>
 					</p>
-				<h3>System</h3>
+				<h3 id = "system">System</h3>
 					<p>
 					We propose a website that lets UofR users login and place an order with declining (the payment is online, no swiping if possible)
 					along with a time for pickup that expedites the process so users can get their food more quickly between classes. If time allows, 
@@ -226,10 +245,10 @@
 					</li>
 					</ul>
 				</p>
-				<h3>Evaluation</h3>
-				<h3>Act</h3>
+				<h3 id = "evaluation">Evaluation</h3>
+				<h3 id = "act">Act</h3>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
-			<h2>Needfinding</h2>
+			<h2 id = "needfinding">Needfinding</h2>
 				<p>
 				We distributed a survey to UR students, and the result is analyzed. 175 students participated in this survey. Connections and Pura Vida 
 				are the least visited cafes around the campus. (show data in table) 9 out of 175 students visited Connections daily, 21 visited Connections 
@@ -243,28 +262,30 @@
 				Therefore, in order to increase the daily visit of Connection, we propose a online food ordering system, through which students can order 
 				their food ahead of time, and pick up their food at their scheduled time, to skip the line and save the waiting time.
 				</p>
-			<h2>Prototype #1</h2>
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0133.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0134.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0135.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0137.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0138.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0139.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0140.jpg">
-				<img style="vertical-align:middle;" width="40%" src="images/IMG_0141.jpg">
-			<h2>Prototype #2</h2>
-				<img width="40%" src="images/connections-homepage copy.png">
-				<img width="40%" src="images/connections-page1 copy.png">
-				<img width="40%" src="images/connections-page2 copy.png">
-				<img width="40%" src="images/connections-page3 copy.png">
-			<h2>Prototype #3</h2>
-				<img width="100%" src="images/flowchart.png">
-			<h2>Stages of Working Prototype</h2>
-				<img src="images/Screenshot (11).png">
-				<img src="images/Screenshot (12).png">
-				<img src="images/Screenshot (13).png">
-			<h2>Video Demo</h2>	
-			<h2>Evaluation</h2>
+
+			<h2 id="prototypes"> Prototypes </h2>
+				<h3>Prototype #1</h3>
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0133.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0134.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0135.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0137.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0138.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0139.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0140.jpg">
+					<img style="vertical-align:middle;" width="40%" src="images/IMG_0141.jpg">
+				<h3>Prototype #2</h3>
+					<img width="40%" src="images/connections-homepage copy.png">
+					<img width="40%" src="images/connections-page1 copy.png">
+					<img width="40%" src="images/connections-page2 copy.png">
+					<img width="40%" src="images/connections-page3 copy.png">
+				<h3>Prototype #3</h3>
+					<img width="100%" src="images/flowchart.png">
+				<h3>Stages of Working Prototype</h3>
+					<img src="images/Screenshot (11).png">
+					<img src="images/Screenshot (12).png">
+					<img src="images/Screenshot (13).png">
+			<h2 id="video">Video Demo</h2>	
+			<h2 id="evaluations">Evaluation</h2>
 
 			</div><!-- end content -->
 </html>
