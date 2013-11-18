@@ -1,4 +1,6 @@
 /* reset default css properties for chrome */
+
+
 html, body {
     padding: 0;
     margin: 0;
@@ -161,4 +163,27 @@ td img {
 
 #login_table .align_left {
 	text-align: left;
+}
+
+
+div.order {
+	background-color: #AFE8BD;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: #7BA685;
+	width:50%;
+	padding-left:.5em;
+	padding-top:1em;
+	margin-left:1em;
+}
+
+div.completedorder {
+	background-color: #F25555;
+	border-style: ridge;
+	border-width: 5px;
+	border-color: #994343;
+	width:50%;
+	padding-left:.5em;
+	padding-top:1em;
+	margin-left:1em;
 }
