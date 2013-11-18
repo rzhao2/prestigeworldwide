@@ -37,12 +37,15 @@ if($_SESSION['username'] != "admin") {
 					$q = $_GET['q'];
 					$rows = mysqli_num_rows($result);
 					for($j = 0; $j < $rows; $j++)
-					{
+					{ 
 						$row = mysqli_fetch_row($result);
 						$lowerQ = strtolower($q);
 						$lowerRow1 = strtolower($row[1]);
 						if(strpos($lowerRow1, $lowerQ) !== false) {
 							$hasResults = true;
+							?>
+						<div class = "item">
+							<?php
 							echo '<span>ID</span>: ' . $row[0] . '<br/ >';
 							echo '<span>Name</span>: ' . $row[1] . '<br/ >';
 							echo '<span>Category</span>: ' . $row[2] . '<br/ >';
@@ -56,6 +59,9 @@ if($_SESSION['username'] != "admin") {
 							</form>
 							';
 							echo '<br />';
+							?>
+						</div>
+							<?php
 						}
 					}
 					
@@ -66,6 +72,9 @@ if($_SESSION['username'] != "admin") {
 					$rows = mysqli_num_rows($result);
 					for($j = 0; $j < $rows; $j++)
 					{
+						?>
+						<div class = "item">
+						<?php
 						$row = mysqli_fetch_row($result);
 						echo '<span>ID</span>: ' . $row[0] . '<br/ >';
 						echo '<span>Name</span>: ' . $row[1] . '<br/ >';
@@ -80,6 +89,9 @@ if($_SESSION['username'] != "admin") {
 						</form>
 						';
 						echo '<br />';
+						?>
+						</div>
+						<?php
 					}
 				}
 			
