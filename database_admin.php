@@ -1,6 +1,7 @@
 <?php
 include 'db_connect.php';
-if($_SESSION['username'] != "admin") {
+if($_SESSION['username'] != "admin")
+{
 	header('Location: index.php');	
 }
 ?>
@@ -24,15 +25,16 @@ if($_SESSION['username'] != "admin") {
 				
 			?>
 				
-				<form action="database_admin.php" method="get">
-					<input type="search" name="q" />
-					<button type="submit">Search</button>
-				</form>
-				<br />
+			<form action="database_admin.php" method="get">
+				<input type="search" name="q" />
+				<button type="submit">Search</button>
+			</form>
+			<br />
 				
 			<?php
 				
-				if(isset($_GET['q'])) {
+				if(isset($_GET['q'])) 
+				{
 					//view search results
 					$q = $_GET['q'];
 					$rows = mysqli_num_rows($result);
@@ -41,11 +43,14 @@ if($_SESSION['username'] != "admin") {
 						$row = mysqli_fetch_row($result);
 						$lowerQ = strtolower($q);
 						$lowerRow1 = strtolower($row[1]);
-						if(strpos($lowerRow1, $lowerQ) !== false) {
+						if(strpos($lowerRow1, $lowerQ) !== false)
+						{
 							$hasResults = true;
-							?>
-						<div class = "item">
-							<?php
+			?>
+
+			<div class="item">
+
+			<?php
 							echo '<span>ID</span>: ' . $row[0] . '<br/ >';
 							echo '<span>Name</span>: ' . $row[1] . '<br/ >';
 							echo '<span>Category</span>: ' . $row[2] . '<br/ >';
@@ -59,22 +64,27 @@ if($_SESSION['username'] != "admin") {
 							</form>
 							';
 							echo '<br />';
-							?>
-						</div>
-							<?php
-						}
-					}
+			?>
+
+			</div> <!-- end item -->
+
+			<?php
+						} // end if
+					} // end for
 					
 					if(!isset($hasResults)) { echo 'No items found matching string ' . $q; }		
 					
-					
-				} else {
+				} // end outer if
+				else // else ($q is not set)
+				{
 					$rows = mysqli_num_rows($result);
 					for($j = 0; $j < $rows; $j++)
 					{
-						?>
-						<div class = "item">
-						<?php
+			?>
+
+			<div class="item">
+
+			<?php
 						$row = mysqli_fetch_row($result);
 						echo '<span>ID</span>: ' . $row[0] . '<br/ >';
 						echo '<span>Name</span>: ' . $row[1] . '<br/ >';
@@ -89,12 +99,13 @@ if($_SESSION['username'] != "admin") {
 						</form>
 						';
 						echo '<br />';
-						?>
-						</div>
-						<?php
-					}
-				}
-			
+			?>
+
+			</div> <!-- end item -->
+
+			<?php
+					} // end for
+				} // end outer else
 			?>
 
 		</div><!-- end container -->
