@@ -2,9 +2,9 @@
 
 include 'db_connect.php';
 
-$id = $_POST['item_id'];
-
-$query = "SELECT * FROM ConnectionsMenu WHERE item_id = 5";
+$id = (string) $_POST['item_id'];
+//echo $id;
+$query = "SELECT * FROM ConnectionsMenu WHERE item_id = " . $id;
 
 $result = mysqli_query($db, $query);
 

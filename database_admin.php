@@ -53,7 +53,7 @@ if($_SESSION['username'] != "admin") {
 							echo '<span>Price</span>: ' . $row[4] . '<br/ >';
 							echo '
 							<form action="edit_item.php" method="POST">
-								<input type="hidden" name="item_id" value="$row[0]" />
+								<input type="hidden" name="item_id" value=" ' . $row[0] . ' " />
 								<input type="submit" value="EDIT RECORD" />
 								<input type="submit" value="DELETE RECORD" />
 							</form>
@@ -83,7 +83,7 @@ if($_SESSION['username'] != "admin") {
 						echo '<span>Price</span>: ' . $row[4] . '<br/ >';
 						echo '
 						<form action="edit_item.php" method="POST">
-							<input type="hidden" name="item_id" value="$row[0]" />
+							<input type="hidden" name="item_id" value=" ' . $row[0] . ' " />
 							<input type="submit" value="EDIT RECORD" />
 							<input type="submit" value="DELETE RECORD" />
 						</form>
