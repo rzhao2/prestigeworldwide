@@ -25,11 +25,9 @@
 			
 			<?php
 				include 'banner.php';
+				include 'navbar.php';
 			?>
             
-			<nav id="nav_bar">
-                <a href="">Home</a> | <a href="">About Us</a> | <a href="">Menus</a> | <a href="">Nutritional Info</a>
-            </nav><!-- end nav_bar -->
 			
 			<?php
 			if($_SESSION['username'] != "admin")

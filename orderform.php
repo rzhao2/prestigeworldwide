@@ -32,18 +32,6 @@
 		}
 		
 	}
-	/*for($j = 0; $j < $rows; $j++)
-	{
-		$row = mysqli_fetch_row($result);
-			echo '<span>Name</span>: ' . $row[1] . '<br/ >';
-			echo '<span>Category</span>: ' . $row[2] . '<br/ >';
-			echo '<span>Description</span>: ' . $row[3] . '<br/ >';
-			cho '<span>Price</span>: ' . $row[4] . '<br/ >';
-			echo '<br />';
-		}
-	}*/
-	
-	
 ?>
 
 <!DOCTYPE html>
@@ -82,11 +70,8 @@
 			
 			<?php
 				include 'banner.php';
+				include 'navbar.php';
 			?>
-            
-			<nav id="nav_bar">
-                <a href="">Home</a> | <a href="final_report.php">About Us</a> | <a href="">Menus</a> | <a href="">Nutritional Info</a>
-            </nav><!-- end nav_bar -->
 			
 			<div id='left_large'>
 			
