@@ -281,6 +281,11 @@
 					<img src="images/Screenshot (11).png">
 					<img src="images/Screenshot (12).png">
 					<img src="images/Screenshot (13).png">
+					<img src="images/orderqueueprototype.png">
+					<img src="images/Screenshot (18).png">
+					<img src="images/Screenshot (20).png">
+					<img src="images/Screenshot (21).png">
+					<img src="images/Screenshot (22).png">
 			<h2 id="video">Video Demo</h2>	
 			<h2 id="evaluations">Evaluation</h2>
 
