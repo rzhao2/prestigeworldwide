@@ -76,6 +76,9 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<link rel="stylesheet" href="/resources/demos/style.css" />
+		
+		<script src= "jquery-ui-timepicker-addon.js"></script>
+		<link rel="stylesheet" href="jquery-ui-timepicker-addon.css" />
 		<!-- <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script> --> <!-- for some reason this makes tab stop working, not sure if changes anything, noted by Ru -->
 		
         <script>
@@ -93,10 +96,14 @@
 			        { view: "increment" , label: false , text: "+" } ,
 			        { attr: "total" , label: "", view: 'currency' } ,
 			        { view: "remove" , text: "Remove" , label: false }
-			    ]
+			    ],
+
+			    cartStyle: "table",
 			});
 			
-			
+			 $(function() {
+				$("#timeFrom").datetimepicker();
+            });
 			
 			
         </script>
@@ -158,7 +165,8 @@
                         <br />
                         <a href='javascript:;' class='simpleCart_checkout'>checkout</a>
 						</div><!--end right small-->
-                   ";        
+                   ";    
+		<input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />
     //<!--------------------------------------------------------------------------------------------------------------------->
                            
     //<!--------------------------------------------------------------------------------------------------------------------->
