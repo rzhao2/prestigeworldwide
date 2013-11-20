@@ -288,7 +288,9 @@
 					<img src="images/Screenshot (22).png">
 			<h2 id="video">Video Demo</h2>	
 			<h2 id="evaluations">Evaluation</h2>
+                <p>The early iterations will be tested by ourselves, and after all the functions are succesfully implemented, we will test the website/app on several (> 20) students who are customers at Connections, and in conjunction with the Connections staff. User survey will be used to collect feedback from students and staff. The survey will include questions ask for quantified scores that the user provided as well as space for open end sugguestions.
 
+                </p>
 			</div><!-- end content -->
 </html>
 </body>
