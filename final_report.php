@@ -248,15 +248,15 @@
 			<h2 id = "needfinding">Needfinding</h2>
 				<p>
 				We distributed a survey to UR students, and the result is analyzed. 175 students participated in this survey. Connections and Pura Vida 
-				are the least visited cafes around the campus. (show data in table) 9 out of 175 students visited Connections daily, 21 visited Connections 
+				are the least visited cafes around the campus. <img style="display: inline-block; margin-left: 10px;" width="500px"; height="90px"; src="images/SurveyResult4.png"><br>
+                9 out of 175 students visited Connections daily, 21 visited Connections
 				2-3 times per week, while 83 students visited Connections monthly or less. Similar result was collected for Pura Vida. In this survey, 79% 
 				students reported that they had to choose not to get food on campus because they don't have time.
-				<img src="images/"> 
-				85% student reported that waiting time has a moderate to primary impact on their decision of where to get food. 
-				<img src="images/">
-				Over 71% students replied that if they would go to Connections more if they could order food online that would be ready when they arrive. 
-				<img src="images/">
-				Therefore, in order to increase the daily visit of Connection, we propose a online food ordering system, through which students can order 
+				85% student reported that waiting time has a moderate to primary impact on their decision of where to get food.
+
+				Over 71% students replied that if they would go to Connections more if they could order food online that would be ready when they arrive. <br>
+                <img style="display: inline-block; margin-left: 10px;" width="760px"; height="200px"; src="images/SurveyResult.png"><br>
+				Therefore, in order to increase the daily visit of Connection, we propose a online food ordering system, through which students can order
 				their food ahead of time, and pick up their food at their scheduled time, to skip the line and save the waiting time.
 				</p>
 
