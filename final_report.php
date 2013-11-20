@@ -165,7 +165,7 @@
 					<p>
 					How do users pay for the food online?
 					<ul>
-					<li>If users cannot pay for the food online, then thereâ€™s no insurance that the customer will actually pay for the food that the restaurant has prepared. So there HAS to be a way for users to pay online. (Otherwise the food is prepared only once the customer has shown up and the app is pointless).</li>
+					<li>If users cannot pay for the food online, then there's no insurance that the customer will actually pay for the food that the restaurant has prepared. So there HAS to be a way for users to pay online. (Otherwise the food is prepared only once the customer has shown up and the app is pointless).</li>
 					<li>Flex should definitely be possible but declining (while the ideal case) is uncertain.</li>
 					<li>We can find out how feasible paying for food online with declining is and the sort of system/back-end that would be used by discussing the possibility with dining services.</li>
 					<li>If Connections cannot work with us until the prototype is finished, we will not implement this part.</li>
@@ -177,7 +177,7 @@
 					How do we figure out how Connections will interact with this application and the feasibility of it on their end?
 					<ul>
 					<li>The cashiers/workers can pull orders from a database which will display the time the order is expected to be done and then make it so that the order can be picked up when the customer arrives.</li>
-					<li>The orders could be placed in bags with the customerâ€™s name on it. When they come to pick it up, they could get in an â€œexpress lineâ€� (which should be empty for the most part) to simply give their name and get their food right away.</li>
+					<li>The orders could be placed in bags with the customer's name on it. When they come to pick it up, they could get in an express line (which should be empty for the most part) to simply give their name and get their food right away.</li>
 						<ol>
 						<li>Maybe they have to swipe their card to verify identity?</li>
 						</ol>
@@ -189,7 +189,7 @@
 					<ul>
 					<li>Ideally this would be an actual application for release on Android/iOS as well as a website that users could use but our prototype will just be the website first and the Android/iOS if we have time.</li>
 						<ol>
-						<li>We need to figure out how to get a domain for this website (and pay for it?). We can talk to dining services to see if theyâ€™d be willing to fund the website if this goes live.</li>
+						<li>We need to figure out how to get a domain for this website (and pay for it?). We can talk to dining services to see if they'd be willing to fund the website if this goes live.</li>
 						<li>We need to figure out how to release this app for Android/iOS. Research this on our own or talk to someone in class with experience here.</li>
 						</ol>
 					</ul>
@@ -201,7 +201,7 @@
 						<ul>
 						<li>Most people working at Connections do not know how to manually edit source code online that displays what food is and is not available.</li>
 						<li>A worker from Connections should not HAVE to edit this code. There should be a way for Connections to have full control of the website but through drop-down menus and a log-in that allows (only) them to update what food is and is not available.</li>
-						<li>This should be achievable, because the vast majority of connectionâ€™s menu is standardized (ie, they sell the same baked goods every day) or semi-standardized (they rotate types of coffee and soup).</li>
+						<li>This should be achievable, because the vast majority of connection's menu is standardized (ie, they sell the same baked goods every day) or semi-standardized (they rotate types of coffee and soup).</li>
 						<li>We will use a MySQL database to store the available food.</li>
 						</ul>
 					<li>How does Connections get orders online and prepare them?</li>
@@ -226,10 +226,10 @@
 						</ul>
 					<li>Orders for other people</li>
 						<ul>
-						<li>An issue is that this process might possibly allow someone to make an order for food with another studentâ€™s declining, simply using their log-in and password but not their physical card.</li>
+						<li>An issue is that this process might possibly allow someone to make an order for food with another student's declining, simply using their log-in and password but not their physical card.</li>
 						<li>If Connections sees this as a not-allowable issue, it might require that users must swipe to pick up their food.</li>
 						<li>Otherwise, this is a feature and users can place an order with their card for someone else and this would also have to be coordinated with Connections.</li>
-						<li>Perhaps, on the order placement screen, have a check-box that says â€œthis order is for someone elseâ€� and then all of that info put in by the user.</li>
+						<li>Perhaps, on the order placement screen, have a check-box that says "this order is for someone else" and then all of that info put in by the user.</li>
 						</ul>
 					<li>Orders with flex</li>
 						<ul>
@@ -250,7 +250,7 @@
 				We distributed a survey to UR students, and the result is analyzed. 175 students participated in this survey. Connections and Pura Vida 
 				are the least visited cafes around the campus. (show data in table) 9 out of 175 students visited Connections daily, 21 visited Connections 
 				2-3 times per week, while 83 students visited Connections monthly or less. Similar result was collected for Pura Vida. In this survey, 79% 
-				students reported that they had to choose not to get food on campus because they donâ€™t have time. 
+				students reported that they had to choose not to get food on campus because they don't have time.
 				<img src="images/"> 
 				85% student reported that waiting time has a moderate to primary impact on their decision of where to get food. 
 				<img src="images/">
