@@ -141,7 +141,7 @@
 			</div>
 			
 			<?php
-				$location = $_GET['location'];
+			/*	$location = $_GET['location'];
 
 				if($location == connections) { //location 1 is page 2 of Yunping's prototype
 					//echo "location is connections";
@@ -166,7 +166,7 @@
                         <a href='javascript:;' class='simpleCart_checkout'>checkout</a>
 						</div><!--end right small-->
                    ";    
-		<input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />
+		
     //<!--------------------------------------------------------------------------------------------------------------------->
                            
     //<!--------------------------------------------------------------------------------------------------------------------->
@@ -240,9 +240,26 @@
                     
                     ";
 				}
-                
                 //<!--------------------------------------------------------------------------------------------------------------------->
+			*/
 			?>
+			
+			</div><!-- emd left_large -->
+                        
+                       <div id='right_small'><!-- SHOPPING CART -->
+						   <!-- show the cart -->
+						   <div class='simpleCart_items'></div>
+						   <br />
+                        -----------------------------
+                        <br />
+                        Final Total: <span id='simpleCart_grandTotal' class='simpleCart_grandTotal'></span>
+						
+						<br /><br /><br /> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />
+                        
+						<br />
+						<br />
+                        <a href='javascript:;' class='simpleCart_checkout'>checkout</a>
+						</div><!--end right small-->
 		</div><!-- end container -->
 </html>
 </body>
