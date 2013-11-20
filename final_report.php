@@ -115,9 +115,9 @@
 			<h2 id="proposal">Project Proposal</h2>
 				<h3 id = "definition">Definition</h3>
 					<p>
-					On campus there's a restaurant located near the IT center called "Connections" that sells mainly breakfast-type food items. 
-					We like to go there a lot but find that the time many students want to go is in between classes and often they don't have the 
-					time to go, because the line is too long.
+					On campus there is a restaurant located near the IT center called "Connections" that sells mainly breakfast-type food items. We like to visit there a lot, but find that the time many students want to go is in between classes. Therefore often they don't have the time to go, because the line is too long.<br>
+                    Currently many restaurants are allowing customers to order online, so that the food will be ready when the customer arrives. Will such an online ordering system help students in UR getting their food faster from Connections? Will students like such a system?
+
 					</p>
 				<h3 id = "requirements">Requirements</h3>
 					<p>
