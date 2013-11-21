@@ -12,6 +12,18 @@ if($_SESSION['username'] != "admin")
 		<title>The Connections Connection</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
         <script src="script.js"></script>
+        <script>
+        function checkForm(){
+        	var myForm = document.getElementById('searchForm');
+        	if(myForm.getElementsByTagName("input")[0].value == "")
+        	{
+        		alert("Enter something in the search field!");
+        		return false;
+        	}else{
+        		return true;
+        	}
+        }
+        </script>
 	</head>
 	<body>
 		<div id="container">
@@ -25,15 +37,15 @@ if($_SESSION['username'] != "admin")
 				
 			?>
 				
-			<form action="database_admin.php" method="get">
+			<form id = "searchForm" onsubmit="return checkForm()" action="database_admin.php" method="get">
 				<input type="search" name="q" />
-				<button type="submit">Search</button>
+				<button type="submit">Submit</button>
 			</form>
 			<br />
 				
 			<?php
 				
-				if(isset($_GET['q'])) 
+				if(isset($_GET['q']) && $_GET['q']!=="") 
 				{
 					//view search results
 					$q = $_GET['q'];
