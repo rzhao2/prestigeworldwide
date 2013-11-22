@@ -11,15 +11,9 @@
                                                 <td colspan="2">Login with your University of Rochester credentials.</td>
                                         </tr>
                                         <tr>
-                                                <td class="align_right">Net ID:</td>
-                                                <td class="align_left"><input type="text" class="login_input" name = "username"/></td>
-                                        </tr>
-                                        <tr>
-                                                <td class="align_right">Password:</td>
-                                                <td class="align_left"><input type="password" class="login_input" name = "password"/></td>
-                                        </tr>
-                                        <tr>
-                                                <td colspan="2" class="align_right"><button type="submit" id="login_submit">Login</button></td>
+                                                <td class="align_left"><input type="text" class="login_input" name = "username" value="Net ID"/></td>
+												<td class="align_left"><input type="password" class="login_input" name = "password" value="Password"/></td>
+												<td colspan="2" class="align_right"><button type="submit" id="login_submit">Login</button></td>
                                         </tr>
                                 </table>
                         </form>

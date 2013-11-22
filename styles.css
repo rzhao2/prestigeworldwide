@@ -59,14 +59,14 @@ html, body {
 
 #banner_left {
 	float: left;
-	/*background-color: #acacac;*/
-	width: 70%;
+	background-color: white;
+	width: 40%;
 	border: 0px;
 }
 
 #banner_right {
 	float: right;
-	width: 30%;
+	width: 60%;
 	/*background-color: #acacac;*/
 	border: 0px;
 }
@@ -205,7 +205,7 @@ div.order {
 }
 
 div.completedorder {
-	background-color: #F25555;
+	/*background-color: #F25555;*/
 	border-style: ridge;
 	border-width: 5px;
 	border-color: #994343;
@@ -216,7 +216,7 @@ div.completedorder {
 }
 
 div.item {
-	background-color: #FFFD80;
+	/*background-color: #FFFD80;*/
 	border-style: ridge;
 	border-width: 5px;
 	border-color: #9E9B00;
