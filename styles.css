@@ -23,6 +23,7 @@ html, body {
 	border: 0;
 	height: 100%;
 	display: inline-block;
+	padding-top: 5%;
 	background-image:url(images/stripe-background.png);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
@@ -30,13 +31,13 @@ html, body {
 
 #banner {
 	width: 100%;
-	height: 20%;
+	height: 30%;
 	background-image:url(images/stripe-background.png);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
 	margin: 0;
 	padding-top: 10px;
-	padding-bottom: 1px;
+	padding-bottom: 20px;
 	overflow: auto;
 }
 
