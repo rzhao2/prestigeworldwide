@@ -5,6 +5,9 @@ html, body {
     margin: 0;
     font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 	height: 100%;
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 	/*background-color: #acacac;*/
 }
 
