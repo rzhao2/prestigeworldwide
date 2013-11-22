@@ -2,9 +2,10 @@
 <div id="banner_left">
     <a href = "index.php"><img src="images/logo.png"></a><!-- logo -->
 </div>
+<div id="banner_right">
 <div class="container clearfix">
     <div class="row">
-		<div class="span12">
+    	<div class="span12">
 			<div class="navbar navbar_">
 				<div class="container">
 				  <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_"><span class="icon-bar"></span> </a>
@@ -42,13 +43,13 @@
                     { ?>
                         <form name="logout_form" method ="POST" action ="logout.php">
                                 Welcome, <?php echo($_SESSION['username']); ?>! <br />
-                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
+                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button>
                         </form>
                <?php }else{//admin
                         ?>
                         <form name="logout_form" method ="POST" action ="logout.php">
                                 Welcome, <?php echo($_SESSION['username']); ?>! <br />
-                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button></td>
+                                <button type="submit" id="login_submit" method = "POST" action ="logout.php">Logout</button>
                         </form>
                       <?php }
               }?>
