@@ -29,7 +29,7 @@ html, body {
 	/*background-color: #acacac;*/
 	margin: 0;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 1px;
 }
 
 #banner_left {
@@ -53,9 +53,7 @@ html, body {
 	text-align: center;
 	font-size: 50px;
 	width: 100%;
-	height: 70px;
-	padding: 30px;
-	z-index: 50;
+	
 	/*background-color: #a8b8e9;*/
 }
 
@@ -217,7 +215,7 @@ div.item {
 }
 /*nav*/
 .navbar_ .container {
-  position: relative;
+  /*position: relative;*/
 }
 .nav-collapse_ {
   padding: 0;
@@ -248,7 +246,7 @@ div.item {
   -moz-box-shadow: none;
   box-shadow: none;
   text-transform: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
   font-size: 20px;
   line-height: 22px;
   text-align: center;
@@ -268,11 +266,10 @@ div.item {
   border-radius: 44px;
 }
 .nav-collapse_ .nav > li > a .sf-sub-indicator {
-  position: absolute;
+  /*position: absolute;
   width: 9px;
   height: 6px;
-  /*background: url(../img/indicator1.png) no-repeat 0 0;*/
-  left: 50%;
+  left: 50%;*/
   bottom: 21px;
   margin-left: -5px;
   -webkit-box-shadow: none;

@@ -13,7 +13,7 @@
 						<li class="active"><a href="index.php">Home</a></li>
 						<li class="sub-menu"><a href="final_report.php">About Us</a></li>
 						<li class="sub-menu"><a href="orderform.php">Menus</a></li>
-						<li class="sub-menu"><a href="http://www.campusdish.com/en-US/CSNE/Rochester/Locations/Connections.htm">Nutritional Info</a></li>
+						<li class="sub-menu"><a href="http://www.campusdish.com/en-US/CSNE/Rochester/Locations/Connections.htm">Nutrition</a></li>
 					  </ul>
 					</div>
 				</div>
