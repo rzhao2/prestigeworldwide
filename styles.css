@@ -37,6 +37,7 @@ html, body {
 	margin: 0;
 	padding-top: 10px;
 	padding-bottom: 1px;
+	overflow: auto;
 }
 
 #banner_left {
@@ -60,8 +61,9 @@ html, body {
 	text-align: center;
 	font-size: 50px;
 	width: 100%;
-	
-	/*background-color: #a8b8e9;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 #header p{
@@ -101,7 +103,9 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
-	/*background-color: #562500;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -113,7 +117,9 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
-	/*background-color: #7aa019;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -125,7 +131,9 @@ html, body {
 	padding-left: 2%;
 	padding-right: 2%;
 	border: none;
-	/*background-color: #819FF7;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 #left_large {
@@ -133,7 +141,9 @@ html, body {
 	width: 75%;
 	height: 100%;
 	border: none;
-	/*background-color: purple;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 	overflow: auto;
 }
 
@@ -142,6 +152,9 @@ html, body {
 	top: 130px;
 	width: 100%;
 	height: 100%;
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 #right_inner {
