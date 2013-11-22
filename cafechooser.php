@@ -10,7 +10,6 @@
 
 <div id='right'>
 	<div id='right_inner'>
-		<h3> Coming Soon </h3>
 		<a href='orderform.php?location=puravida'><img src="images/PuraVidaLogo.png" /></a>
 	</div><!--end right_inner -->
 </div><!-- end right -->
