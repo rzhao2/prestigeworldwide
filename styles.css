@@ -35,8 +35,8 @@ html, body {
 	background-image:url(images/stripe-background.png);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
-	margin: 0;
-	padding-top: 10px;
+	margin-left: 8%;
+	padding-top: 3px;
 	padding-bottom: 20px;
 	overflow: auto;
 }
@@ -46,6 +46,11 @@ html, body {
 	background-color: white;
 	width: 40%;
 	border: 0px;
+	padding-top: 3px;
+	padding-bottom: 20px;
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 #banner_right {
@@ -53,8 +58,12 @@ html, body {
 	text-align: left;
 	margin-left: 3%;
 	margin-top: 10%;
+	padding-top: 3px;
+	padding-bottom: 20px;
 	width: 50%;
-	/*background-color: #acacac;*/
+	background-image:url(images/stripe-background.png);
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 	border: 0px;
 }
 
