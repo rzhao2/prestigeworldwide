@@ -25,11 +25,11 @@ $row = mysqli_fetch_array($result);
 			<?php 
 				include 'banner.php';
 			?>
-			<form action="database_admin.php" method="POST">
+			<form action="submit_changes_to_item.php" method="POST">
 				<table>
 					<tr>
 						<td class="align_right">ID:</td>
-						<td class="align_left"><input type="text" name="item_id" value="<?php echo $row[0] ?>" disabled /></td>
+						<td class="align_left"><input type="text" name="item_id" value="<?php echo $row[0] ?>" readonly /></td>
 					</tr>
 					<tr>
 						<td class="align_right">Item Name:</td>
@@ -42,8 +42,9 @@ $row = mysqli_fetch_array($result);
 								<option value="Cold Drinks">Cold Drinks</option>
 								<option value="Hot Drinks">Hot Drinks</option>
 								<option value="Refrigerated Food">Refrigerated Food</option>
-								<option value="Pre-Packaged/Snacks">Pre-Packaged/Snacks</option>
-								<option value="Pastries">Pastries</option>
+								<option value="Pre-Packaged Food/Fruits">Pre-Packaged Food/Fruits</option>
+								<option value="Counter">Counter</option>
+								<option value="Frozen">Frozen</option>
 							</select>
 						</td>
 					</tr>
@@ -54,6 +55,14 @@ $row = mysqli_fetch_array($result);
 					<tr>
 						<td class="align_right">Price:</td>
 						<td class="align_left"><input type="text" name="price" value="<?php echo $row[4] ?>" /></td>
+					</tr>
+					<tr>
+						<td class="align_right">Options:</td>
+						<td class="align_left"><input type="text" name="options" value="<?php echo $row[5] ?>" /></td>
+					</tr>
+					<tr>
+						<td class="align_right">Image:</td>
+						<td class="align_left"><input type="file" name="image" accept="image/*" /></td>
 					</tr>
 					<tr>
 						<td class="align_right" colspan="2"><button type="submit">Update Item</button></td>
