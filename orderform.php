@@ -1,5 +1,14 @@
 <?php
 	session_start();
+
+	include 'parse_options.php';
+	/*
+	numOptionSets(s) returns how many option sets in a fully encoded item_options
+	getOptionSets(s) returns a String[] of each encoded option set
+	getOptionName(s) returns the name of an option set
+	getOptionRange(s) returns the range of an option set
+	getOptions(s) Takes an encoded Option Set and returns a 2D array of all the options in it
+	*/
 	
 	function getItems()
 	{
@@ -20,14 +29,51 @@
 		for($j = 0; $j < $rows; $j++)
 		{
 			$row = mysqli_fetch_row($result);
-			echo "<div class='simpleCart_shelfItem'>
-					<h2 class='item_name'>$row[1]</h2>
-						<p>
-							<input type='text' value='1' class='item_Quantity'>
-							<span class='item_price'>$row[4]</span>
-							<a class='item_add' href='javascript:;'> Add to Cart </a>
-						</p>
-				</div>";
+			$options = $row[5];
+			$optionSets = getOptionSets($options);
+
+			?>
+			<div class='simpleCart_shelfItem' title='<?php echo $row[1];?>'>
+				<h2 class='item_name'><?php echo $row[1];?></h2>
+					<p>
+						<input type='text' value='1' class='item_Quantity'>
+						<span class='item_price'><?php echo $row[4]/100; ?></span>
+
+			<?php
+
+				for($i = 0; $i<count($optionSets); $i++)
+				{
+			?>
+						<table hidden name= '<?php echo getOptionName($optionSets[$i]); ?>' value='<?php echo $optionSets[$i]; ?>'>
+						<tr>
+							<th><?php echo getOptionName($optionSets[$i]); ?></th>
+						</tr>
+						<tr>
+							<th>Name</th>
+							<th>Additional Price</th>
+						</tr>
+				<?php
+					$numOptions = getNumOptions($optionSets[$i]);
+					$o = getOptions($optionSets[$i]);
+					for($k=0; $k<$numOptions; $k++)
+					{
+				?>
+						<tr>
+							<td><?php echo $o[$k][0];?></td>
+							<td><?php echo $o[$k][1];?></td>
+						</tr>
+				<?php
+					}
+				?>
+						</table>
+			<?php
+				}
+			?>
+
+						<button onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
+					</p>
+			</div>
+			<?php
 			
 		}
 		
@@ -52,14 +98,51 @@
 		for($j = 0; $j < $rows; $j++)
 		{
 			$row = mysqli_fetch_row($result);
-			echo "<div class='simpleCart_shelfItem'>
-					<h2 class='item_name'>$row[1]</h2>
-						<p>
-							<input type='text' value='1' class='item_Quantity'>
-							<span class='item_price'>$row[4]</span>
-							<a class='item_add' href='javascript:;'> Add to Cart </a>
-						</p>
-				</div>";
+			$options = $row[5];
+			$optionSets = getOptionSets($options);
+
+			?>
+			<div class='simpleCart_shelfItem' title='<?php echo $row[1];?>'>
+				<h2 class='item_name'><?php echo $row[1];?></h2>
+					<p>
+						<input type='text' value='1' class='item_Quantity'>
+						<span class='item_price'><?php echo $row[4]/100; ?></span>
+
+			<?php
+
+				for($i = 0; $i<count($optionSets); $i++)
+				{
+			?>
+						<table hidden name= '<?php echo getOptionName($optionSets[$i]); ?>' value='<?php echo $optionSets[$i]; ?>'>
+						<tr>
+							<th><?php echo getOptionName($optionSets[$i]); ?></th>
+						</tr>
+						<tr>
+							<th>Name</th>
+							<th>Additional Price</th>
+						</tr>
+				<?php
+					$numOptions = getNumOptions($optionSets[$i]);
+					$o = getOptions($optionSets[$i]);
+					for($k=0; $k<$numOptions; $k++)
+					{
+				?>
+						<tr>
+							<td><?php echo $o[$k][0];?></td>
+							<td><?php echo $o[$k][1];?></td>
+						</tr>
+				<?php
+					}
+				?>
+						</table>
+			<?php
+				}
+			?>
+
+						<button onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
+					</p>
+			</div>
+			<?php
 			
 		}
 	}
@@ -90,6 +173,7 @@
         	simpleCart({
 			    cartColumns: [
 			        { attr: "name" , label: "" } ,
+			        { attr: "options", label: ""} ,
 			        { attr: "price" , label: "", view: 'currency' } ,
 			        { view: "decrement" , label: false , text: "-" } ,
 			        { attr: "quantity" , label: "" } ,
@@ -105,7 +189,19 @@
 				$("#timeFrom").datetimepicker();
             });
 			
-			
+        </script>
+
+        <script>
+		function showOptions(title)
+		{
+			var element = $("div[title='Pepsi'] > p > span").html();
+			//alert(element);
+			simpleCart.add({
+				name: title,
+				price: element
+			});
+			alert("options called from " + title);
+		}
         </script>
         
 
@@ -126,6 +222,11 @@
 					<li><a href="#tabs-1">Cold Drinks</a></li>
 					<li><a href="#tabs-2">Refrigerated Food</a></li>
 					<li><a href="#tabs-3">Pre-Packaged Food / Fruits</a></li>
+					<li><a href="#tabs-4">Frozen Food</a></li>
+					<li><a href="#tabs-5">Hot Drinks</a></li>
+					<li><a href="#tabs-6">Counter</a></li>
+					<li><a href="#tabs-7">Bagel Addon</a></li>
+					
 				</ul>
 			<div id="tabs-1">
 				<p><?php getItemsByCategory('Cold Drinks'); ?></p>
@@ -137,8 +238,26 @@
 			
 			<div id="tabs-3">
 				<p><?php getItemsByCategory('Pre-Packaged Food / Fruits'); ?></p>
-				</div>
 			</div>
+			
+
+			<div id="tabs-4">
+				<p><?php getItemsByCategory('Frozen Food'); ?></p>
+			</div>
+			
+
+			<div id="tabs-5">
+				<p><?php getItemsByCategory('Hot Drinks'); ?></p>
+			</div>
+
+			<div id="tabs-6">
+				<p><?php getItemsByCategory('Counter'); ?></p>
+			</div>
+
+			<div id="tabs-7">
+				<p><?php getItemsByCategory('add-on'); ?></p>
+			</div>
+		</div>
 			
 			<?php
 			/*	$location = $_GET['location'];
@@ -244,11 +363,13 @@
 			*/
 			?>
 			
-			</div><!-- emd left_large -->
+			</div><!-- end left_large -->
                         
                        <div id='right_small'><!-- SHOPPING CART -->
 						   <!-- show the cart -->
 						   <div class='simpleCart_items'></div>
+
+						   <a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
 						   <br />
                         -----------------------------
                         <br />

@@ -1,9 +1,15 @@
 <?php
 
+/*
+9,1:1,Types,Plain,0,Poppy,0,Cinnamon Raisin,0,Onion,0,Wheat,0,Spinach,0,Pumpernickel,0,Everything,0,Pumpernickel Everything,0
+3,0:3,Cream Cheeses,Regular Cream Cheese,49, Lite Cream Cheese,49, Vegetable Cream Cheese,49
+2,0:2,Other Condiments,Jelly,20,Butter,20
+*/
+
 function numOptionSets($s)
 { /*Takes an encoded item_options and returns how many option sets it has*/
 
-	$array = split(",", $s);
+	$array = explode(',', $s);
 
 	$array_length = count($array);
 
@@ -27,7 +33,7 @@ function numOptionSets($s)
 function getOptionSets($s)
 { /*Separates an encoded item_options into its encoded option sets*/
 
-	$array = split(",", $s);
+	$array = explode(',', $s);
 
 	$array_length = count($array);
 
@@ -42,8 +48,8 @@ function getOptionSets($s)
 	for($i=0; $i<$num_sets; $i++)
 	{
 		$set_val = $array[$current_value];
-		$optionSets[$i] = implode(",", array_slice($array, $current_value, 2*$set_val+3) );
-		$current_value += 3+(2*$set_length);
+		$optionSets[$i] = implode(",", array_slice($array, $current_value, 3+(2*$set_val) ) );
+		$current_value += (3+(2*$set_val));
 	}
 
 	return $optionSets;
@@ -53,7 +59,8 @@ function getOptionSets($s)
 function getOptionName($s)
 { /*Takes an encoded Option Set and returns the name of it*/
 
-	return split(",", $s)[2];
+	$a = explode(',', $s);
+	return $a[2];
 
 }
 
@@ -61,24 +68,32 @@ function getOptionRange($s)
 { /*Takes an encoded Option Set and returns the range of it*/
 
 	//Returns as an array. First element is the lower bound, second element is the upper bound.
-	return split(":", split(",", $s)[1] );
+	$a = explode(',', $s);
+	return preg_split(":", $a[1] );
 	
+}
+
+function getNumOptions($s)
+{ /*Takes an encoded Option Set and returns a 2D array of all the options in it*/
+
+	$array = explode(',', $s);
+	return $array[0];
 }
 
 function getOptions($s)
 { /*Takes an encoded Option Set and returns a 2D array of all the options in it*/
 
-	$array = split(",", $s);
+	$array = explode(',', $s);
 	$num_options = $array[0];
 
-	$ret = array_fill(0,$num_options, array_fill(0,2,0));
+	//$ret = array_fill(0,$num_options, array_fill(0,2,0));
 
 	$counter=0;
 
-	for($i=3; $i<(3+2*num_options); $i+=2)
+	for($i=3; $i< (3+2*$num_options); $i+=2)
 	{
-		$ret[$counter][0]=$array[$i];
-		$ret[$counter][1]=$array[$i+1];
+		$ret[$counter][0] = $array[$i];
+		$ret[$counter][1] = $array[$i+1];
 		$counter++;
 	}
 
