@@ -1,15 +1,15 @@
-<div id="header">
-				<p>Choose your cafe</p>
-</div><!-- end header -->
+<div class="centered" id="cafeChooser">
 
-<div id='left'>
-	<div id='left_inner'>
-		<a href='orderform.php?location=connections'><img src="images/ConnectionsLogo.png" /></a>
-	</div><!--end left_inner -->
-</div><!-- end left -->
-
-<div id='right'>
-	<div id='right_inner'>
-		<a href='orderform.php?location=puravida'><img src="images/PuraVidaLogo.png" /></a>
-	</div><!--end right_inner -->
-</div><!-- end right -->
+	<p>Choose your cafe</p>
+	<table class="centered" table border="0">
+		<tr>
+			<td class="centered" id='left-home'>
+				<a href='orderform.php?location=connections'><img src="images/ConnectionsLogo.png" /></a>
+			</td>
+			<td class="centered" id='right-home'>
+				<a href='orderform.php?location=puravida'><img src="images/PuraVidaLogo.png" /></a>
+			</td>
+		</tr>
+	</table>
+	
+</div><!-- end cafeChooser -->

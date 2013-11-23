@@ -32,7 +32,7 @@
 				</ul>
 				
 				<h2 id="team"> The Team </h2>
-				<table table border="1" bordercolor="#FFFFFF" style="background-color:#FFFFFF" width="100%">
+				<table table border="1" bordercolor="#FFFFFF" width="100%">
 				<tr>
 					<td style="vertical-align:top;">
 						<img style="display: inline-block; vertical-align: middle; margin-right: 10px;" width="120px"; height="160px"; src="images/MattDeMartino.jpg">

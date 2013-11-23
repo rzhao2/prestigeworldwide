@@ -18,12 +18,18 @@ html, body {
 	display: inline-block;
 }
 
+.centered {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 #container {
 	width: 100%;
 	border: 0;
 	height: 100%;
 	display: inline-block;
-	padding-top: 5%;
+	padding-top: 2%;
 	background-image:url(images/stripe-background.png);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
@@ -31,11 +37,11 @@ html, body {
 
 #banner {
 	width: 100%;
-	height: 30%;
+	height: 40%;
 	background-image:url(images/stripe-background.png);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
-	margin-left: 8%;
+	margin-left: 2%;
 	padding-top: 3px;
 	padding-bottom: 20px;
 	overflow: auto;
@@ -67,11 +73,41 @@ html, body {
 	border: 0px;
 }
 
+#cafeChooser {
+	background-color: rgba(200, 0, 0, 0);
+	width: 70%;
+}
+
+#left-home {
+	float: left;
+	width: 35%;
+	height: 100%;
+	padding-top: 1%;
+	padding-left: 15%;
+	padding-right: 10%;
+	border: none;
+	background-color: rgba(200, 0, 0, 0);
+	text-align: center;
+}
+
+#right-home {
+	float: right;
+	width: 35%;
+	height: 100%;
+	padding-top: 1%;
+	padding-left: 15%;
+	padding-right: 15%;
+	border: none;
+	background-color: rgba(200, 0, 0, 0);
+	text-align: center;
+}
+
 #header{
 	text-align: center;
 	font-size: 50px;
+	font-color: #acacac;
 	width: 100%;
-	background-image:url(images/stripe-background.png);
+	background-image:rgba(200, 0, 0, 0);
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
 }
