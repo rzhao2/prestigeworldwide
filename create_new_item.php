@@ -1,27 +1,6 @@
-<?php
 
-include 'db_connect.php';
-if($_SESSION['username'] != "admin")
-{
-	header('Location: index.php');	
-}
-
-?>
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>The Connections Connection</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="script.js"></script>
-	</head>
-	<body>
-		<div id="container">
-			<?php 
-				include 'banner.php';
-			?>
 			<h2>Create new record</h2>
-			<form action="submt_new_item.php" method="POST">
+			<form action="submit_new_item.php" method="POST">
 				<table>
 					<tr>
 						<td class="align_right">ID:</td>
@@ -66,6 +45,3 @@ if($_SESSION['username'] != "admin")
 				</table>
 			</form>
 	
-		</div> <!-- end container -->
-	</body>
-</html>
