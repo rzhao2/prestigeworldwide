@@ -24,7 +24,7 @@ if(!$result)
 	die ("Insert unsuccessful: " . mysql_error());
 	echo '
 	<script type="text/javascript">
-		alert('$alertFailMsg');
+		alert("$alertFailMsg");
 		window.location = "http://www.theconnectionsconnection.us/create_new_item.php";
 	</script>
 	';
@@ -33,7 +33,7 @@ else
 {
 	echo '
 	<script type="text/javascript">
-		alert('$alertSuccessMsg');
+		alert("$alertSuccessMsg");
 		window.location = "http://www.theconnectionsconnection.us/database_admin.php";
 	</script>
 	';
