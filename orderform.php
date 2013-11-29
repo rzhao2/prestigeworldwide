@@ -95,19 +95,45 @@
 				
 		$rows = mysqli_num_rows($result);
 
-		for($j = 0; $j < $rows; $j++)
+		for($i = 0; $i <= rows/2-1; $i++)
 		{
+		?>
+		
+			<div id = "firstcolumn">
+
+		<?php
 			$row = mysqli_fetch_row($result);
+			getItemsByIndividual($row);
+		?>
+			</div>
+		<?php
+		}
+		
+		for($i = $rows/2; $i < $rows; $i++)
+		{
+		?>
+			<div id = "secondcolumn">
+		<?php	
+			$row = mysqli_fetch_row($result);
+			getItemsByIndividual($row);
+		?>
+			</div>
+		<?php
+		}
+	}
+	
+	function getItemsByIndividual($row)
+	{
 			$options = $row[5];
 			$optionSets = getOptionSets($options);
-
 			?>
+			<div class ='itemcontainer'>
 			<div class='simpleCart_shelfItem' title='<?php echo $row[1];?>'>
 				<h2 class='item_name'><?php echo $row[1];?></h2>
 					<p>
 						<input type='text' value='1' class='item_Quantity'>
 						<span class='item_price'><?php echo $row[4]/100; ?></span>
-
+						
 			<?php
 
 				for($i = 0; $i<count($optionSets); $i++)
@@ -138,13 +164,14 @@
 			<?php
 				}
 			?>
-
 						<button onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
 					</p>
 			</div>
+			<div class = 'imagecontainer'>
+			<img src='images/food_images/<?php echo $row[6];?>' alt='images' height='177' width=100%>
+			</div>
+			</div>
 			<?php
-			
-		}
 	}
 ?>
 
@@ -194,7 +221,7 @@
         <script>
 		function showOptions(title)
 		{
-			var element = $("div[title='Pepsi'] > p > span").html();
+			var element = $("div[title='"+title+"'] > p > span").html();
 			//alert(element);
 			simpleCart.add({
 				name: title,

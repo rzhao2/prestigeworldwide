@@ -30,17 +30,11 @@ html, body {
 	height: 100%;
 	display: inline-block;
 	padding-top: 2%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #banner {
 	width: 100%;
 	height: 40%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	margin-left: 2%;
 	padding-top: 3px;
 	padding-bottom: 20px;
@@ -54,9 +48,6 @@ html, body {
 	border: 0px;
 	padding-top: 3px;
 	padding-bottom: 20px;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #banner_right {
@@ -67,9 +58,6 @@ html, body {
 	padding-top: 3px;
 	padding-bottom: 20px;
 	width: 50%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	border: 0px;
 }
 
@@ -149,9 +137,6 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -163,9 +148,6 @@ html, body {
 	padding-left: 10%;
 	padding-right: 10%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -177,9 +159,7 @@ html, body {
 	padding-left: 2%;
 	padding-right: 2%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
+
 }
 
 #left_large {
@@ -187,9 +167,6 @@ html, body {
 	width: 75%;
 	height: 100%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	overflow: auto;
 }
 
@@ -198,9 +175,6 @@ html, body {
 	top: 130px;
 	width: 100%;
 	height: 100%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #right_inner {
@@ -429,4 +403,42 @@ ul{
 .dark {
 	background-color: rgb(14, 32, 59); 
 	background-color: rgba(14, 32, 59, .75);
+}
+
+#firstcolumn{
+	width: 47%;
+	float:left;
+	padding: 1px;
+	padding-left: 2%;
+	padding-right: 1%;
+	clear: left;
+	margin-top:11px;
+}
+
+#secondcolumn{
+	width: 47%;
+	float:right;
+	padding-left: 1%;
+	padding-right: 2%;
+	margin-top:11px;
+
+}
+
+.simpleCart_shelfItem{
+	width: 47%;
+	float:left;
+	padding: 1px;
+	padding-left: 2%;
+	padding-right: 1%;
+	clear: left;
+	margin-top:11px;
+}
+
+.imagecontainer{
+	width: 47%;
+	float:right;
+	padding-left: 1%;
+	padding-right: 2%;
+	margin-top:11px;
+
 }
