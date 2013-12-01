@@ -139,7 +139,9 @@
 				for($i = 0; $i<count($optionSets); $i++)
 				{
 			?>
-						<table hidden name= '<?php echo getOptionName($optionSets[$i]); ?>' value='<?php echo $optionSets[$i]; ?>'>
+					<div id='<?php echo str_replace(' ', '_', $row[1]); ?>' title='<?php echo str_replace(' ', '_', $row[1]); ?>'>
+						<form>
+						<table name= '<?php echo getOptionName($optionSets[$i]); ?>' value='<?php echo $optionSets[$i]; ?>'>
 						<tr>
 							<th><?php echo getOptionName($optionSets[$i]); ?></th>
 						</tr>
@@ -154,17 +156,19 @@
 					{
 				?>
 						<tr>
-							<td><?php echo $o[$k][0];?></td>
-							<td><?php echo $o[$k][1];?></td>
+							 <td> <label> <input type="checkbox" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
+							 <td> <?php echo $o[$k][1];?> </td>
 						</tr>
 				<?php
 					}
 				?>
 						</table>
+						</form>
+					</div>
 			<?php
 				}
 			?>
-						<button onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
+						<button onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
 					</p>
 			</div>
 			<div class = 'imagecontainer'>
@@ -227,8 +231,38 @@
 				name: title,
 				price: element
 			});
-			alert("options called from " + title);
+			
+			//document.write(title);
+
+			var tagt = '#' + title;
+			
+			//document.write(tagt);
+
+			$(tagt).dialog({
+				autoOpen: false,
+				height: 300,
+				width: 350,
+				modal: true,
+				buttons: {
+					"Create an account": function() {
+						$( this ).dialog( "close" );
+					},
+					Cancel: function() {
+						$( this ).dialog( "close" );
+					}
+				},
+				close: function() {
+					allFields.val( "" ).removeClass( "ui-state-error" );
+				}
+			});
+			
+			$(tagt).dialog( "open" );
+			//alert("options called from " + title);
 		}
+		
+		
+ 
+ 
         </script>
         
 
