@@ -129,18 +129,19 @@
 			?>
 			<div class ='itemcontainer'>
 			<div class='simpleCart_shelfItem' title='<?php echo $row[1];?>'>
-				<h2 class='item_name'><?php echo $row[1];?></h2>
+				<h3 class='item_name'><?php echo $row[1];?></h2>
 					<p>
-						<input type='text' value='1' class='item_Quantity'>
-						<span class='item_price'><?php echo $row[4]/100; ?></span>
-						
+						<input size='2' type='text' value='1' class='item_Quantity'>
+						<span class='item_price'><?php echo '$'.$row[4]/100; ?></span>
+			
+			<div hidden id='<?php echo str_replace(' ', '_', $row[1]); ?>' title='<?php echo $row[1].' Options'; ?>'>
+			<form>		
 			<?php
-
+				
 				for($i = 0; $i<count($optionSets); $i++)
 				{
 			?>
-					<div id='<?php echo str_replace(' ', '_', $row[1]); ?>' title='<?php echo str_replace(' ', '_', $row[1]); ?>'>
-						<form>
+					
 						<table name= '<?php echo getOptionName($optionSets[$i]); ?>' value='<?php echo $optionSets[$i]; ?>'>
 						<tr>
 							<th><?php echo getOptionName($optionSets[$i]); ?></th>
@@ -163,16 +164,16 @@
 					}
 				?>
 						</table>
-						</form>
-					</div>
 			<?php
 				}
 			?>
+			</form>
+			</div>
 						<button onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
 					</p>
 			</div>
 			<div class = 'imagecontainer'>
-			<img src='images/food_images/<?php echo $row[6];?>' alt='images' height='177' width=100%>
+			<img src='images/food_images/<?php echo $row[6];?>' alt='images' height='177' width=70%>
 			</div>
 			</div>
 			<?php
@@ -240,11 +241,11 @@
 
 			$(tagt).dialog({
 				autoOpen: false,
-				height: 300,
-				width: 350,
+				height: 600,
+				width: 800,
 				modal: true,
 				buttons: {
-					"Create an account": function() {
+					"Add Item": function() {
 						$( this ).dialog( "close" );
 					},
 					Cancel: function() {
@@ -252,7 +253,7 @@
 					}
 				},
 				close: function() {
-					allFields.val( "" ).removeClass( "ui-state-error" );
+					//allFields.val( "" ).removeClass( "ui-state-error" );
 				}
 			});
 			
