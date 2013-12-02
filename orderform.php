@@ -262,6 +262,14 @@
 				$("#timeFrom").datetimepicker();
             });
 			
+			simpleCart({
+				checkout: {
+					type: "SendForm",
+					url: "checkout.php",
+					method: "POST"
+			}
+			});
+			
         </script>
 
         <script>
@@ -295,6 +303,8 @@
 						});
 						
 						var stringOption = option.join();
+						title = title.replace(/_/g," ");
+						
 						simpleCart.add({
 							name: title,
 							quantity: q,
@@ -326,7 +336,7 @@
 			var option = new Array();
 			var i = 0;
 			
-
+			title = title.replace(/_/g," ");
 			//alert(element);
 			simpleCart.add({
 				name: title,
@@ -514,7 +524,7 @@
                         
 						<br />
 						<br />
-                        <a href='javascript:;' class='simpleCart_checkout'>checkout</a>
+                        <a onclick="simpleCart.checkout()"  class='simpleCart_checkout'>checkout</a>
 						</div><!--end right small-->
 		</div><!-- end container -->
 </html>
