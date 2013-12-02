@@ -95,30 +95,36 @@
 				
 		$rows = mysqli_num_rows($result);
 
-		for($i = 0; $i <= rows/2-1; $i++)
+		/*for($i = 0; $i <= $rows/2-1; $i++)
 		{
-		?>
-		
-			<div id = "firstcolumn">
-
-		<?php
+			echo "<div id = 'firstcolumn'>";
 			$row = mysqli_fetch_row($result);
 			getItemsByIndividual($row);
-		?>
-			</div>
-		<?php
+			echo "</div>";
 		}
 		
 		for($i = $rows/2; $i < $rows; $i++)
 		{
-		?>
-			<div id = "secondcolumn">
-		<?php	
+			echo "<div id = 'secondcolumn'>";
 			$row = mysqli_fetch_row($result);
 			getItemsByIndividual($row);
-		?>
-			</div>
-		<?php
+			echo "</div>";	
+		}*/
+		
+		for($i = 0; $i < $rows; $i++)
+		{
+			if($i % 2 == 0)
+			{
+				echo "<div id = 'firstcolumn'>";
+			}
+			else
+			{
+				echo "<div id = 'secondcolumn'>";
+			}
+				
+			$row = mysqli_fetch_row($result);
+			getItemsByIndividual($row);
+			echo "</div>";	
 		}
 	}
 	
