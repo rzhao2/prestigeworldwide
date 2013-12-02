@@ -159,15 +159,36 @@
 				<?php
 					$numOptions = getNumOptions($optionSets[$i]);
 					$o = getOptions($optionSets[$i]);
-					for($k=0; $k<$numOptions; $k++)
-					{
-				?>
-						<tr>
-							 <td> <label> <input type="checkbox" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
-							 <td> <?php echo $o[$k][1];?> </td>
-						</tr>
-				<?php
-					}
+					$range = getOptionRange($optionSets[$i]);
+
+						if($range[0] == 1 && $range[1] == 1)
+						{
+							for($k=0; $k<$numOptions; $k++)
+							{
+							?>
+								<tr>
+									<td> <label> <input type="radio" name="<?php echo getOptionName($optionSets[$i]); ?>" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
+									<td> <?php echo $o[$k][1];?> </td>
+								</tr>
+							<?php
+							}
+						}
+						else
+						{
+							for($k=0; $k<$numOptions; $k++)
+							{
+								//echo "<p>".getOptionRange($optionSets[$i])."</p>";
+								//echo "<p>".$optionSets[$i]."</p>"; 
+
+							?>
+								<tr>
+									<td> <label> <input type="checkbox" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
+									<td> <?php echo $o[$k][1];?> </td>
+								</tr>
+							<?php
+							}
+						}
+					
 				?>
 						</table>
 			<?php

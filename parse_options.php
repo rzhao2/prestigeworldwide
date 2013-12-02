@@ -69,7 +69,8 @@ function getOptionRange($s)
 
 	//Returns as an array. First element is the lower bound, second element is the upper bound.
 	$a = explode(',', $s);
-	return preg_split(":", $a[1] );
+	//echo "<span>".$a[1]."</span>";
+	return explode(":", $a[1] );
 	
 }
 
