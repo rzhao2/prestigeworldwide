@@ -134,14 +134,14 @@
 			$optionSets = getOptionSets($options);
 			?>
 			<div class ='itemcontainer'>
-			<div class='simpleCart_shelfItem' title='<?php echo $row[1];?>'>
+			<div class='simpleCart_shelfItem' title='<?php echo str_replace(' ', '_', $row[1]); ?>'>
 				<h3 class='item_name'><?php echo $row[1];?></h2>
 					<p>
 						<input size='2' type='text' value='1' class='item_Quantity'>
 						<span class='item_price'><?php echo '$'.$row[4]/100; ?></span>
 			
 			<div hidden id='<?php echo str_replace(' ', '_', $row[1]); ?>' title='<?php echo $row[1].' Options'; ?>'>
-			<form>		
+			<form id = '<?php echo str_replace(' ', '_', $row[1]); ?>' >		
 			<?php
 				
 				for($i = 0; $i<count($optionSets); $i++)
@@ -167,7 +167,7 @@
 							{
 							?>
 								<tr>
-									<td> <label> <input type="radio" name="<?php echo getOptionName($optionSets[$i]); ?>" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
+									<td> <label> <input type="radio" name="<?php echo getOptionName($optionSets[$i]); ?>" class="item_options" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
 									<td> <?php echo $o[$k][1];?> </td>
 								</tr>
 							<?php
@@ -182,7 +182,7 @@
 
 							?>
 								<tr>
-									<td> <label> <input type="checkbox" class="item_option" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
+									<td> <label> <input type="checkbox" class="item_options" value=<?php echo $o[$k][0];?> /> <?php echo $o[$k][0];?> </label> </td>
 									<td> <?php echo $o[$k][1];?> </td>
 								</tr>
 							<?php
@@ -196,7 +196,21 @@
 			?>
 			</form>
 			</div>
-						<button onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
+					<?php
+						if($row[5] == null)
+						{
+					?>
+							<button onclick="showNoOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
+					<?php
+						}
+						else
+						{
+					?>
+							<button onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Options</button>
+					<?php
+						}
+					?>
+				
 					</p>
 			</div>
 			<div class = 'imagecontainer'>
@@ -254,15 +268,13 @@
 		function showOptions(title)
 		{
 			var element = $("div[title='"+title+"'] > p > span").html();
-			//alert(element);
-			simpleCart.add({
-				name: title,
-				price: element
-			});
+			var q = $("div[title='"+title+"'] > p > input").val();
+			var tagt = '#' + title;
+			
+			var option = new Array();
+			var i = 0;
 			
 			//document.write(title);
-
-			var tagt = '#' + title;
 			
 			//document.write(tagt);
 
@@ -273,7 +285,24 @@
 				modal: true,
 				buttons: {
 					"Add Item": function() {
+						$(tagt + " :input").each(function(){
+							var input = $(this);
+							if(input.is(':checked'))	
+							{
+								option[i] = input.val();
+								i++;
+							}
+						});
+						
+						var stringOption = option.join();
+						simpleCart.add({
+							name: title,
+							quantity: q,
+							options: stringOption,
+							price: element
+						});
 						$( this ).dialog( "close" );
+						//document.write(option);
 					},
 					Cancel: function() {
 						$( this ).dialog( "close" );
@@ -288,7 +317,24 @@
 			//alert("options called from " + title);
 		}
 		
-		
+		function showNoOptions(title)
+		{
+			var element = $("div[title='"+title+"'] > p > span").html();
+			var q = $("div[title='"+title+"'] > p > input").val();
+			var tagt = '#' + title;
+			
+			var option = new Array();
+			var i = 0;
+			
+
+			//alert(element);
+			simpleCart.add({
+				name: title,
+				quantity: q,
+				options: "none",
+				price: element
+			});
+		}
  
  
         </script>
