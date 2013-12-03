@@ -30,6 +30,7 @@ html, body {
 	height: 100%;
 	display: inline-block;
 	padding-top: 2%;
+	background-color: transparent;
 }
 
 #banner {
@@ -39,15 +40,16 @@ html, body {
 	padding-top: 3px;
 	padding-bottom: 20px;
 	overflow: auto;
+	background-color: transparent;
 }
 
 #banner_left {
 	float: left;
-	background-color: white;
 	width: 40%;
 	border: 0px;
 	padding-top: 3px;
 	padding-bottom: 20px;
+	background-color: transparent;
 }
 
 #banner_right {
@@ -62,7 +64,7 @@ html, body {
 }
 
 #cafeChooser {
-	background-color: rgba(200, 0, 0, 0);
+	background-color: transparent;
 	width: 70%;
 }
 
