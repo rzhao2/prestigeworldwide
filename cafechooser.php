@@ -1,5 +1,5 @@
-<html>
-	<img class="centered" src="images/ChooseText.png"/>
+
+<img class="centered" src="images/ChooseText.png"/>
 <div id="cafeChooser">
 
 	<table table border="0">
@@ -19,7 +19,7 @@
 		</tr>
 		<tr>
 			<td>
-				<!--coming soon  <a href='orderform.php?location=puravida'>--><img src="images/PuraVidaLogo.png" /></a>
+				<a href='orderform.php?location=puravida'><img src="images/PuraVidaLogo.png" /></a>
 			</td>
 			<td>
 				<img src="images/puravida1.png"/>
@@ -32,6 +32,4 @@
 			</td>
 		</tr>
 	</table>
-	
 </div><!-- end cafeChooser -->
-</html>
