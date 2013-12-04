@@ -51,12 +51,14 @@ html, body {
 	border: 0px;
 	padding-top: 3px;
 	padding-bottom: 20px;
+	padding-right: 10%;
 	background-color: transparent;
 }
 
 #banner_right {
 	float: right;
 	text-align: left;
+	margin-right: 0%;
 	padding-top: 3px;
 	padding-bottom: 2px;
 	width: 60%;
@@ -247,7 +249,7 @@ div.item {
 
 /* navbar */
 .navbar-inner_ {
-  padding: 0;
+  padding: 10;
   margin: 0;
   border: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
