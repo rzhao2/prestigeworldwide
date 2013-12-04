@@ -200,13 +200,13 @@
 						if($row[5] == null)
 						{
 					?>
-							<button onclick="showNoOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
+							<button class="myButton" onclick="showNoOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
 					<?php
 						}
 						else
 						{
 					?>
-							<button onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Options</button>
+							<button class="myOption" onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">View Option</button>
 					<?php
 						}
 					?>
