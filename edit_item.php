@@ -72,27 +72,25 @@ include 'parse_options.php';
 				</table>
 			</form>
 
-
-
-
-
-
 			<div id="options">
 				<!--Fill this with all the options -->
 					<?php
 						$options = $row[5];
-						$optionSets = getOptionSets($options);
+
+						if($options != "")
+						{
+							$optionSets = getOptionSets($options);
 							for($i = 0; $i<count($optionSets); $i++)
 							{
 						?>
-									<br />
-									<table id="Table<?php echo $i;?>">
+									<table>
 									<tr>
 										<th class="align_right">Item Set Name:</th>
-										<th><input type="text" name="optionSetName" value="<?php echo getOptionName($optionSets[$i]); ?>"/></th>
+										<th><input type="text" placeholder="Item Set Name" name="optionSetName" value="<?php echo getOptionName($optionSets[$i]); ?>"/></th>
+										<td><button onclick = "removeOptionSet(this)">Remove This Option Set</button></td>
 									</tr>
 									<tr>
-										<td colspan="2">Pick between <input type="text" name="min" size = "2" value="<?php $min = getOptionRange($optionSets[$i]); echo $min[0];?>"/> and <input type="text" name="min" size = "2" value="<?php $min = getOptionRange($optionSets[$i]); echo $min[1];?>"/> options. </td>
+										<td colspan="2">Pick between <input type="text" placeholder="min" name="min" size = "2" value="<?php $min = getOptionRange($optionSets[$i]); echo $min[0];?>"/> and <input type="text" name="min" placeholder="max" size = "2" value="<?php $min = getOptionRange($optionSets[$i]); echo $min[1];?>"/> options. </td>
 									</tr>
 									<tr>
 										<th>Name</th>
@@ -105,17 +103,20 @@ include 'parse_options.php';
 								{
 							?>
 									<tr>
-										<td><input type="text" name="" value="<?php echo $o[$k][0];?>" /></td>
-										<td><input type="text" name="" value="<?php echo $o[$k][1];?>" /></td>
+										<td><input placeholder="Option Name" type="text" name="" value="<?php echo $o[$k][0];?>" /></td>
+										<td><input placeholder="Option Additional Price" type="text" name="" value="<?php echo $o[$k][1];?>" /></td>
 										<td><button onclick= "removeOption(this)">Remove Option </button </td>
 									</tr>
 							<?php
 								}
 							?>
-								<tr><td><button onclick = "addOption(this)">Add an Option</button></td></tr>
+								<tr>
+									<td><button onclick = "addOption(this)">Add an Option</button></td>
+								</tr>
 									</table>
 							<?php
 							}
+						}
 					?>
 					<button onclick = "addOptionSet(this)"> Add an Option Set </button>
 			</div>
