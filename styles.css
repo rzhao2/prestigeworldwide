@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 	height: 100%;
-	background-image:url(images/stripe-background.png);
+	background-image:url('images/stripe-background.png');
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
 }
@@ -31,20 +31,18 @@ html, body {
 	border: 0;
 	height: 100%;
 	display: inline-block;
-	padding-top: 2%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
+	padding-top: 2px;
 }
 
 #banner {
 	width: 100%;
 	height: 30%;
-	margin-left: 2%;
-	padding-top: 3px;
-	padding-bottom: 10px;
-	overflow: auto;
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	overflow: visible;
 	background-color: transparent;
+	display: table;
 }
 
 #banner_left {
@@ -59,11 +57,9 @@ html, body {
 #banner_right {
 	float: right;
 	text-align: left;
-	margin-left: 3%;
-	margin-top: 10%;
 	padding-top: 3px;
-	padding-bottom: 20px;
-	width: 50%;
+	padding-bottom: 2px;
+	width: 60%;
 	border: 0px;
 	background-color: transparent;
 }
@@ -87,9 +83,6 @@ html, body {
 	padding-left: 15%;
 	padding-right: 10%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -101,9 +94,6 @@ html, body {
 	padding-left: 15%;
 	padding-right: 15%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 	text-align: center;
 }
 
@@ -112,9 +102,6 @@ html, body {
 	font-size: 50px;
 	font-color: #acacac;
 	width: 100%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #header p{
@@ -125,9 +112,6 @@ html, body {
 #table {
 	padding-left: 2px;
 	padding-right: 2px;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 .login_input {
@@ -158,9 +142,6 @@ html, body {
 	padding-right: 10%;
 	border: none;
 	text-align: center;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #left {
@@ -172,9 +153,6 @@ html, body {
 	padding-right: 10%;
 	border: none;
 	text-align: center;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #right_small {
@@ -185,10 +163,6 @@ html, body {
 	padding-left: 2%;
 	padding-right: 2%;
 	border: none;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
-
 }
 
 #left_large {
@@ -197,9 +171,6 @@ html, body {
 	height: 100%;
 	border: none;
 	overflow: auto;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #content {
@@ -207,23 +178,14 @@ html, body {
 	top: 130px;
 	width: 100%;
 	height: 100%;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #right_inner {
 	margin-top: 50px;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 #left_inner {
 	margin-top:50px;
-	background-image:url(images/stripe-background.png);
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
 }
 
 td img {
@@ -284,25 +246,13 @@ div.item {
 }
 
 /* navbar */
-.navbar_ {
-  margin: 0;
-  position: relative;
-}
-.navbar_ .navbar-inner_ {
+.navbar-inner_ {
   padding: 0;
   margin: 0;
   border: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /*nav*/
-.navbar_ .container {
-  /*position: relative;*/
-}
-.nav-collapse_ {
-  padding: 0;
-  z-index: 10;
-  float: right;
-}
 .nav-collapse_ .nav li {
   margin: 0;
   padding: 0;
@@ -315,6 +265,7 @@ div.item {
   box-shadow: none;
   background: none;
   margin-left: 22px;
+  display: inline;
 }
 .nav-collapse_ .nav li a {
   text-shadow: none;
@@ -337,7 +288,7 @@ div.item {
 .nav-collapse_ .nav > li > a {
   margin: 0;
   padding: 30px 0 32px;
-  display: block;
+  display: inline-block;
   background: none;
   position: relative;
   z-index: 20;
@@ -345,20 +296,6 @@ div.item {
   -webkit-border-radius: 44px;
   -moz-border-radius: 44px;
   border-radius: 44px;
-}
-.nav-collapse_ .nav > li > a .sf-sub-indicator {
-  /*position: absolute;
-  width: 9px;
-  height: 6px;
-  left: 50%;*/
-  bottom: 21px;
-  margin-left: -5px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
-  border-radius: none;
 }
 .nav-collapse_ .nav > li.sfHover > a,
 .nav-collapse_ .nav > li.sfHover > a:hover,
@@ -370,13 +307,6 @@ div.item {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-}
-.nav-collapse_ .nav > li.sfHover > a .sf-sub-indicator,
-.nav-collapse_ .nav > li.active > a .sf-sub-indicator {
-  background-position: 0 bottom;
-}
-.sub-menu > a {
-  position: relative;
 }
 .nav-collapse_ .nav ul {
   position: absolute;
@@ -393,58 +323,18 @@ div.item {
 }
 .nav-collapse_ .nav ul li {
   text-align: center;
+  display: inline-block;
 }
 .nav-collapse_ .nav ul li a {
   padding: 4px 0;
-  display: block;
+  display: inline-block;
   background: none;
 }
-.nav-collapse_ .nav > li > ul li > a:hover,
-.nav-collapse_ .nav > li > ul li.sfHover > a {
-  text-decoration: none;
-  color: #ffffff;
-  background: #e85356;
-}
-.nav-collapse_ .nav ul .sf-sub-indicator {
-  display: none;
-}
-.nav-collapse_ .nav ul ul li a {
-  color: #ffffff;
-}
-.nav-collapse_ .nav li ul ul li a:hover {
-  text-decoration: none;
-  color: #000000;
-}
-#nav-items {
-	margin-right: 3%;
-}
+/*end nav*/
+
 ul{
     list-style-type: none;
 }
-/*.white {
-	background-color: rgb(255, 255, 255); 
-	background-color: rgba(255, 255, 255, .75);
-}
-
-.light {
-	background-color: rgb(228, 229, 235); 
-	background-color: rgba(228, 229, 235, .75);
-}
-
-.grey {
-	background-color: rgb(170, 178, 192); 
-	background-color: rgba(170, 178, 192, .75);
-}
-
-.red {
-	background-color: rgb(179, 45, 71); 
-	background-color: rgba(179, 45, 71, .75);
-}
-
-.dark {
-	background-color: rgb(14, 32, 59); 
-	background-color: rgba(14, 32, 59, .75);
-}*/
 
 #firstcolumn{
 	width: 47%;
@@ -482,4 +372,8 @@ ul{
 	padding-right: 2%;
 	margin-top:11px;
 
+}
+
+.clear {
+    clear:both;
 }
