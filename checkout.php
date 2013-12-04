@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-
 <?php
+	session_start();
 	$content = $_POST;
 ?>
 <html>
 
 <head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 
+
 <body>
+
+<?php
+	include 'banner.php';
+	include 'navbar.php';
+?>
+			
 <p>
 Checkout stuff goes here!
 <a href="orderform.php?location=connections">Go back</a>
@@ -58,6 +66,9 @@ Checkout stuff goes here!
 		$price = $content[$price];
 		$quantity = $content[$quantity];
 		$options = $content[$options];
+		
+		$options = explode(':', $options);
+		$options = $options[1];
 		
 		$query = "SELECT * FROM ConnectionsMenu WHERE item_name = '$name'";
 		$result = mysqli_query($db, $query);

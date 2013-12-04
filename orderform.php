@@ -214,7 +214,7 @@
 					</p>
 			</div>
 			<div class = 'imagecontainer'>
-			<img src='images/food_images/<?php echo $row[6];?>' alt='images' height='177' width=70%>
+			<img src="images/food_images/<?php echo $row[6];?>" alt='images' height='177' width=70%>
 			</div>
 			</div>
 			<?php
