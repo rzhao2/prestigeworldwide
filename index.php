@@ -25,7 +25,6 @@
 			
 			<?php
 				include 'banner.php';
-				/*include 'navbar.php';*/
 			?>
             
 			
@@ -37,7 +36,8 @@
 			}
 			?>  
 
+			<div class="clear"></div><!-- makes it so container contains floated child elements -->
 		</div><!-- end container -->
-</body>
+	</body>
 </html>
 
