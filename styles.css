@@ -44,7 +44,7 @@ html, body {
 
 #banner_left {
 	float: left;
-	width: 40%;
+	/*width: 40%;*/
 	border: 0px;
 	padding-top: 3px;
 	padding-bottom: 20px;
@@ -58,7 +58,8 @@ html, body {
 	margin-right: 0%;
 	padding-top: 3px;
 	padding-bottom: 2px;
-	width: 60%;
+	padding-right:2em;
+	/*width: 60%;*/
 	border: 0px;
 	background-color: transparent;
 }
@@ -116,7 +117,7 @@ html, body {
 }
 
 #login {
-	padding-left: 40%;
+	/*padding-left: 40%;*/
 }
 
 #nav_bar {
