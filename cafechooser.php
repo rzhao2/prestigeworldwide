@@ -1,6 +1,7 @@
-<div class="centered" id="cafeChooser">
+<html>
+	<img class="centered" src="images/ChooseText.png"/>
+<div id="cafeChooser">
 
-	<p>Choose your cafe</p>
 	<table table border="0">
 		<tr>
 			<td>
@@ -33,3 +34,4 @@
 	</table>
 	
 </div><!-- end cafeChooser -->
+</html>
