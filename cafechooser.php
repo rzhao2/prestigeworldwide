@@ -2,7 +2,7 @@
 <img class="centered" src="images/ChooseText.png"/>
 <div id="cafeChooser">
 
-	<table table border="0">
+	<table class="centered" border="0" width="904px">
 		<tr>
 			<td>
 				<a href='orderform.php?location=connections'><img src="images/ConnectionsLogo.png" /></a>
