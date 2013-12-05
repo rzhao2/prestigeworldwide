@@ -26,7 +26,7 @@ html, body {
 	height: 100%;
 	border: 0;
 	display: inline-block;
-	padding-top: 2px;
+	/*padding-top: 2px;*/
 	background-image:url('images/stripe-background.png');
 	background-repeat:repeat;
 }
@@ -34,9 +34,9 @@ html, body {
 #banner {
 	width: 100%;
 	height: 30%;
-	padding-left: 2px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	/*padding-left: 2px;*/
+	/*padding-top: 2px;*/
+	/*padding-bottom: 2px;*/
 	overflow: visible;
 	background-color: transparent;
 	display: table;
@@ -161,17 +161,17 @@ html, body {
 #right_small {
 	float: left;
 	width: 21%;
-	height: 100%;
-	padding-top: 2%;
+	height: 70%;
+	/*padding-top: 2%;
 	padding-left: 2%;
-	padding-right: 2%;
+	padding-right: 2%;*/
 	border: none;
 }
 
 #left_large {
 	float: left;
 	width: 75%;
-	height: 100%;
+	height: 70%;
 	border: none;
 	overflow: auto;
 }
@@ -408,6 +408,11 @@ ul{
     color: #459e00; 
 }
 
+#tabs .ui-tabs-panel {
+    height: 100%;
+    overflow: auto;
+}
+
 .myButton {
 	-moz-box-shadow: 3px 4px 0px 0px #1564ad;
 	-webkit-box-shadow: 3px 4px 0px 0px #1564ad;
@@ -490,3 +495,4 @@ ul{
 	position:relative;
 	top:1px;
 }
+
