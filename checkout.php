@@ -69,7 +69,7 @@ Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rou
 <th>Price</th>
 <th>Quantity</th>
 <th>SubTotal</th>
-
+</tr>
 <?php 
 	//print_r($content); 
 
