@@ -508,3 +508,6 @@ ul{
 	top:1px;
 }
 
+@media only screen and (max-device-width: 480px) {
+	/*Mobile device css properties*/
+}
