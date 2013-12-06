@@ -1,12 +1,46 @@
 <?php
 	session_start();
 	$content = $_POST;
+	$_SESSION['content'] = $content;
+	//$id =  $_SESSION['username'];
+	
+	/*$db_hostname = "theccdb.db.12066565.hostedresource.com";
+	$db_username = "theccdb";
+	$db_password = "Q!@Wq12w";
+	$db_name = "theccdb";
+				
+	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
+	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
+				
+	$sql="SELECT * FROM Student_Info Where $student_id = '$id'";
+	$result = mysqli_query($db, $sql);
+	if(!$result) { die("Database access failed: " . mysql_error()); }
+	
+	$rows = mysqli_num_rows($result);* may or may not need this*/ 
+	
+
+
+	
 ?>
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="styles.css">
-
+		<title>The Connections Connection</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+		
+		<script src= "jquery-ui-timepicker-addon.js"></script>
+		<link rel="stylesheet" href="jquery-ui-timepicker-addon.css" />	
+		
+		<script>
+			 $(function() {
+				$("#timeFrom").datetimepicker();
+            });			
+        </script>
 </head>
 
 
@@ -14,12 +48,18 @@
 
 <?php
 	include 'banner.php';
-	include 'navbar.php';
 ?>
 			
 <p>
-Checkout stuff goes here!
-<a href="orderform.php?location=connections">Go back</a>
+<!--<a href="orderform.php?location=connections">Go back</a> -->
+
+<form action="checkoutDB.php" method="post">
+
+<br /><br /> 
+Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />                        
+<br /><br />
+<!-- <input type="submit"> -->
+	
 
 <table border="1" style="margin: auto;">
 <tr>
@@ -31,7 +71,7 @@ Checkout stuff goes here!
 <th>SubTotal</th>
 
 <?php 
-	print_r($content); 
+	//print_r($content); 
 
 	$db_hostname = "theccdb.db.12066565.hostedresource.com";
 	$db_username = "theccdb";
@@ -49,6 +89,7 @@ Checkout stuff goes here!
 		
 	$item_number = array();
 	$item = array(); 
+	$total = 0;
 
 	for($i=1; $i < $content['itemCount'] + 1; $i++) 
 	{
@@ -85,16 +126,21 @@ Checkout stuff goes here!
 	<td  align="center"><?php echo "$".$price*$quantity; ?></td>
 	</tr>
 <?php
-
+	$total = $total+$price*$quantity;
 	}
 
 ?>
+	<input type="hidden" name="total" value="<?php echo $total; ?>">
 	<tr>
 	<td align="center">Total: </td>
-	<td align="center" colspan="5"> </td>
+	<td align="center" colspan="5"><?php echo "$".$total; ?></td>
 
 	</tr>
 </table>
+<button class="myButton" type="submit">Confirm</button>
+
+</form>
+
 </p>
 </body>
 

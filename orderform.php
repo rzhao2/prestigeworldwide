@@ -519,11 +519,11 @@
                         <br />
                         Final Total: <span id='simpleCart_grandTotal' class='simpleCart_grandTotal'></span>
 						
-						<br /><br /><br /> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />
+						<!-- <br /><br /><br /> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" /> -->
                         
 						<br />
 						<br />
-                        <a onclick="simpleCart.checkout()"  class='simpleCart_checkout'>checkout</a>
+                        <button class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
 						</div><!--end right small-->
 		</div><!-- end container -->
 </html>
