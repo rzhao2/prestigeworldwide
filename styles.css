@@ -25,15 +25,26 @@ html, body {
 	width: 100%;
 	height: 100%;
 	border: 0;
-	display: inline-block;
+	display: table;
 	/*padding-top: 2px;*/
 	background-image:url('images/stripe-background.png');
 	background-repeat:repeat;
 }
 
+.scrollable {
+	display: table-row;
+	height:100%;
+	/*height:69%;*/
+}
+
+.scrollable-wrapper {
+	height:100%;
+	overflow: auto;
+}
+
 #banner {
 	width: 100%;
-	height: 30%;
+	/*height: 30%;*/
 	/*padding-left: 2px;*/
 	/*padding-top: 2px;*/
 	/*padding-bottom: 2px;*/
@@ -46,7 +57,7 @@ html, body {
 	float: left;
 	/*width: 40%;*/
 	border: 0px;
-	padding-top: 3px;
+	/*padding-top: 3px;*/
 	padding-bottom: 20px;
 	/*padding-right: 10%;*/
 	background-color: transparent;

@@ -38,7 +38,6 @@ $img_dir = 'images/food_images/';
 				if(!$result) { die("Database access failed: " . mysql_error()); }
 				
 			?>
-				
 			<form id="searchForm" onsubmit="return checkForm()" action="database_admin.php" method="get">
 				<input type="search" name="q" />
 				<button type="submit">Submit</button>
@@ -47,6 +46,8 @@ $img_dir = 'images/food_images/';
 				<button type="submit" name="create_new_item">Create new item</button>
 			</form>
 			<br />
+			<div class="scrollable">
+					<div class= "scrollable-wrapper">
 				
 			<?php
 				
@@ -142,6 +143,8 @@ $img_dir = 'images/food_images/';
 				} // end outer else
 			?>
 
+		</div><!--end scrollable-wrapper -->
+		</div><!-- end scrollable-->
 		</div><!-- end container -->
 	</body>
 </html>
