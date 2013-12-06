@@ -30,11 +30,35 @@
 		
 		<script>
 			(function poll(){
+				setTimeout(function(){
 				$.ajax({ url: "datamonitor.php", success: function(data){
 				//Update your dashboard gauge
-					$(".order").html(data);
+					$("#left_large").html(data);
 				}, dataType: "html", complete: poll, timeout: 30000 });
+				}, 1000);
 			})();
+			
+			function viewDetails(orderid)
+			{
+				var dataString = 'orderid='+ orderid;
+				//document.write(dataString);
+
+				$.ajax({
+					type: "POST",
+					url: "datamonitor2.php",
+					data: { orderid: orderid },
+					cache: false,
+					success: function(result){
+						//document.write(result);
+						$("#right_small").html(result);
+					}
+				});
+			}
+			
+			function completeOrder(orderid)
+			{
+			
+			}			
 		</script>
 	</head>
 	<body>
@@ -42,12 +66,11 @@
 			
 			<?php
 				include 'banner.php';
-                include 'navbar.php';
 			?>
-
-            <h2><a href="completedorders.php">All Completed Orders:</a></h2>
-            
-            <!-- For each order in the order queue: -->
+			<div id='left_large' class="scrollable">
+            <!-- <h2><a href="completedorders.php">All Completed Orders:</a></h2> -->
+				
+            <!-- For each order in the order queue: 
             <div class="order">
             <form action ="completeorder.php" method="POST">
                 <input type="hidden" name="order_id" value="5" />
@@ -55,7 +78,6 @@
 
                 <h3> User: Matt </h3>
                 <h3> Finish by: 3:00pm November 18, 2013 </h3>
-                <!-- For Each item in the order: -->
                 <br />
                 <ul>
                     <li>Item:</li>
@@ -71,8 +93,13 @@
 
                 <br />
                 <input type="submit" name="COMPLETE ORDER" value = "COMPLETE ORDER"/>
-            </form>
-            <div>
+			</div>
+            </form> -->
+			</div>
+			<div id='right_small'>
+			
+			
+			</div>
 
 		</div><!-- end container -->
 </body>
