@@ -23,6 +23,19 @@
 		<title>The Connections Connection</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
         <script src="script.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+		
+		<script>
+			(function poll(){
+				$.ajax({ url: "datamonitor.php", success: function(data){
+				//Update your dashboard gauge
+					$(".order").html(data);
+				}, dataType: "html", complete: poll, timeout: 30000 });
+			})();
+		</script>
 	</head>
 	<body>
 		<div id="container">

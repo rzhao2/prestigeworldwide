@@ -3,6 +3,7 @@
 <th>Order ID</th>
 <th>Student ID</th>
 <th>Complete Time</th>
+<th></th>
 </tr>
 <?php
 	$db_hostname = "theccdb.db.12066565.hostedresource.com";
@@ -28,6 +29,7 @@
 		echo "<td>".$row[0]."</td>";
 		echo "<td>".$row[1]."</td>";
 		echo "<td>".$row[3]."</td>";
+		//echo "<button class='myButton' onclick='getDetails();'>View Order Details</button>";
 		echo "</tr>";
 	}
 	
