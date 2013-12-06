@@ -56,7 +56,7 @@
 <form action="checkoutDB.php" method="post">
 
 <br /><br /> 
-Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />                        
+<center> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />  </center>                      
 <br /><br />
 <!-- <input type="submit"> -->
 	
@@ -137,7 +137,8 @@ Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rou
 
 	</tr>
 </table>
-<button class="myButton" type="submit">Confirm</button>
+<br/><br/>
+<center> <button class="myButton" type="submit">Confirm</button> </center>
 
 </form>
 
