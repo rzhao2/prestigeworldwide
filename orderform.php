@@ -371,7 +371,7 @@
                                         <li><a href="#tabs-7">Bagel Add-on</a></li>        
                                 </ul>
                         </div>
-                        
+                    <div class = "data-row">
                         <div id='left_large' class="scrollable">
                                 <div class= "scrollable-wrapper">
                         
@@ -527,7 +527,8 @@
                                                 <br />
                                                 <br />
                         <button class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
-                                                </div><!--end right small-->
+                        </div><!--end right small-->
+                    </div><!--end Data row-->
                 </div><!-- end container -->
 </html>
 </body>
