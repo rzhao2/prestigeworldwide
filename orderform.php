@@ -370,8 +370,7 @@
 					<li><a href="#tabs-4">Frozen Food</a></li>
 					<li><a href="#tabs-5">Hot Drinks</a></li>
 					<li><a href="#tabs-6">Counter</a></li>
-					<li><a href="#tabs-7">Bagel Addon</a></li>
-					
+					<li><a href="#tabs-7">Bagel Add-on</a></li>	
 				</ul>
 			<div id="tabs-1">
 				<p><?php getItemsByCategory('Cold Drinks'); ?></p>
