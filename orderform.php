@@ -360,7 +360,7 @@
                                 //include 'navbar.php';
                         ?>
 
-                        <div id="tabs">
+                    <div id="tabs">
                                 <ul>
                                         <li><a href="#tabs-1">Cold Drinks</a></li>
                                         <li><a href="#tabs-2">Refrigerated Food</a></li>
@@ -370,7 +370,6 @@
                                         <li><a href="#tabs-6">Counter</a></li>
                                         <li><a href="#tabs-7">Bagel Add-on</a></li>        
                                 </ul>
-                        </div>
                     <div class = "data-row">
                         <div id='left_large' class="scrollable">
                                 <div class= "scrollable-wrapper">
@@ -529,6 +528,7 @@
                         <button class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
                         </div><!--end right small-->
                     </div><!--end Data row-->
+                    </div>
                 </div><!-- end container -->
 </html>
 </body>
