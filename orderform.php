@@ -360,8 +360,8 @@
 				//include 'navbar.php';
 			?>
 			
-			<div id='left_large'>
-			
+			<div id='left_large' class="scrollable">
+				<div class= "scrollable-wrapper">
 			<div id="tabs">
 				<ul>
 					<li><a href="#tabs-1">Cold Drinks</a></li>
@@ -506,7 +506,7 @@
                 //<!--------------------------------------------------------------------------------------------------------------------->
 			*/
 			?>
-			
+			</div> <!--end scrollable content and wrapper -->
 			</div><!-- end left_large -->
                         
                        <div id='right_small'><!-- SHOPPING CART -->
