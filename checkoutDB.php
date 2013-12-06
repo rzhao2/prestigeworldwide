@@ -19,6 +19,7 @@ session_start();
 	$time = $_POST['timeFrom'];
 	$time = date("H:i:s", strtotime($time));
 	$total = $_POST['total'];
+	$content = $_SESSION['content'];
 	
 	$db_hostname = "theccdb.db.12066565.hostedresource.com";
 	$db_username = "theccdb";
@@ -36,7 +37,7 @@ session_start();
 	mysqli_query($db, $queryCreate);
 	
 	$order_id = mysqli_insert_id($db);
-	 
+	
 	$item_number = array();
 	$item = array(); 
 	//$total = 0;
@@ -60,7 +61,7 @@ session_start();
 		
 		$options = explode(':', $options);
 		$options = $options[1];
-		
+				
 		$query = "SELECT * FROM ConnectionsMenu WHERE item_name = '$name'";
 		$result = mysqli_query($db, $query);
 		if(!$result) { die("Database access failed: " . mysql_error()); }
@@ -68,9 +69,11 @@ session_start();
 		$row = mysqli_fetch_row($result);
 		
 		$item_id = $row[0];
-			
+		
+		//echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
+		
 		$queryCreate2 = "INSERT INTO 
-	 	 Order_info (order_id, item_id, quantity, options)
+	 	 Order (order_id, item_id, quantity, options)
 	 	 VALUES('$order_id', '$item_id', '$quantity', '$options');";
 		mysqli_query($db, $queryCreate2);
 	}

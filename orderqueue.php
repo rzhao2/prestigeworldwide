@@ -46,7 +46,7 @@
 				$.ajax({
 					type: "POST",
 					url: "datamonitor2.php",
-					data: { orderid: orderid },
+					data: { orderid: orderid, },
 					cache: false,
 					success: function(result){
 						//document.write(result);

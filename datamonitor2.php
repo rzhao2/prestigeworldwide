@@ -19,7 +19,7 @@
 	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
 				
-	$query = "SELECT * FROM Order where order_id = 10";
+	$query = "SELECT * FROM Order where order_id = '$orderid'";
 	$result = mysqli_query($db, $query);
 	if(!$result) { die("Database access failed: " . mysql_error()); }
 				
