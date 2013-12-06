@@ -405,6 +405,7 @@ ul{
     border: none;
     display:table;
     height:100%;
+    width:99%;
 } 
 #tabs .ui-widget-header { 
     background: transparent; 
@@ -431,7 +432,7 @@ ul{
 
 #tabs .ui-tabs-panel {
     height: 100%;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 
 .myButton {
