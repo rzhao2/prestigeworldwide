@@ -1,8 +1,26 @@
 <?php
-	include 'db_connect.php';
+	session_start();
 	$content = $_POST;
 	$_SESSION['content'] = $content;
+	//$id =  $_SESSION['username'];
+	
+	/*$db_hostname = "theccdb.db.12066565.hostedresource.com";
+	$db_username = "theccdb";
+	$db_password = "Q!@Wq12w";
+	$db_name = "theccdb";
+				
+	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
+	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
+				
+	$sql="SELECT * FROM Student_Info Where $student_id = '$id'";
+	$result = mysqli_query($db, $sql);
+	if(!$result) { die("Database access failed: " . mysql_error()); }
+	
+	$rows = mysqli_num_rows($result);* may or may not need this*/ 
+	
 
+
+	
 ?>
 <html>
 
@@ -27,12 +45,13 @@
 
 
 <body>
+
 <div id="container">
 <?php
 	include 'banner.php';
 ?>
 			
-
+<p>
 <!--<a href="orderform.php?location=connections">Go back</a> -->
 
 <form action="checkoutDB.php" method="post">
@@ -124,6 +143,7 @@
 
 </form>
 
+</p>
 </div>
 </body>
 

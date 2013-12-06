@@ -10,7 +10,8 @@ session_start();
 </head>
 
 <body>
-</p>
+	<div id="container">
+
 <?php
 	include 'banner.php';
 
@@ -97,8 +98,9 @@ session_start();
 <br/><br/>
 Thanks for testing out our website. Unfortunately, this website is currently not directly connected with The Connections. But we would really love to make it happen. As a thank you for your support. Here's a picture of a red panda. 
 <br/><br/>
-	<img src="images/redpanda.png">
-</p>
+	<center><img src="images/redpanda.png"></center>
+
+	</div>
 
 </body>
 
