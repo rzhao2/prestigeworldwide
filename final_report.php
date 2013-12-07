@@ -13,8 +13,7 @@
 			<div id="content">
 				<h1>PRESTIGE WORLDWIDE - FINAL REPORT</h1>
 
-				<h2 class = "centered"> Table of Contents </h2>
-				<ul class = "centered">
+				<ul>
 					<li><a href="final_report.php#team">The Team</a></li>
 					<li><a href="final_report.php#mentor">Our Mentor</a></li>
 					<li><a href="final_report.php#proposal">Proposal</a></li>
@@ -30,6 +29,8 @@
 					<li><a href="final_report.php#video">Video</a></li>
 					<li><a href="final_report.php#evaluations">Evaluations</a></li>
 				</ul>
+				</br>
+				</br>
 				
 				<h2 id="team"> The Team </h2>
 				<table table border="1" bordercolor="#FFFFFF" width="100%">
@@ -243,6 +244,8 @@
 					</ul>
 				</p>
 				<h3 id = "evaluation">Evaluation</h3>
+				<p>The early iterations will be tested by ourselves, and after all the functions are succesfully implemented, we will test the website/app on several (> 20) students who are customers at Connections, and in conjunction with the Connections staff. User survey will be used to collect feedback from students and staff. The survey will include questions ask for quantified scores that the user provided as well as space for open end sugguestions.
+                </p>
 				<h3 id = "act">Act</h3>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
 			<h2 id = "needfinding">Needfinding</h2>
@@ -288,9 +291,7 @@
 					<img src="images/Screenshot (22).png">
 			<h2 id="video">Video Demo</h2>	
 			<h2 id="evaluations">Evaluation</h2>
-                <p>The early iterations will be tested by ourselves, and after all the functions are succesfully implemented, we will test the website/app on several (> 20) students who are customers at Connections, and in conjunction with the Connections staff. User survey will be used to collect feedback from students and staff. The survey will include questions ask for quantified scores that the user provided as well as space for open end sugguestions.
-
-                </p>
+                
 			</div><!-- end content -->
 </html>
 </body>

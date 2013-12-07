@@ -9,6 +9,9 @@ html, body {
 
 .simpleCart_items {
 	display: inline-block;
+	background-color: black;
+	color: white;
+	font-size: 12;
 }
 
 .headerRow {
@@ -54,7 +57,8 @@ html, body {
 	/*padding-top: 2px;*/
 	/*padding-bottom: 2px;*/
 	overflow: visible;
-	background-color: transparent;
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
 	display: table-row;
 }
 
@@ -200,6 +204,20 @@ html, body {
 	top: 130px;
 	width: 100%;
 	height: 100%;
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+}
+
+#table{
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+}
+
+body {
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;	
+	margin-left: 2%;
+	margin-right: 2%
 }
 
 #right_inner {
@@ -226,7 +244,6 @@ td img {
 
 
 div.order {
-	/*background-color: #AFE8BD;*/
 	border-style: ridge;
 	border-width: 5px;
 	border-color: #7BA685;
@@ -237,7 +254,6 @@ div.order {
 }
 
 div.completedorder {
-	/*background-color: #F25555;*/
 	border-style: ridge;
 	border-width: 5px;
 	border-color: #994343;
@@ -248,7 +264,6 @@ div.completedorder {
 }
 
 div.item {
-	/*background-color: #FFFD80;*/
 	border-style: ridge;
 	border-width: 5px;
 	border-color: #9E9B00;
