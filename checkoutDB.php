@@ -17,7 +17,8 @@ session_start();
 
 	$id =  $_SESSION['username'];
 	$time = $_POST['timeFrom'];
-	$time = date("H:i:s", strtotime($time));
+	//$time = date("H:i:s", strtotime($time));
+	$time = date("Y-m-d H:i:s", strtotime($time));
 	$total = $_POST['total'];
 	$content = $_SESSION['content'];
 	
@@ -31,17 +32,20 @@ session_start();
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
 	
 	
-	$queryCreate = "INSERT INTO 
+	/*$queryCreate = "INSERT INTO 
 	 	 Order_info (student_id, complete_time, status, total, comments)
 	 	 VALUES('$id', '$time', '0', '$total', 'none');";
-	mysqli_query($db, $queryCreate);
+	mysqli_query($db, $queryCreate);*/
 	
-	$order_id = mysqli_insert_id($db);
+	//$order_id = mysqli_insert_id($db);
+			 
+	mysqli_query($db, $queryCreate2);
 	
 	$item_number = array();
 	$item = array(); 
 	//$total = 0;
-
+	
+		
 	for($i=1; $i < $content['itemCount'] + 1; $i++) 
 	{
 		$name = 'item_name_'.$i;
@@ -61,7 +65,8 @@ session_start();
 		
 		$options = explode(':', $options);
 		$options = $options[1];
-				
+		
+		
 		$query = "SELECT * FROM ConnectionsMenu WHERE item_name = '$name'";
 		$result = mysqli_query($db, $query);
 		if(!$result) { die("Database access failed: " . mysql_error()); }
@@ -70,11 +75,11 @@ session_start();
 		
 		$item_id = $row[0];
 		
-		//echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
+		echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
+
 		
-		$queryCreate2 = "INSERT INTO 
-	 	 Order (order_id, item_id, quantity, options)
-	 	 VALUES('$order_id', '$item_id', '$quantity', '$options');";
+		$queryCreate2 = "INSERT INTO `theccdb`.`Order` (`index`, `item_id`, `quantity`, `options`, `order_id`) VALUES (NULL, '$item_id', '$quantity', NULL, '$options');";
+
 		mysqli_query($db, $queryCreate2);
 	}
 	
