@@ -9,7 +9,8 @@
         getOptionRange(s) returns the range of an option set
         getOptions(s) Takes an encoded Option Set and returns a 2D array of all the options in it
         */
-        
+       
+
         function getItems()
         {
                 $db_hostname = "theccdb.db.12066565.hostedresource.com";
@@ -359,7 +360,8 @@
                                 include 'banner.php';
                                 //include 'navbar.php';
                         ?>
-
+					<img class="centered" src="images/BuildText.png"/>
+					 
                     <div id="tabs">
                                 <ul>
                                         <li><a href="#tabs-1">Counter</a></li>

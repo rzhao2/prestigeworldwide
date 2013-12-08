@@ -148,12 +148,11 @@ html, body {
 
 
 #login {
-	/*padding-left: 40%;*/
+	float: right;
 }
 
 #nav_bar {
-	padding-left: 30%;
-	margin-left: 30%
+	float: left;
 }
 
 #login_submit {
@@ -327,7 +326,7 @@ div.item {
 
 /* navbar */
 .navbar-inner_ {
-  padding: 10;
+  padding: 15;
   margin: 0;
   border: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);

@@ -54,11 +54,10 @@
 <p>
 <!--<a href="orderform.php?location=connections">Go back</a> -->
 
+<img class="centered" src="images/SetTimeText.png"/>
 <form action="checkoutDB.php" method="post">
-
-<br /><br /> 
 <center> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />  </center>                      
-<br /><br />
+<br />
 <!-- <input type="submit"> -->
 	
 
