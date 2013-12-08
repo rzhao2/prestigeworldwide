@@ -249,11 +249,11 @@
                                 { attr: "name" , label: "Name" } ,
                                 { attr: "options", label: "Options"} ,
                                 { attr: "price" , label: "Price", view: 'currency' } ,
-                                { view: "decrement" , label: ' ' , text: "<button class='myButton'>-</button>" } ,
+                                { view: "decrement" , label: ' ' , text: "<button class='myButtonCustom'>-</button>" } ,
                                 { attr: "quantity" , label: 'Qty' } ,
-                                { view: "increment" , label: ' ' , text: "<button class='myButton'>+</button>" } ,
+                                { view: "increment" , label: ' ' , text: "<button class='myButtonCustom'>+</button>" } ,
                                 { attr: "total" , label: "Total", view: 'currency' } ,
-                                { view: "remove" , text: "<button class='myButton'>Remove</button>" , label: "<button class='myButton'>Remove</button>' }
+                                { view: "remove" , text: "<button class='myButtonCustom'>Remove</button>" , label: " " }
                             ],
 
                             cartStyle: "table",
@@ -517,24 +517,18 @@
                                                    <!-- show the cart -->
                                                    <div class='simpleCart_items'></div>
 												   </br>
-                                                   <a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
+                                                   <center><a href="javascript:;" class="simpleCart_empty"><button class="myButtonCustom">Empty Cart</button></a></center>
                                                    <br />
-                        -----------------------------
+                        <center>-----------------------------</center>
                         <br />
-                        Final Total: <span id='simpleCart_grandTotal' class='simpleCart_grandTotal'></span>
+                        <center>Final Total: <span Font-Color="White" id='simpleCart_grandTotal' class='simpleCart_grandTotal'></span></center>
                                                 
                                                 <!-- <br /><br /><br /> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" /> -->
                         
                                                 <br />
                                                 <br />
-                        <button id="checkout" class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
-						<span class="simplecart_name"></span>
-						<span class="simplecart_options"></span>
-						<span class="simplecart_quantity"></span>
-						<span class="simpleCart_price"></span>
-						<span class="simpleCart_quantity"></span>
-						
-						
+                        <center><button id="checkout" class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button></center>
+											
 						
                         </div><!--end right small-->
                     </div><!--end Data row-->
