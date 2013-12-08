@@ -375,29 +375,29 @@
                                 <div class= "scrollable-wrapper">
                         
                         <div id="tabs-1">
-                                <p><?php getItemsByCategory('Cold Drinks'); ?></p>
+                                <p><?php getItemsByCategory('Counter'); ?></p>
                         </div>
                         
                         <div id="tabs-2">
-                                <p><?php getItemsByCategory('Refrigerated Food'); ?></p>
+                                <p><?php getItemsByCategory('Hot Drinks'); ?></p>
                         </div>
                         
                         <div id="tabs-3">
-                                <p><?php getItemsByCategory('Pre-Packaged Food / Fruits'); ?></p>
+                                <p><?php getItemsByCategory('Cold Drinks'); ?></p>
                         </div>
                         
 
                         <div id="tabs-4">
-                                <p><?php getItemsByCategory('Frozen Food'); ?></p>
+                                <p><?php getItemsByCategory('Pre-Packaged Food / Fruits'); ?></p>
                         </div>
                         
 
                         <div id="tabs-5">
-                                <p><?php getItemsByCategory('Hot Drinks'); ?></p>
+                                <p><?php getItemsByCategory('Refrigerated Food'); ?></p>
                         </div>
 
                         <div id="tabs-6">
-                                <p><?php getItemsByCategory('Counter'); ?></p>
+                                <p><?php getItemsByCategory('Frozen Food'); ?></p>
                         </div>
 
                         <div id="tabs-7">
@@ -514,7 +514,7 @@
                        <div id='right_small'><!-- SHOPPING CART -->
                                                    <!-- show the cart -->
                                                    <div class='simpleCart_items'></div>
-
+												   </br>
                                                    <a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
                                                    <br />
                         -----------------------------
