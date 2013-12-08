@@ -362,12 +362,12 @@
 
                     <div id="tabs">
                                 <ul>
-                                        <li><a href="#tabs-1">Cold Drinks</a></li>
-                                        <li><a href="#tabs-2">Refrigerated Food</a></li>
-                                        <li><a href="#tabs-3">Pre-Packaged Food / Fruits</a></li>
-                                        <li><a href="#tabs-4">Frozen Food</a></li>
-                                        <li><a href="#tabs-5">Hot Drinks</a></li>
-                                        <li><a href="#tabs-6">Counter</a></li>
+                                        <li><a href="#tabs-1">Counter</a></li>
+                                        <li><a href="#tabs-2">Hot Drinks</a></li>
+                                        <li><a href="#tabs-3">Cold Drinks</a></li>
+                                        <li><a href="#tabs-4">Pre-Packaged Food / Fruits</a></li>
+                                        <li><a href="#tabs-5">Refrigerated Food</a></li>
+                                        <li><a href="#tabs-6">Frozen Food</a></li>
                                         <li><a href="#tabs-7">Bagel Add-on</a></li>        
                                 </ul>
                     <div class = "data-row">
