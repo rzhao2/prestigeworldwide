@@ -11,10 +11,10 @@ session_start();
 
 <body>
 	<div id="container">
-	 
 
 <?php
 	include 'banner.php';
+
 	$id =  $_SESSION['username'];
 	$time = $_POST['timeFrom'];
 	//$time = date("H:i:s", strtotime($time));
@@ -32,15 +32,13 @@ session_start();
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
 	
 	
-	/*$queryCreate = "INSERT INTO 
+	$queryCreate = "INSERT INTO 
 	 	 Order_info (student_id, complete_time, status, total, comments)
 	 	 VALUES('$id', '$time', '0', '$total', 'none');";
-	mysqli_query($db, $queryCreate);*/
+	mysqli_query($db, $queryCreate);
 	
-	//$order_id = mysqli_insert_id($db);
-			 
-	mysqli_query($db, $queryCreate2);
-	
+	$order_id = mysqli_insert_id($db);
+			 	
 	$item_number = array();
 	$item = array(); 
 	//$total = 0;
@@ -75,10 +73,10 @@ session_start();
 		
 		$item_id = $row[0];
 		
-		echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
+		//echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
 
 		
-		$queryCreate2 = "INSERT INTO `theccdb`.`Order` (`index`, `item_id`, `quantity`, `options`, `order_id`) VALUES (NULL, '$item_id', '$quantity', NULL, '$options');";
+		$queryCreate2 = "INSERT INTO `theccdb`.`Order` (`index`, `item_id`, `quantity`, `options`, `order_id`) VALUES (NULL, '$item_id', '$quantity', '$options', '$order_id');";
 
 		mysqli_query($db, $queryCreate2);
 	}
