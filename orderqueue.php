@@ -35,7 +35,7 @@
 				//Update your dashboard gauge
 					$("#left_large").html(data);
 				}, dataType: "html", complete: poll, timeout: 30000 });
-				}, 1000);
+				}, 5000);
 			})();
 			
 			function viewDetails(orderid)

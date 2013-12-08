@@ -18,8 +18,10 @@
 				
 	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
-				
-	$query = "SELECT * FROM Order where order_id = '$orderid'";
+	//echo "$orderid";
+	$query = "SELECT * FROM `Order` where order_id = '$orderid'";
+	//$query = "SELECT * FROM 'Order'";
+
 	$result = mysqli_query($db, $query);
 	if(!$result) { die("Database access failed: " . mysql_error()); }
 				
@@ -34,7 +36,7 @@
 		echo "<td>".$row[1]."</td>";
 		echo "<td>".$row[2]."</td>";
 		echo "<td>".$row[3]."</td>";
-		echo "<td><button class='myButton' onclick=completeOrder($row[0])>Complete Order</button></td>";
+		//echo "<td><button class='myButton' onclick=completeOrder($row[0])>Complete Order</button></td>";
 		echo "</tr>";
 	}
 	
