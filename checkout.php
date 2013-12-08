@@ -142,7 +142,27 @@
 </table>
 
 <br/><br/>
-<center> <button class="myButton" type="submit">Confirm</button> </center>
+<?php 
+if($_SESSION['username'] != "") { 
+	echo '<center><button class="myButton" type="submit">Confirm</button></center>';
+} else { ?>
+<div style="text-align: center">
+	<div style="margin: auto; width: 462px;"><b>NOTE: You must login to confirm your order:</b><br />
+		<form name="login_form" method ="POST" action ="login.php">
+	        <table id="login_table">
+	            <tr>
+	                <td colspan="3">Login with your University of Rochester credentials.</td>
+	            </tr>
+	            <tr>
+	                <td class="align_left"><input type="text" class="login_input" name="username" placeholder="Net ID"/></td>
+					<td class="align_left"><input type="password" class="login_input" name="password" placeholder="Password"/></td>
+					<td class="align_right"><button type="submit" id="login_submit">Login</button></td>
+	            </tr>
+	        </table>
+	    </form>
+	</div>
+</div>
+<?php } ?>
 
 </form>
 
