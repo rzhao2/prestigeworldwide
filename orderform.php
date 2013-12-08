@@ -246,14 +246,14 @@
                         
                 simpleCart({
                             cartColumns: [
-                                { attr: "name" , label: "" } ,
-                                { attr: "options", label: ""} ,
-                                { attr: "price" , label: "", view: 'currency' } ,
-                                { view: "decrement" , label: false , text: "-" } ,
-                                { attr: "quantity" , label: "" } ,
-                                { view: "increment" , label: false , text: "+" } ,
-                                { attr: "total" , label: "", view: 'currency' } ,
-                                { view: "remove" , text: "Remove" , label: false }
+                                { attr: "name" , label: "Name" } ,
+                                { attr: "options", label: "Options"} ,
+                                { attr: "price" , label: "Price", view: 'currency' } ,
+                                { view: "decrement" , label: ' ' , text: "<button class='myButton'>-</button>" } ,
+                                { attr: "quantity" , label: 'Qty' } ,
+                                { view: "increment" , label: ' ' , text: "<button class='myButton'>+</button>" } ,
+                                { attr: "total" , label: "Total", view: 'currency' } ,
+                                { view: "remove" , text: "<button class='myButton'>Remove</button>" , label: "<button class='myButton'>Remove</button>' }
                             ],
 
                             cartStyle: "table",
@@ -363,14 +363,14 @@
 					<img class="centered" src="images/BuildText.png"/>
 					 
                     <div id="tabs">
-                                <ul>
-                                        <li><a href="#tabs-1">Counter</a></li>
-                                        <li><a href="#tabs-2">Hot Drinks</a></li>
-                                        <li><a href="#tabs-3">Cold Drinks</a></li>
-                                        <li><a href="#tabs-4">Pre-Packaged Food / Fruits</a></li>
-                                        <li><a href="#tabs-5">Refrigerated Food</a></li>
-                                        <li><a href="#tabs-6">Frozen Food</a></li>
-                                        <li><a href="#tabs-7">Bagel Add-on</a></li>        
+                                <ul id="blue">
+                                        <li id="blue"><a href="#tabs-1">Counter</a></li>
+                                        <li id="blue"><a href="#tabs-2">Hot Drinks</a></li>
+                                        <li id="blue"><a href="#tabs-3">Cold Drinks</a></li>
+                                        <li id="blue"><a href="#tabs-4">Pre-Packaged Food / Fruits</a></li>
+                                        <li id="blue"><a href="#tabs-5">Refrigerated Food</a></li>
+                                        <li id="blue"><a href="#tabs-6">Frozen Food</a></li>
+                                        <li id="blue"><a href="#tabs-7">Bagel Add-on</a></li>        
                                 </ul>
                     <div class = "data-row">
                         <div id='left_large' class="scrollable">
@@ -528,6 +528,14 @@
                                                 <br />
                                                 <br />
                         <button id="checkout" class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
+						<span class="simplecart_name"></span>
+						<span class="simplecart_options"></span>
+						<span class="simplecart_quantity"></span>
+						<span class="simpleCart_price"></span>
+						<span class="simpleCart_quantity"></span>
+						
+						
+						
                         </div><!--end right small-->
                     </div><!--end Data row-->
                     </div>

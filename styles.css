@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 }
 
-.simpleCart_items {
+/*.simpleCart_items {
 	display: inline-block;
     font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
@@ -15,7 +15,7 @@ html, body {
 .headerRow {
 	display: inline-block;
     font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
-}
+}*/
 
 .centered {
 	display: block;
@@ -216,10 +216,8 @@ html, body {
 
 #right_small {
 	float: left;
-	width: 28%;
+	width: 32%;
 	height: 100%;
-	padding-left: 2%;
-	padding-right: 2%;
 	border: none;
 	display:table-row;
 	background-color: black;
@@ -657,6 +655,41 @@ ul{
 	color: #669;
 }
 
+
+
 @media only screen and (max-device-width: 480px) {
 	/*Mobile device css properties*/
+}
+
+.simpleCart_items table
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+.simpleCart_items table th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+.simpleCart_items table td
+{
+	padding: 8px;
+	background: #e8edff; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+.simpleCart_items table td
+{
+	background: #d0dafd;
+	color: #339;
 }

@@ -61,7 +61,7 @@
 <!-- <input type="submit"> -->
 	
 
-<table id="box-table-a" border="1" style="margin: auto;">
+<table id="box-table-a" style="margin: auto;">
 
 <tr>
 <th>Image</th>
