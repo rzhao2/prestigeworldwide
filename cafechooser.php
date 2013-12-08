@@ -19,7 +19,7 @@
 		</tr>
 		<tr>
 			<td>
-				<a href='orderform.php?location=puravida'><img src="images/PuraVidaLogo.png" /></a>
+				<img src="images/PuraVidaLogo.png" />
 			</td>
 			<td>
 				<img src="images/puravida1.png"/>
