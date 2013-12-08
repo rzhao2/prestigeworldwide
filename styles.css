@@ -461,7 +461,7 @@ ul{
 }
 
 #tabs{ 
-    background: transparent; 
+    background: black; 
     border: none;
     display:table;
     height:100%;
