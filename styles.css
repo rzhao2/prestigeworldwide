@@ -498,6 +498,21 @@ ul{
     /*overflow: auto;*/
 }
 
+#addToCart {
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+	font-size: 14px;
+}
+
+#checkout {
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+	font-size: 14px;
+}
+
+#viewOptions {
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+	font-size: 14px;
+}
+
 .myButton {
 	-moz-box-shadow: 3px 4px 0px 0px #a8b8e9;
 	-webkit-box-shadow: 3px 4px 0px 0px #a8b8e9;

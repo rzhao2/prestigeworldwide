@@ -70,7 +70,7 @@
                                 }
                         ?>
 
-                                                <button onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
+                                                <button id="addToCart" onclick="showOptions('<?php echo $row[1];?>')">Add to Cart</button>
                                         </p>
                         </div>
                         <?php
@@ -200,13 +200,13 @@
                                                 if($row[5] == null)
                                                 {
                                         ?>
-                                                        <button class="myButton" onclick="showNoOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
+                                                        <button id="addToCart" class="myButton" onclick="showNoOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">Add to Cart</button>
                                         <?php
                                                 }
                                                 else
                                                 {
                                         ?>
-                                                        <button class="myOption" onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">View Option</button>
+                                                        <button id="viewOptions" class="myOption" onclick="showOptions('<?php echo str_replace(' ', '_', $row[1]); ?>')">View Options</button>
                                         <?php
                                                 }
                                         ?>
@@ -525,7 +525,7 @@
                         
                                                 <br />
                                                 <br />
-                        <button class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
+                        <button id="checkout" class="myButton" onclick="simpleCart.checkout()"  class='simpleCart_checkout'>Checkout</button>
                         </div><!--end right small-->
                     </div><!--end Data row-->
                     </div>
