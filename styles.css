@@ -9,10 +9,12 @@ html, body {
 
 .simpleCart_items {
 	display: inline-block;
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 .headerRow {
 	display: inline-block;
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 .centered {
@@ -29,6 +31,7 @@ html, body {
 	/*padding-top: 2px;*/
 	background-image:url('images/stripe-background.png');
 	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;	
 }
 
 .scrollable {
@@ -44,7 +47,9 @@ html, body {
 
 .data-row {
 	display:table-row;
-	height:100%;
+	height:100%;background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #banner {
@@ -95,6 +100,9 @@ html, body {
 	padding-right: 10%;
 	border: none;
 	text-align: center;
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #right-home {
@@ -105,7 +113,9 @@ html, body {
 	padding-left: 15%;
 	padding-right: 15%;
 	border: none;
-	text-align: center;
+	text-align: center;background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #header{
@@ -123,6 +133,9 @@ html, body {
 #table {
 	padding-left: 2px;
 	padding-right: 2px;
+	background-image:url('images/stripe-background.png');
+	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 .login_input {
@@ -144,14 +157,38 @@ html, body {
 }
 
 #login_submit {
-	padding: 0 10px;
+	/*padding: 0 10px;
 	color: #fff;
 	font-size: 20px;
 	width: 80px;
 	height: 36px;
 	line-height: 36px;
 	background-color: #547cfc;
-	border-radius: 5px;
+	border-radius: 5px;*/
+	-moz-box-shadow: 3px 4px 0px 0px #3dc21b;
+	-webkit-box-shadow: 3px 4px 0px 0px #3dc21b;
+	box-shadow: 3px 4px 0px 0px #3dc21b;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+	background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+	background-color:#44c767;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 44px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
 }
 
 #right {
@@ -163,6 +200,7 @@ html, body {
 	padding-right: 10%;
 	border: none;
 	text-align: center;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #left {
@@ -174,20 +212,21 @@ html, body {
 	padding-right: 10%;
 	border: none;
 	text-align: center;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #right_small {
 	float: left;
 	width: 28%;
 	height: 100%;
-	/*padding-top: 2%;
 	padding-left: 2%;
-	padding-right: 2%;*/
+	padding-right: 2%;
 	border: none;
 	display:table-row;
 	background-color: black;
 	color: white;
 	font-size: 14px;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #left_large {
@@ -197,6 +236,7 @@ html, body {
 	border: none;
 	overflow: auto;
 	display:table-row;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #content {
@@ -206,14 +246,12 @@ html, body {
 	height: 100%;
 	background-image:url('images/stripe-background.png');
 	background-repeat:repeat;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
-#table{
-	background-image:url('images/stripe-background.png');
-	background-repeat:repeat;
-}
 
 body {
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 	background-image:url('images/stripe-background.png');
 	background-repeat:repeat;	
 	margin-left: 2%;
@@ -222,10 +260,12 @@ body {
 
 #right_inner {
 	margin-top: 50px;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #left_inner {
 	margin-top:50px;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 td img {
@@ -251,6 +291,7 @@ div.order {
 	padding-left:.5em;
 	padding-top:1em;
 	margin-left:1em;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 div.completedorder {
@@ -261,6 +302,7 @@ div.completedorder {
 	padding-left:.5em;
 	padding-top:1em;
 	margin-left:1em;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 div.item {
@@ -272,6 +314,7 @@ div.item {
 	padding-top:1em;
 	margin-left:1em;
 	margin-top:.5em;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 .align_right {
@@ -381,6 +424,7 @@ ul{
 	padding-right: 1%;
 	clear: left;
 	margin-top:11px;
+    font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 #secondcolumn{
@@ -389,6 +433,7 @@ ul{
 	padding-left: 1%;
 	padding-right: 2%;
 	margin-top:11px;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 
 }
 
@@ -400,6 +445,7 @@ ul{
 	padding-right: 1%;
 	clear: left;
 	margin-top:11px;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 }
 
 .imagecontainer{
@@ -421,6 +467,7 @@ ul{
     display:table;
     height:100%;
     width:99%;
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 } 
 #tabs .ui-widget-header { 
     background: transparent; 
@@ -429,6 +476,7 @@ ul{
     -moz-border-radius: 0px; 
     -webkit-border-radius: 0px; 
     border-radius: 0px; 
+	font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 } 
 #tabs .ui-tabs-nav .ui-state-default { 
     background: transparent; 
@@ -469,7 +517,6 @@ ul{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:arial;
 	font-size:12px;
 	font-weight:bold;
 	padding:12px 44px;
@@ -485,6 +532,7 @@ ul{
 	background:linear-gradient(to bottom, #6e90fb 5%, #547cfc 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#547cfc',GradientType=0);
 	background-color:#6e90fb;
+	
 }
 .myButton:active {
 	position:relative;
@@ -511,7 +559,6 @@ ul{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:arial;
 	font-size:12px;
 	font-weight:bold;
 	padding:12px 44px;
