@@ -1,4 +1,4 @@
-<table>
+<table id="box-table-c" width=100%>
 <tr>
 <th>Order ID</th>
 <th>Student ID</th>

@@ -1,9 +1,8 @@
-<table>
+<table id="box-table-b" width=100% >
 <tr>
 <th>Item ID</th>
 <th>Quantity</th>
 <th>Options</th>
-<th></th>
 </tr>
 <?php
 	//echo "<tr>";

@@ -595,11 +595,11 @@ ul{
 #box-table-a
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-	font-size: 12px;
-	margin: 45px;
-	width: 480px;
-	text-align: left;
-	border-collapse: collapse;
+    font-size: 12px;
+    margin: 45px;
+    width: 480px;
+    text-align: left;
+    border-collapse: collapse;
 }
 #box-table-a th
 {
@@ -629,8 +629,7 @@ ul{
 {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 	font-size: 12px;
-	margin: 45px;
-	width: 480px;
+	width: 100%;
 	text-align: center;
 	border-collapse: collapse;
 	border-top: 7px solid #9baff1;
@@ -688,7 +687,7 @@ ul{
 	border-top: 1px solid transparent;
 }
 
-.simpleCart_items table td
+.simpleCart_items table  tr:hover td
 {
 	background: #d0dafd;
 	color: #339;
@@ -734,4 +733,36 @@ ul{
 .myButtonCustom:active {
 	position:relative;
 	top:1px;
+}
+
+#box-table-c
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#box-table-c th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #b9c9fe;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #039;
+}
+#box-table-c td
+{
+	padding: 8px;
+	background: #e8edff; 
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+#box-table-c tr:hover td
+{
+	background: #d0dafd;
+	color: #339;
 }
