@@ -68,6 +68,7 @@
 				include 'banner.php';
 			?>
 			<div id='left_large' class="scrollable">
+				<?php include 'datamonitor.php'; ?>
             <!-- <h2><a href="completedorders.php">All Completed Orders:</a></h2> -->
 				
             <!-- For each order in the order queue: 
