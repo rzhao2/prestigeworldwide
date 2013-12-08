@@ -50,7 +50,7 @@
 <?php
 	include 'banner.php';
 ?>
-			
+<div height="50%">			
 <p>
 <!--<a href="orderform.php?location=connections">Go back</a> -->
 
@@ -61,7 +61,8 @@
 <!-- <input type="submit"> -->
 	
 
-<table border="1" style="margin: auto;">
+<table id="box-table-a" border="1" style="margin: auto;">
+
 <tr>
 <th>Image</th>
 <th>Item</th>
@@ -70,6 +71,7 @@
 <th>Quantity</th>
 <th>SubTotal</th>
 </tr>
+<div style="height:100%;overflow:auto;">
 <?php 
 	//print_r($content); 
 
@@ -118,7 +120,7 @@
 		$row = mysqli_fetch_row($result);
 ?>
 	<tr>
-	<td  align="center"><img src='images/food_images/<?php echo $row[6];?>' alt='images' height='177' width=70%></td>
+	<td style="max-width:150px;" align="center"><img src='images/food_images/<?php echo $row[6];?>' alt='images' height=auto width=100%></td>
 	<td  align="center"><?php echo $name;?></td>
 	<td  align="center"><?php echo $options;?></td>
 	<td  align="center"><?php echo "$".$price;?></td>
@@ -136,13 +138,16 @@
 	<td align="center" colspan="5"><?php echo "$".$total; ?></td>
 
 	</tr>
+</div>
 </table>
+
 <br/><br/>
 <center> <button class="myButton" type="submit">Confirm</button> </center>
 
 </form>
 
 </p>
+</div>
 </div>
 </body>
 
