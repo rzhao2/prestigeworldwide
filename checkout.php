@@ -56,7 +56,7 @@
 
 <img class="centered" src="images/SetTimeText.png"/>
 <form action="checkoutDB.php" method="post">
-<center> Time of Pickup : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />  </center>                      
+<center> Time of Pick-up : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />  </center>                      
 <br />
 <!-- <input type="submit"> -->
 	
