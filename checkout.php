@@ -39,8 +39,31 @@
 		<script>
 			 $(function() {
 				$("#timeFrom").datetimepicker();
-            });			
+            });
+
+			$(function() {
+				$("#timeTo").datetimepicker();
+            });	
+			
+			 $(function() {
+				var icons = {
+				header: "ui-icon-circle-arrow-e",
+				activeHeader: "ui-icon-circle-arrow-s"
+			};
+			$( "#accordion" ).accordion({
+				icons: icons
+			});
+			$( "#toggle" ).button().click(function() {
+				if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+				$( "#accordion" ).accordion( "option", "icons", null );
+				} else {
+				$( "#accordion" ).accordion( "option", "icons", icons );
+			}
+		});
+		});
         </script>
+		
+		
 </head>
 
 
@@ -56,8 +79,22 @@
 
 <img class="centered" src="images/SetTimeText.png"/>
 <form action="checkoutDB.php" method="post">
-<center> Time of Pick-up : <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" />  </center>                      
-<br />
+
+<div id="accordion">
+  <h3>Manually Select Time of Pick-up</h3>
+  <div>
+		<p>Click the box to select your time. <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" /></p>
+  </div>
+  <h3>Geolocation</h3>
+  <div>
+		</p>Our algorithm has determined that it will take 10 minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <input type="text" name = "timeTo" id="timeTo" class = "rounded1" /></p>
+  </div>
+  <h3>Real-Time Geolocation</h3>
+  <div>
+		</p>Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible. </p>
+  </div>
+</div>
+
 <!-- <input type="submit"> -->
 	
 
@@ -142,27 +179,7 @@
 </table>
 
 <br/><br/>
-<?php 
-if($_SESSION['username'] != "") { 
-	echo '<center><button class="myButton" type="submit">Confirm</button></center>';
-} else { ?>
-<div style="text-align: center">
-	<div style="margin: auto; width: 462px;"><b>NOTE: You must login to confirm your order:</b><br />
-		<form name="login_form" method ="POST" action ="login.php">
-	        <table id="login_table">
-	            <tr>
-	                <td colspan="3">Login with your University of Rochester credentials.</td>
-	            </tr>
-	            <tr>
-	                <td class="align_left"><input type="text" class="login_input" name="username" placeholder="Net ID"/></td>
-					<td class="align_left"><input type="password" class="login_input" name="password" placeholder="Password"/></td>
-					<td class="align_right"><button type="submit" id="login_submit">Login</button></td>
-	            </tr>
-	        </table>
-	    </form>
-	</div>
-</div>
-<?php } ?>
+<center> <button class="myButton" type="submit">Confirm</button> </center>
 
 </form>
 
