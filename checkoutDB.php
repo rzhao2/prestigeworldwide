@@ -15,7 +15,8 @@ session_start();
 <?php
 	include 'banner.php';
 
-	$id =  $_SESSION['username'];
+	$id =  $_SESSION['id'];
+	$student_name = $_SESSION['username'];
 	$time = $_POST['timeFrom'];
 	//$time = date("H:i:s", strtotime($time));
 	$time = date("Y-m-d H:i:s", strtotime($time));
@@ -33,8 +34,8 @@ session_start();
 	
 	
 	$queryCreate = "INSERT INTO 
-	 	 Order_info (student_id, complete_time, status, total, comments)
-	 	 VALUES('$id', '$time', '0', '$total', 'none');";
+	 	 Order_info (student_id, complete_time, status, total, comments, student_name)
+	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name');";
 	mysqli_query($db, $queryCreate);
 	
 	$order_id = mysqli_insert_id($db);
@@ -76,7 +77,7 @@ session_start();
 		//echo "order: $order_id"."item: $item_id"."quantity: $quantity"."options: $options";
 
 		
-		$queryCreate2 = "INSERT INTO `theccdb`.`Order` (`index`, `item_id`, `quantity`, `options`, `order_id`) VALUES (NULL, '$item_id', '$quantity', '$options', '$order_id');";
+		$queryCreate2 = "INSERT INTO `theccdb`.`Order` (`index`, `item_id`, `item_name`, `quantity`, `options`, `order_id`) VALUES (NULL, '$item_id', '$name', '$quantity', '$options', '$order_id');";
 
 		mysqli_query($db, $queryCreate2);
 	}

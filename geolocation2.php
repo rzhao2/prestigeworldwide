@@ -3,7 +3,7 @@
 
 $A = "University of Rochester, Rochester, NY";
 $B = "Strong Hospital, Rochester";
-getdistanceInfo($A, $B);
+//getdistanceInfo($A, $B);
 function getdistanceInfo($locationA , $locationB)
 {
 
@@ -38,8 +38,8 @@ function getdistanceInfo($locationA , $locationB)
 	//function getdistanceInfo()
 	//{
 		
-		echo "later".$locLat."later";
-		echo "longer".$locLong."longer";
+		//echo "later".$locLat."later";
+		//echo "longer".$locLong."longer";
 		
 		$connectionsLat =43.1286931; 
 		$connectionsLong =-77.6281672;
@@ -66,10 +66,16 @@ function getdistanceInfo($locationA , $locationB)
 		$timeinminutes = $time/60;
 		$distanceinmiles = $distance/1609.344;
 		
-		echo $timeinminutes;
+		//echo $timeinminutes;
 		
+		//$projectedtime = time()+$time;
+		date_default_timezone_set('America/New_York');
+		
+		$projectedtime = date('m/d/Y H:i', time()+$time);
+
 		$locInfo = array(
 			'time' => $timeinminutes,
+			'projectedtime' => $projectedtime
 		);
 		
 		echo json_encode($locInfo);

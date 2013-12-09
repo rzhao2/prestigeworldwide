@@ -51,7 +51,8 @@
 				activeHeader: "ui-icon-circle-arrow-s"
 			};
 			$( "#accordion" ).accordion({
-				icons: icons
+				icons: icons,
+				heightStyle: "content"
 			});
 			$( "#toggle" ).button().click(function() {
 				if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
@@ -61,6 +62,50 @@
 			}
 		});
 		});
+		
+		
+		var x=document.getElementById("displayTime");
+			function getLocation()
+		{
+			if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(calculateTime);
+			}
+			else{x.innerHTML="Geolocation is not supported by this browser.";}
+		}
+
+		function showPosition(position)
+		{
+			x.innerHTML="Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude;	
+		}
+ 
+		function calculateTime(position)
+		{
+			var loclat = position.coords.latitude;
+			var loclong =  position.coords.longitude;
+			var orderid = 10;
+	
+			/* x.innerHTML="Latitude: " + loclat + 
+			"<br>Longitude: " + loclong;*/
+			$.ajax({
+					type: "POST",
+					url: "geolocation2.php",
+					data: { loclat:loclat, loclong:loclong },
+					dataType: 'json',
+					cache: false,
+					success: function(result){
+						//document.write(result);
+						//var html = result.time;
+						 var html = "Our algorithm has determined that it will take <b>" + result.time + "</b> minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <br/><br/> <input type='text' name='timeTo' id='timeTo' class = 'rounded1' value='"+result.projectedtime+"'/>";
+						$("#displayTime").html(html);
+						
+						$(function() {
+								$("#timeTo").datetimepicker();
+						});	
+					}
+				});
+		}
         </script>
 		
 		
@@ -80,25 +125,11 @@
 <img class="centered" src="images/SetTimeText.png"/>
 <form action="checkoutDB.php" method="post">
 
-<div id="accordion">
-  <h3>Manually Select Time of Pick-up</h3>
-  <div>
-		<p>Click the box to select your time. <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" /></p>
-  </div>
-  <h3>Geolocation</h3>
-  <div>
-		</p>Our algorithm has determined that it will take 10 minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <input type="text" name = "timeTo" id="timeTo" class = "rounded1" /></p>
-  </div>
-  <h3>Real-Time Geolocation</h3>
-  <div>
-		</p>Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible. </p>
-  </div>
-</div>
 
 <!-- <input type="submit"> -->
-	
-
-<table id="box-table-a" style="margin: auto;">
+<div style="width: 50%; float: left">	
+<center>
+<table id="box-table-a" style="margin:0">
 
 <tr>
 <th>Image</th>
@@ -177,10 +208,32 @@
 	</tr>
 </div>
 </table>
+</center>
+</div>
+
+<div style="width: 50%; float: left">	
+
+<center><div id="accordion">
+  <h3>Manually Select Time of Pick-up</h3>
+  <div>
+		<p>Click the box to select your time. <br/><br/> <input type="text" name = "timeFrom" id="timeFrom" class = "rounded1" /></p>
+  </div>
+  <h3>Geolocation</h3>
+  <div>
+		<!--</p>Our algorithm has determined that it will take 10 minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <br/><br/> <input type="text" name = "timeTo" id="timeTo" class = "rounded1" /></p> -->
+		<p id="displayTime">Click Below to use our algorithm to determine how long it would take base on your location.
+		<input type="button" onclick="getLocation();"  value="Watch Update"/></p>
+  </div>
+  <h3>Real-Time Geolocation</h3>
+  <div>
+		</p>Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible. </p>
+  </div>
+</div></center>
 
 <br/><br/>
 <center> <button class="myButton" type="submit">Confirm</button> </center>
 
+</div>
 </form>
 
 </p>
