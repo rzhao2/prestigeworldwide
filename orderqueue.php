@@ -30,10 +30,38 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		
 		
 		<style>
-			html, body, #map-canvas {
+			#map-canvas {
+				height: 100%;	
+			}
+			
+			#map_container {
+				height: 50%;
+				width: 100%;
+			}
+			
+			#left_large {
+				width: 60%;
+				float: left;
+				border: none;
+				overflow: auto;
+				display:table-row;
+				font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+			}
+			
+			#right_small {
+				width: 40%;
+				background-color: #e8edff;					
+			}
+			
+			#right_bottom {
+				width: 100%;
+				float: left;
 				height: 100%;
-				margin: 0px;
-				padding: 0px
+				border: none;
+				display:table-row;
+				color: white;
+				font-size: 14px;
+				font-family: "Trebuchet MS", tahoma, verdana, sans-serif;		
 			}
 		</style>
 		
@@ -59,7 +87,7 @@
 					cache: false,
 					success: function(result){
 						//document.write(result);
-						$("#right_small").html(result);
+						$("#right_bottom").html(result);
 					}
 				});
 			}
@@ -119,8 +147,12 @@
             </form> -->
 			</div>
 			<div id='right_small'>
-				<div id="map-canvas"  height= 100%/>
-			
+
+				<div id= "map_container">
+					<div id="map-canvas" />
+				</div>
+				
+				<div id="right_bottom"/>
 			</div>
 
 		</div><!-- end container -->
