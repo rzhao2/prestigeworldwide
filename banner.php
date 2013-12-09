@@ -15,3 +15,4 @@
 </div><!-- end banner right -->
 <div class="clear"></div>
 </div><!-- end banner -->
+<div class="clear"></div>
