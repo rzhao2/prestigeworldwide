@@ -2,7 +2,9 @@
 <tr>
 <th>Order ID</th>
 <th>Student ID</th>
-<th>Complete Time</th>
+<th>Student Name</th>
+<th>Request Time of Completion</th>
+<th>Total</th>
 <th></th>
 </tr>
 <?php
@@ -28,7 +30,9 @@
 		echo "<tr>";
 		echo "<td>".$row[0]."</td>";
 		echo "<td>".$row[1]."</td>";
+		echo "<td>".$row[7]."</td>";
 		echo "<td>".$row[3]."</td>";
+		echo "<td>$".$row[5]."</td>";
 		echo "<td><button class='myButton' onclick=viewDetails($row[0])>View Order Details</button></td>";
 		echo "</tr>";
 	}
