@@ -27,6 +27,15 @@
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<link rel="stylesheet" href="/resources/demos/style.css" />
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>		
+		
+		<style>
+			html, body, #map-canvas {
+				height: 100%;
+				margin: 0px;
+				padding: 0px
+			}
+		</style>
 		
 		<script>
 			(function poll(){
@@ -58,8 +67,20 @@
 			function completeOrder(orderid)
 			{
 			
-			}			
+			}		
+
+			function initialize() {
+				var mapOptions = {
+				center: new google.maps.LatLng(-34.397, 150.644),
+				zoom: 8
+				};
+				var map = new google.maps.Map(document.getElementById("map-canvas"),
+				mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			
 		</script>
+	
 	</head>
 	<body>
 		<div id="container">
@@ -98,7 +119,7 @@
             </form> -->
 			</div>
 			<div id='right_small'>
-			
+				<div id="map-canvas"  height= 100%/>
 			
 			</div>
 
