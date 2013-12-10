@@ -16,7 +16,7 @@
 	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
 				
-	$query = "SELECT * FROM Order_info";
+	$query = "SELECT * FROM Order_info ORDER BY `complete_time`";
 	$result = mysqli_query($db, $query);
 	if(!$result) { die("Database access failed: " . mysql_error()); }
 				

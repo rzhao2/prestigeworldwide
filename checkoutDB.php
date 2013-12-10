@@ -15,12 +15,32 @@ session_start();
 <?php
 	include 'banner.php';
 
+?>
+ <img class="centered" src="images/SkipText.png"/>
+<?php
+
 	$id =  $_SESSION['id'];
 	$student_name = $_SESSION['username'];
 	$time = $_POST['timeFrom'];
+	$time2 = $_POST['timeTo'];
+	
+	if($time == NULL)
+	{
+			if($time2 == NULL)
+			{
+				echo "<p>Our employees are notified of your real time position, please keep this page open.</p>";
+			}
+			else
+			{
+				$time = $time2;
+			}
+	}
+	
+	
 	//$time = date("H:i:s", strtotime($time));
 	$time = date("Y-m-d H:i:s", strtotime($time));
 	$total = $_POST['total'];
+
 	$content = $_SESSION['content'];
 	
 	$db_hostname = "theccdb.db.12066565.hostedresource.com";
@@ -101,11 +121,11 @@ session_start();
 	//print_r($_SESSION['content']); 
 	//echo $_POST['content'];
 	
+	
 ?>
-<br/><br/>
-	 <img class="centered" src="images/SkipText.png"/>
+<!-- <br/><br/>
 Thank you for testing out our website. Unfortunately, we are not synced with University of Rochester cafes, but we would love to make that happen. </br>
-As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>. 
+As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>. -->
 <br/><br/>
 	<center><img src="images/redpanda.png"></center>
 

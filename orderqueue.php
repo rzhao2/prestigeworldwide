@@ -94,13 +94,24 @@
 			
 			function completeOrder(orderid)
 			{
-			
+				//var dataString = 'orderid='+ orderid;
+				//document.write(dataString);
+
+				$.ajax({
+					type: "POST",
+					url: "deleteorder.php",
+					data: { orderid: orderid, },
+					cache: false,
+					success: function(result){
+						$("#right_bottom").html();
+					}
+				});	
 			}		
 
 			function initialize() {
 				var mapOptions = {
-				center: new google.maps.LatLng(-34.397, 150.644),
-				zoom: 8
+				center: new google.maps.LatLng(43.1286931, -77.6281672),
+				zoom: 16
 				};
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 				mapOptions);

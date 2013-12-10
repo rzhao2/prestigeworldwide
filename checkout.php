@@ -200,10 +200,10 @@
 	}
 
 ?>
-	<input type="hidden" name="total" value="<?php echo $total; ?>">
 	<tr>
 	<td align="center">Total: </td>
 	<td align="center" colspan="5"><?php echo "$".$total; ?></td>
+	<input type="hidden" name="total" value="<?php echo $total; ?>">
 
 	</tr>
 </div>
@@ -221,8 +221,8 @@
   <h3>Geolocation</h3>
   <div>
 		<!--</p>Our algorithm has determined that it will take 10 minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <br/><br/> <input type="text" name = "timeTo" id="timeTo" class = "rounded1" /></p> -->
-		<p id="displayTime">Click Below to use our algorithm to determine how long it would take base on your location.
-		<input type="button" onclick="getLocation();"  value="Watch Update"/></p>
+		<p id="displayTime">Click Below to use our algorithm to determine how long it would take base on your location.<br/> <br/>
+		<input type="button" onclick="getLocation();"  value="Calculate Time"/></p>
   </div>
   <h3>Real-Time Geolocation</h3>
   <div>

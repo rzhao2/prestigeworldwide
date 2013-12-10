@@ -39,8 +39,8 @@
 		echo "<td>".$row[4]."</td>";
 		echo "</tr>";
 	}
-	
 ?>
 </table>
 </div>
-<button style="height:10%;width:100%" class='myButton' onclick=completeOrder(<?php $row[5]; ?>)>I have Completed The Order</button>
+<button style="height:10%;width:100%" class='myButton' onclick='<?php echo completeOrder($orderid); ?>'>I have Completed The Order</button>
+
