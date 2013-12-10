@@ -42,7 +42,7 @@
 						<b>Class Year:</b> Senior</br>
 						<b>Major:</b> Computer Science</br>
 						<b>Title:</b> Account Executive</br>
-						<b>Contribution:</b> Corporate Relations, front-end development
+						<b>Contribution:</b> Corporate relations, front-end development
 						</span>
 					</td>
 					<td style="vertical-align:top;">
@@ -52,7 +52,7 @@
 						<b>Class Year:</b> MS First Year</br>
 						<b>Major:</b> Computer Science</br>
 						<b>Title:</b> Analyst</br>
-						<b>Contribution:</b> Writing, statistical analysis
+						<b>Contribution:</b> Prototyping, need-finding, evaluations, statistical analysis, menu images, filming, poster
 						</span>
 					</td>
 				</tr>
@@ -64,7 +64,7 @@
 						<b>Class Year:</b> Sophomore</br>
 						<b>Major:</b> Computer Science &amp; Digital Media</br>
 						<b>Title:</b> Operations Manager</br>
-						<b>Contribution:</b> Design, writing, quality assurance
+						<b>Contribution:</b> Prototyping, design, HTML/CSS, interviews, filming/video-editing, poster, presentation, quality assurance
 						</span>
 					</td>
 					<td style="vertical-align:top;">
@@ -74,7 +74,7 @@
 						<b>Class Year:</b> Junior </br>
 						<b>Major:</b> Computer Science, Economics, &amp; International Relations</br>
 						<b>Title:</b> Junior Account Executive</br>
-						<b>Contribution:</b> Corporate Relations, front-end development</br>
+						<b>Contribution:</b> Corporate relations, data entry, student interviews, evaluations</br>
 						</span>
 					</td>
 				</tr>
@@ -96,7 +96,7 @@
 						<b>Class Year:</b> Senior </br>
 						<b>Major:</b> Computer Science</br>
 						<b>Title:</b> Back-end Developer</br>
-						<b>Contribution:</b> Back-end development, database design/implementation
+						<b>Contribution:</b> Back-end development, database design/implementation, geo-location, menu, cart
 						</span>
 					</td>
 				</tr>
@@ -116,8 +116,13 @@
 			<h2 id="proposal">Project Proposal</h2>
 				<h3 id = "definition">Definition</h3>
 					<p>
-					On campus there is a restaurant located near the IT center called "Connections" that sells mainly breakfast-type food items. We like to visit there a lot, but find that the time many students want to go is in between classes. Therefore often they don't have the time to go, because the line is too long.<br>
-                    Currently many restaurants are allowing customers to order online, so that the food will be ready when the customer arrives. Will such an online ordering system help students in UR getting their food faster from Connections? Will students like such a system?
+					There is a cafe on campus near the IT Center called "Connections" from which we like to get food, but we've found that it is often too busy between 
+					classes and at meal times. These are key times for students to eat around their classes and meetings, but since everyone tries to visit Connections 
+					around the same times, the long lines can deter a lot of business and make staying well-nourished throughout the day difficult.<br>
+                    We already know of many chain restaurants, such as Five Guys and Chipotle, that allow customers to order online so that food will be ready 
+					when customers arrive, eliminating a waiting period. Since college students are generally busy and on-the-go, such a system should facilitate 
+					better opportunities to get food at precise times in their days, preventing malnutrition and tardiness to class as well as profiting campus cafes by 
+					decreasing stress during busy periods and increasing business.
 
 					</p>
 				<h3 id = "requirements">Requirements</h3>
@@ -135,16 +140,16 @@
 						</ul>
 					<li>Prototype</li>
 						<ul>
-						<li type=circle>User-end website</li>
+						<li type=circle>User-end of website</li>
 							<ul>
 							<li type=square>Homepage</li>
 							<li type=square>User log-in</li>
-							<li type=square>Food information (involves back-end database)</li>
+							<li type=square>Menu (involves back-end database)</li>
 							<li type=square>Order placement (edits the order queue back-end, which edits the employee-side order queue page)</li>
 							</ul>
 						</ul>
 						<ul>
-						<li type=circle>Connections employee website</li>
+						<li type=circle>Employee-end of website</li>
 							<ul>
 							<li type=square>Homepage</li>
 							<li type=square>Employee log-in</li>
@@ -156,29 +161,27 @@
 					</p>
 				<h3 id = "system">System</h3>
 					<p>
-					We propose a website that lets UofR users login and place an order with declining (the payment is online, no swiping if possible)
-					along with a time for pickup that expedites the process so users can get their food more quickly between classes. If time allows, 
-					we will propose an app for Android/iOS as well.
+					We propose a website that lets University of Rochester users log-in and place orders with declining (by paying online, further time is saved by eliminating
+					the step of swiping an ID card at the cafe site upon pick-up), indicating a pick-up time to expedite the process. Cafe employees can view the order queue to
+ 					estimate when to start preparing orders based on their scheduled pick-up. This should shorten lines, space out the work of employees, and provide students
+					with their food more quickly and at a specified time.
 					</p>
 					<p>
-					Finding a way to pay with declining online.
+					There has to be a way for users to pay online, since without the deposit upon ordering, there would be no way to ensure that customers will pay for the food 
+					cafe employees spent time preparing. Our website is intended for use alongside UR Declining and student Net ID system. For obvious security reasons, we do 
+					not have access to these systems, so they would only be implemented if the university and dining services decide to use the website we have created. Since
+					that is unlikely to happen until after our working prototype is complete, we will implement log-in and payment features on an inconsequential level. In other
+					words, until the website is integrated with university systems, orders placed on the website will not reach Connections. 
 					</p>
 					<p>
-					How do users pay for the food online?
+					Plan for future use of the employee-end of the website
 					<ul>
-					<li>If users cannot pay for the food online, then there's no insurance that the customer will actually pay for the food that the restaurant has prepared. So there HAS to be a way for users to pay online. (Otherwise the food is prepared only once the customer has shown up and the app is pointless).</li>
-					<li>Flex should definitely be possible but declining (while the ideal case) is uncertain.</li>
-					<li>We can find out how feasible paying for food online with declining is and the sort of system/back-end that would be used by discussing the possibility with dining services.</li>
-					<li>If Connections cannot work with us until the prototype is finished, we will not implement this part.</li>
-					</ul>
-					</p>
-					<p>
-					Coordinating with Connections
-					<p>
-					How do we figure out how Connections will interact with this application and the feasibility of it on their end?
-					<ul>
-					<li>The cashiers/workers can pull orders from a database which will display the time the order is expected to be done and then make it so that the order can be picked up when the customer arrives.</li>
-					<li>The orders could be placed in bags with the customer's name on it. When they come to pick it up, they could get in an express line (which should be empty for the most part) to simply give their name and get their food right away.</li>
+					<li>The cafe employees can pull orders from a database, which will display the time the order is scheduled for pick-up and then prepare it accordingly to be 
+					ready when the customer arrives. Customers would order hot items at the risk of temperature having cooled by the time of pick-up.</li>
+					<li>The orders would be placed on a separate table or counter in bags with the customers' names written on them and/or receipts attached. When 
+					customers come to retrieve their orders, they could get in an express line to simply give their name or find the bag with their receipt. This is no 
+					different from the operations at popular cafes like Starbucks where customers pay first and then claim their order (other than that wait-time will be significantly
+					shorter).</li>
 						<ol>
 						<li>Maybe they have to swipe their card to verify identity?</li>
 						</ol>
