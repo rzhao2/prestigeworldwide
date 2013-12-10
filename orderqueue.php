@@ -95,7 +95,7 @@
 			function completeOrder(orderid)
 			{
 				//var dataString = 'orderid='+ orderid;
-				//document.write(dataString);
+				//document.write(orderid);
 
 				$.ajax({
 					type: "POST",
@@ -103,7 +103,7 @@
 					data: { orderid: orderid, },
 					cache: false,
 					success: function(result){
-						$("#right_bottom").html();
+						$("#right_bottom").html('');
 					}
 				});	
 			}		
