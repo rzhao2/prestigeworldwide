@@ -167,6 +167,9 @@
 					with their food more quickly and at a specified time.
 					</p>
 					<p>
+					Reality of Declining integration
+					</p>
+					<p>
 					There has to be a way for users to pay online, since without the deposit upon ordering, there would be no way to ensure that customers will pay for the food 
 					cafe employees spent time preparing. Our website is intended for use alongside UR Declining and student Net ID system. For obvious security reasons, we do 
 					not have access to these systems, so they would only be implemented if the university and dining services decide to use the website we have created. Since
@@ -174,7 +177,7 @@
 					words, until the website is integrated with university systems, orders placed on the website will not reach Connections. 
 					</p>
 					<p>
-					Plan for future use of the employee-end of the website
+					Plan for future cafe use of the website
 					<ul>
 					<li>The cafe employees can pull orders from a database, which will display the time the order is scheduled for pick-up and then prepare it accordingly to be 
 					ready when the customer arrives. Customers would order hot items at the risk of temperature having cooled by the time of pick-up.</li>
@@ -183,71 +186,49 @@
 					different from the operations at popular cafes like Starbucks where customers pay first and then claim their order (other than that wait-time will be significantly
 					shorter).</li>
 						<ol>
-						<li>Maybe they have to swipe their card to verify identity?</li>
+						<li>If identity fraud became an issue, students would merely show their student IDs instead of finding their own order.</li>
 						</ol>
-					<li>We can talk to the general manager of Connections who can discuss how it would be implemented on his end and share these ideas with him. This part is not essential to the prototype.</li>
+					<li>We will communicate these ideas with the Connections managers and get their feedback, but this is not essential to the building of the prototype and would
+					probably be left to the cafe employees to decide anyway.
 					</ul>
 					<p>
-					Designing and releasing the app
+					Logistics of website/app
 					</p>
 					<ul>
-					<li>Ideally this would be an actual application for release on Android/iOS as well as a website that users could use but our prototype will just be the website first and the Android/iOS if we have time.</li>
+					<li>Ideally, this project would be an application for release on Android/iOS as well as a website because students are always on-the-go. However, due to our
+					time constraints and the skill-sets of our team members, our time would be best spent focusing on the website and implementing the mobile application at a later
+					time.</li>
 						<ol>
-						<li>We need to figure out how to get a domain for this website (and pay for it?). We can talk to dining services to see if they'd be willing to fund the website if this goes live.</li>
-						<li>We need to figure out how to release this app for Android/iOS. Research this on our own or talk to someone in class with experience here.</li>
+						<li>We will buy a domain name for the website and discuss the possibility of turning the website over to dining services with the appropriate individuals.</li>
+						<li>We will research the process of making an Android/iOS app for future reference.</li>
 						</ol>
 					</ul>
 					<p>
-					Back-end side for Connections taking orders, editing website, etc.
+					Employee-end of website
 					</p>
 					<ul>
-					<li>How does Connections maintain what food is and is not available?</li>
+					<li>How will Connections keep track what food is and is not available?</li>
 						<ul>
-						<li>Most people working at Connections do not know how to manually edit source code online that displays what food is and is not available.</li>
-						<li>A worker from Connections should not HAVE to edit this code. There should be a way for Connections to have full control of the website but through drop-down menus and a log-in that allows (only) them to update what food is and is not available.</li>
-						<li>This should be achievable, because the vast majority of connection's menu is standardized (ie, they sell the same baked goods every day) or semi-standardized (they rotate types of coffee and soup).</li>
+						<li>Most people Connections employees do not know how to manually edit source code to update the cafe's inventory, nor should they have to. There 
+						should be a way for Connections to have full control of the website but via a tailored user-interface of drop-down menus and a log-in that allows 
+						only authorized employees to update what food is and is not available.</li>
+						<li>This should be achievable because the vast majority of the cafe's menu is standardized (i.e., they sell the same baked goods every day) or 
+						semi-standardized (they rotate types of coffee and soup).</li>
 						<li>We will use a MySQL database to store the available food.</li>
 						</ul>
-					<li>How does Connections get orders online and prepare them?</li>
+					<li>How does Connections see the orders that have been placed online and prepare them?</li>
 						<ul>
-						<li>There should be a cashier interface that allows the workers to see when the customer is expecting to pick up the food so they can prepare it on time.</li>
-						<li>There should be a way for a cashier to â€œcompleteâ€� the order and remove it from the queue.</li>
+						<li>There will be an order queue page that allows employees to see customers' scheduled pick-up times. Employees will know from experience how
+						much time to leave to prepare the specific items. If the customer is late to retrieve an order, employees will not be responsible for any undesired 
+						changes in temperature/quality.</li>
+						<li>There will be a way for employees to mark an order as complete to remove it from the queue.</li>
 						</ul>
 					</ul>
-					<p>
-					Possible Features?
-					</p>
-					<ul>
-					<li>Recurring orders for customers</li>
-						<ul>
-						<li>Suppose I always want a bagel with cream-cheese between my 1:45 and 2:00 class. I should be able to save past orders and order it again through just a few clicks/screen taps</li>
-						<li>Even better, a way to AUTOMATICALLY order the same order many times over a semester.</li>
-						</ul>
-					<li>Far-in-advance orders?</li>
-						<ul>
-						<li>U of R would not like it if students were able to pay for a meal next semester with declining that is only available for this semester so there has to be at least that limit in advance orders.</li>
-						<li>Can we make orders days, weeks, or months in advance? Talk about this with Connections/Dining Services</li>
-						</ul>
-					<li>Orders for other people</li>
-						<ul>
-						<li>An issue is that this process might possibly allow someone to make an order for food with another student's declining, simply using their log-in and password but not their physical card.</li>
-						<li>If Connections sees this as a not-allowable issue, it might require that users must swipe to pick up their food.</li>
-						<li>Otherwise, this is a feature and users can place an order with their card for someone else and this would also have to be coordinated with Connections.</li>
-						<li>Perhaps, on the order placement screen, have a check-box that says "this order is for someone else" and then all of that info put in by the user.</li>
-						</ul>
-					<li>Orders with flex</li>
-						<ul>
-						<li>Users should be able to pay with flex online as well as with declining. This possibility could also be discussed with dining services.</li>
-						</ul>
-					<li>Orders with Credit Card</li>
-						<ul>
-						<li>Users should be able to pay with a credit card online. This possibility could also be discussed with dining services
-						</ul>
-					</li>
-					</ul>
-				</p>
+					
 				<h3 id = "evaluation">Evaluation</h3>
-				<p>The early iterations will be tested by ourselves, and after all the functions are succesfully implemented, we will test the website/app on several (> 20) students who are customers at Connections, and in conjunction with the Connections staff. User survey will be used to collect feedback from students and staff. The survey will include questions ask for quantified scores that the user provided as well as space for open end sugguestions.
+				<p>We will test early iterations of the website ourselves, and after all the functions listed in our requirements are successfully implemented, we will evaluate 
+				the website by sharing it with at least 20 students who are customers at Connections and in conjunction with the Connections staff. A user survey will collect 
+				feedback from students and Connections employees. The survey will ask for quantified scores as well open-ended suggestions.
                 </p>
 				<h3 id = "act">Act</h3>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
