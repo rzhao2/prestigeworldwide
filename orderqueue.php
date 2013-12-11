@@ -42,14 +42,16 @@
 			#left_large {
 				width: 60%;
 				float: left;
-				border: none;
 				overflow: auto;
 				display:table-row;
 				font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
+				background-color: #e8edff;
+				border:5px solid blue;
 			}
 			
 			#right_small {
 				width: 40%;
+				border:5px solid blue;
 				background-color: #e8edff;					
 			}
 			
