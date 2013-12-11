@@ -13,33 +13,34 @@ session_start();
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js'></script>
 	
 	<script>
-	function toggle(button)
-	{
-		if(document.getElementById("1").value=="STOP"){
-			getLocationUpdate();
-			document.getElementById("1").value="START";}
+		function toggle(button)
+		{
+			if(document.getElementById("realGeo").value=="STOP"){
+				stopWatch();
+				document.getElementById("realGeo").value="START";}
 
-		else if(document.getElementById("1").value=="START"){
-			document.getElementById("1").value="STOP";
+			else if(document.getElementById("realGeo").value=="START"){
+				getLocationUpdate();
+				document.getElementById("realGeo").value="STOP";
+			}
 		}
-	}
 	
 		var watchID;
 		var geoLoc;
 
 		function showLocation(position) {
-		var latitude = position.coords.latitude;
-		var longitude = position.coords.longitude;
+		var loclat = position.coords.latitude;
+		var loclong =  position.coords.longitude;
 		var orderid = $('#order_id').val();
 		
 		$.ajax({
 					type: "POST",
-					url: "geolocation3.php",
-					data: { orderid:orderid, },
+					url: "updatelocation.php",
+					data: { orderid:orderid, loclat:loclat, loclong:loclong, },
 					dataType: 'json',
 					cache: false,
 					success: function(result){
-						$("#demo").html(result.time);
+						$("#demo").html(result.id + " " + result.locLat +" "+result.locLong + " " + result.time + " " + result.projectedtime);
 					}
 			});
 			
@@ -67,6 +68,9 @@ session_start();
 			}
 		}
 		
+		function stopWatch(){
+			geoLoc.clearWatch(watchID);
+		}
 			
 	</script>
 </head>
@@ -200,8 +204,7 @@ session_start();
 	//echo $_POST['content'];
 	if($_POST['accordionIndex'] == 2)
 	{
-		echo "<input id='useRealGeolocation' type='button' class = 'myButton' value='Start'/>";
-
+		echo "<center><input type='button' class = 'myButton' id='realGeo' value='START' onclick='toggle(this);'></center>";
 	}
 	
 ?>
@@ -210,7 +213,6 @@ Thank you for testing out our website. Unfortunately, we are not synced with Uni
 As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>. -->
 <br/><br/>
 	<center><img src="images/redpanda.png"></center>
-<input type="button" class = "myButton" id="1" value="STOP" onclick="toggle(this);">	
 </div>
 <p id="demo"></p>
 </body>
