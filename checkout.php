@@ -312,13 +312,13 @@
   <div>
 		<!--</p>Our algorithm has determined that it will take 10 minutes for you to get to Connections using your location and average walking speed. Click the box below to modify the time to your liking.  <br/><br/> <input type="text" name = "timeTo" id="timeTo" class = "rounded1" /></p> -->
 		<p id="displayTime">Click Below to use our algorithm to determine how long it would take base on your location.<br/> <br/>
-		<input type="button" onclick="getLocation();"  value="Calculate Time"/></p>
+		<input type="button" class="myButton" onclick="getLocation();"  value="Calculate Time"/></p>
   </div>
   <h3>Real-Time Geolocation</h3>
   <div>
 		<p id="displayRealTime">Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible.
 		<br/><br/>
-		<input type="button" onclick="getRealLocation();" value="Grant Us Permission to Use Your Location"/> 
+		<input type="button" class="myButton" onclick="getRealLocation();" value="Grant Us Permission to Use Your Location"/> 
 		</p>
 		<input hidden type="text" name = "timeReal" id="timeReal" class = "rounded1" />
   </div>

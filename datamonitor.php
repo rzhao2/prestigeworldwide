@@ -31,10 +31,22 @@
 		echo "<td>".$row[0]."</td>";
 		echo "<td>".$row[1]."</td>";
 		echo "<td>".$row[7]."</td>";
-		echo "<td>".$row[3]."</td>";
+		
+		date_default_timezone_set('America/New_York');
+
+		$diff_seconds  = strtotime($row[3]) - time();
+		$stat = floor($diff_seconds/3600).'Hours,'.floor(($diff_seconds%3600)/60).'Min';
+		
+		//echo "<b>(".$stat."from NOW)</b>";
+		echo "<td>".$row[3]." <b>(".$stat." from NOW)</b></td>";
 		echo "<td>$".$row[5]."</td>";
 		echo "<td><button class='myButton' onclick=viewDetails($row[0])>View Order Details</button></td>";
 		echo "</tr>";
+		
+		if($row[8] == 1)
+		{
+			echo "<input type='hidden' class='markers' name='markers[]' value='$row[0],$row[7],$row[9],$row[10]' />";
+		}
 	}
 	
 ?>

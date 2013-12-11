@@ -36,7 +36,11 @@
 			
 			#map_container {
 				height: 50%;
-				width: 100%;
+				width: 100%
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				border:6px inset #a8b8e9;
 			}
 			
 			#left_large {
@@ -46,13 +50,20 @@
 				display:table-row;
 				font-family: "Trebuchet MS", tahoma, verdana, sans-serif;
 				background-color: #e8edff;
-				border:5px solid blue;
+				box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				border:6px groove #e8edff;
 			}
 			
 			#right_small {
 				width: 40%;
-				border:5px solid blue;
-				background-color: #e8edff;					
+				background-color: #e8edff;
+				 box-sizing:border-box;
+				-moz-box-sizing:border-box;
+				-webkit-box-sizing:border-box;
+				border:6px groove #e8edff;
+
 			}
 			
 			#right_bottom {
@@ -68,14 +79,49 @@
 		</style>
 		
 		<script>
+			var map;
+			
 			(function poll(){
 				setTimeout(function(){
 				$.ajax({ url: "datamonitor.php", success: function(data){
-				//Update your dashboard gauge
 					$("#left_large").html(data);
+					/*var myLatlng = new google.maps.LatLng(43.131050, -77.622086);
+
+					var marker = new google.maps.Marker({
+						position: myLatlng,
+						title:"Hello World!"
+					});
+
+					// To add the marker to the map, call setMap();
+					marker.setMap(map);*/
+					initialize();
+
+					$('.markers').each(function(){
+						//document.write($(this).val());
+						//alert($(this).val());
+						var markerInfo = ($(this).val()).split(",");
+						//var markerInfo = .split(",");
+						var myLatlng = new google.maps.LatLng(markerInfo[2],markerInfo[3]);
+						
+						//document.write(markerInfo[2]);
+						
+						var marker = new google.maps.Marker({
+							position: myLatlng,
+							title:"Hello World!"
+						});
+	
+						// To add the marker to the map, call setMap();
+						marker.setMap(map);
+					});
+					
+					//clearMarkers();
 				}, dataType: "html", complete: poll, timeout: 30000 });
 				}, 5000);
 			})();
+			
+			function clearMarkers() {
+				setAllMap(null);
+			}
 			
 			function viewDetails(orderid)
 			{
@@ -111,15 +157,25 @@
 			}		
 
 			function initialize() {
+				var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+				var myLatlng = new google.maps.LatLng(43.1286931, -77.6281672);
+
 				var mapOptions = {
-				center: new google.maps.LatLng(43.1286931, -77.6281672),
-				zoom: 16
+				center: myLatlng,
+				zoom: 14
 				};
-				var map = new google.maps.Map(document.getElementById("map-canvas"),
+				map = new google.maps.Map(document.getElementById("map-canvas"),
 				mapOptions);
+				
+				var marker = new google.maps.Marker({
+					position: myLatlng,
+					map: map,
+					title: 'Connections',
+					icon: iconBase + 'schools_maps.png'
+				});
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
-			
+
 		</script>
 	
 	</head>

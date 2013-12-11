@@ -70,6 +70,17 @@ session_start();
 		
 		function stopWatch(){
 			geoLoc.clearWatch(watchID);
+			var orderid = $('#order_id').val();
+
+			$.ajax({
+					type: "POST",
+					url: "stopupdate.php",
+					data: { orderid:orderid, },
+					dataType: 'json',
+					cache: false,
+					success: function(result){
+					}
+			});
 		}
 			
 	</script>
@@ -127,7 +138,7 @@ session_start();
 	{
 		$queryCreate = "INSERT INTO 
 	 	 Order_info (student_id, complete_time, status, total, comments, student_name, geostatus)
-	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name', '1');";
+	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name', '0');";
 	}
 	else
 	{

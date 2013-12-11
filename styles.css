@@ -772,3 +772,11 @@ ul{
 	border: none;
 	overflow: auto;
 }
+
+#accordion .ui-accordion-header { 
+	color:  #339; 
+}
+
+#accordion .ui-accordion-content {
+	color: #330;  
+}
