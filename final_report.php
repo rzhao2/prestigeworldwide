@@ -285,12 +285,24 @@
 				<iframe width="960" height="569" src="//www.youtube.com/embed/5Zn7_YaG7V4" frameborder="0" allowfullscreen></iframe>
 				
 			<h2 id="presentation">Presentation</h2>
-			<iframe src="https://docs.google.com/a/u.rochester.edu/presentation/d/11YNfIcZHKcGPNM5SBhJ6WWlNanESStdbjZi3V1RS_8s/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+				<iframe src="https://docs.google.com/a/u.rochester.edu/presentation/d/11YNfIcZHKcGPNM5SBhJ6WWlNanESStdbjZi3V1RS_8s/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			
 			<h2 id="poster">Poster</h2>
-			
+				<img src="images/PrestigeWorldwidePoster copy.png" width="960" height="720">
+				
 			<h2 id="evaluations">Evaluation</h2>
-			
+				<img src="images/evalpic.png">
+				<p>
+				We distributed the link to our website along with a survey (to ensure participation and avoid confusion, at the top of the survey was the link to the website and if 
+				someone went through the motions of placing a test order on our website, they would be prompted to take the survey). The average rating of the website on a scale of 
+				0-10 was 6 and the median was 7 (N=58). Some irrelevant "trolling" comments indicated that some participants were not taking the survey entirely seriously, which 
+				explains the left-tailed distribution. 76% of participants like our pick-up time feature and 56% liked the menu options. We are happy to receive this positive endorsement 
+				of what we think to be key elements of the website. The most common feedback we received was that participants would have liked to be able to use their UR net ID and
+				pay online with declining because it is not waiting for the food to be prepared but rather waiting to pay that is most frustrating to students. What we can take away 
+				from this, given that we fully intend to implement the net ID and declining systems and the feedback suggested other functionality we indeed have or indicated future 
+				implementation of, is that we need to better communicate the purposes and features of our product so that users know about and can utilize them. The good news is that 
+				once we have these systems fully implemented and more effectively advertise them, we fully expect our website's ratings to improve. 
+				</p>
 			
 			<h2 id="future">The Future of the Project</h2>
             <ul>
