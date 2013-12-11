@@ -32,7 +32,7 @@
 				</br>
 				</br>
 				
-				<h2 id="team"> The Team </h2>
+				<h2 id="team"> The Team (<a href="f13-csc412-prestige-worldwide@googlegroups.com">f13-csc412-prestige-worldwide@googlegroups.com</a>) </h2>
 				<table table border="1" bordercolor="#FFFFFF" width="100%">
 				<tr>
 					<td style="vertical-align:top;">
@@ -234,17 +234,22 @@
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
 			<h2 id = "needfinding">Needfinding</h2>
 				<p>
-				We distributed a survey to UR students, and the result is analyzed. 175 students participated in this survey. Connections and Pura Vida 
-				are the least visited cafes around the campus. <img style="display: inline-block; margin-left: 10px;" width="500px"; height="90px"; src="images/SurveyResult4.png"><br>
-                9 out of 175 students visited Connections daily, 21 visited Connections
-				2-3 times per week, while 83 students visited Connections monthly or less. Similar result was collected for Pura Vida. In this survey, 79% 
-				students reported that they had to choose not to get food on campus because they don't have time.
-				85% student reported that waiting time has a moderate to primary impact on their decision of where to get food.
-
-				Over 71% students replied that if they would go to Connections more if they could order food online that would be ready when they arrive. <br>
-                <img style="display: inline-block; margin-left: 10px;" width="760px"; height="200px"; src="images/SurveyResult.png"><br>
-				Therefore, in order to increase the daily visit of Connection, we propose a online food ordering system, through which students can order
-				their food ahead of time, and pick up their food at their scheduled time, to skip the line and save the waiting time.
+				We distributed a survey to UR students, and received nearly 200 responses. Our findings indicate that Connections and Pura Vida are the least visited dining locations 
+				on the campus. This confirms our hypothesis that these two cafes would benefit the most from an online-ordering system, and thus they are our priority locations
+				to integrate with the website. 
+				</br>
+				<img style="display: inline-block; margin-left: 10px;" width="500px"; height="90px"; src="images/SurveyResult4.png">
+				<br>
+                Out of 175 students, 9 reported that they visit Connections daily and 21 reported that they visit 2-3 times per week, while the majority 83 students 
+				reported that they only visit Connections monthly or less. Similar numbers were recorded for students' frequency of visits to Pura Vida. 79% of students 
+				reported that they often choose not to get food on campus because they don't have time and 85% of students reported that waiting time has a moderate 
+				to primary impact on their decision of where to get food. Over 71% of students said that they would go to Connections more if they could order food online 
+				that would be ready when they arrive. 
+				<br>
+                <img style="display: inline-block; margin-left: 10px;" width="760px"; height="200px"; src="images/SurveyResult.png">
+				<br>
+				These findings provide statistical support to our initial claim that an online food ordering system through which students can order their food ahead of time
+				and pick it up at their convenience will save them time, increase daily visits to Connections, and positively impact students' overall UR dining experience.
 				</p>
 
 			<h2 id="prototypes"> Prototypes </h2>
@@ -274,8 +279,17 @@
 					<img src="images/Screenshot (21).png">
 					<img src="images/Screenshot (22).png">
 			<h2 id="video">Video Demo</h2>	
+				<iframe width="560" height="315" src="//www.youtube.com/watch?v=5Zn7_YaG7V4&list=HL1386720412&feature=mh_lolz" frameborder="0" allowfullscreen></iframe>
+				
+			<h2 id="presentation">Presentation</h2>
+			<iframe src="https://docs.google.com/a/u.rochester.edu/presentation/d/11YNfIcZHKcGPNM5SBhJ6WWlNanESStdbjZi3V1RS_8s/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+			
 			<h2 id="evaluations">Evaluation</h2>
-                
+			
+			
+			<h2 id="future">The Future of the Project</h2>
+            
+			
 			</div><!-- end content -->
 </html>
 </body>
