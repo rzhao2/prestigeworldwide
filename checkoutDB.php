@@ -7,6 +7,68 @@ session_start();
 	<title>The Connections Connection</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css" />
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js'></script>
+	
+	<script>
+	function toggle(button)
+	{
+		if(document.getElementById("1").value=="STOP"){
+			getLocationUpdate();
+			document.getElementById("1").value="START";}
+
+		else if(document.getElementById("1").value=="START"){
+			document.getElementById("1").value="STOP";
+		}
+	}
+	
+		var watchID;
+		var geoLoc;
+
+		function showLocation(position) {
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		var orderid = $('#order_id').val();
+		
+		$.ajax({
+					type: "POST",
+					url: "geolocation3.php",
+					data: { orderid:orderid, },
+					dataType: 'json',
+					cache: false,
+					success: function(result){
+						$("#demo").html(result.time);
+					}
+			});
+			
+		//html = "Order ID" + orderid + " Latitude : " + latitude + " Longitude: " + longitude;
+		//$("#demo").html(html);
+		}
+
+		function errorHandler(err) {
+			if(err.code == 1) {
+			alert("Error: Access is denied!");
+			}else if( err.code == 2) {
+				alert("Error: Position is unavailable!");
+			}
+		}
+		function getLocationUpdate(){
+			if(navigator.geolocation){
+			// timeout at 60000 milliseconds (60 seconds)
+			var options = {timeout:60000};
+			geoLoc = navigator.geolocation;
+			watchID = geoLoc.watchPosition(showLocation, 
+                                     errorHandler,
+                                     options);
+			}else{
+				alert("Sorry, browser does not support geolocation!");
+			}
+		}
+		
+			
+	</script>
 </head>
 
 <body>
@@ -21,21 +83,25 @@ session_start();
 
 	$id =  $_SESSION['id'];
 	$student_name = $_SESSION['username'];
-	$time = $_POST['timeFrom'];
-	$time2 = $_POST['timeTo'];
+	//$time = $_POST['timeFrom'];
+	//$time2 = $_POST['timeTo'];
 	
-	//if($time == NULL)
-	//{
-	//		if($time2 == NULL)
-	//		{
-	//			echo "<p>Our employees are notified of your real time position, please keep this page open.</p>";
-	//		}
-	//		else
-	//		{
-	//			$time = $time2;
-	//		}
-	//}
-
+	//echo $_POST['accordionIndex'];
+	//echo $_POST['timeReal'];
+	
+	if($_POST['accordionIndex'] == 0)
+	{
+		$time = $_POST['timeFrom'];
+	
+	}
+	else if($_POST['accordionIndex'] == 1)
+	{
+		$time = $_POST['timeTo'];
+	}
+	else
+	{
+		$time = $_POST['timeReal'];
+	}
 	
 	//$time = date("H:i:s", strtotime($time));
 	$time = date("Y-m-d H:i:s", strtotime($time));
@@ -52,14 +118,26 @@ session_start();
 	$db = mysqli_connect($db_hostname, $db_username, $db_password, $db_name);
 	if(!$db) { die("Unable to connect to MySQL: " . mysql_error()); }
 	
+	$queryCreate="";
+	if($_POST['accordionIndex'] == 2)
+	{
+		$queryCreate = "INSERT INTO 
+	 	 Order_info (student_id, complete_time, status, total, comments, student_name, geostatus)
+	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name', '1');";
+	}
+	else
+	{
+		$queryCreate = "INSERT INTO 
+	 	 Order_info (student_id, complete_time, status, total, comments, student_name, geostatus)
+	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name', '0');";
+	}
 	
-	$queryCreate = "INSERT INTO 
-	 	 Order_info (student_id, complete_time, status, total, comments, student_name)
-	 	 VALUES('$id', '$time', '0', '$total', 'none', '$student_name');";
 	mysqli_query($db, $queryCreate);
 	
 	$order_id = mysqli_insert_id($db);
 			 	
+	echo "<input id = 'order_id' type='hidden' name='order_id' value='$order_id'/>";
+			
 	$item_number = array();
 	$item = array(); 
 	//$total = 0;
@@ -120,16 +198,21 @@ session_start();
 	
 	//print_r($_SESSION['content']); 
 	//echo $_POST['content'];
-	
+	if($_POST['accordionIndex'] == 2)
+	{
+		echo "<input id='useRealGeolocation' type='button' class = 'myButton' value='Start'/>";
+
+	}
 	
 ?>
+<!-- <br/><br/>
 Thank you for testing out our website. Unfortunately, we are not synced with University of Rochester cafes, but we would love to make that happen. </br>
-As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>.
+As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>. -->
 <br/><br/>
 	<center><img src="images/redpanda.png"></center>
-
-	</div>
-
+<input type="button" class = "myButton" id="1" value="STOP" onclick="toggle(this);">	
+</div>
+<p id="demo"></p>
 </body>
 
 </html>
