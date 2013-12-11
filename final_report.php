@@ -254,6 +254,18 @@
 				These findings provide statistical support to our initial claim that an online food ordering system through which students can order their food ahead of time
 				and pick it up at their convenience will save them time, increase daily visits to Connections, and positively impact students' overall UR dining experience.
 				</p>
+				<iframe width="960" height="569" src="//www.youtube.com/embed/Ks-xu5HaZ7A" frameborder="0" allowfullscreen></iframe>
+				<p>
+				Assistant Food Service Director Andi Van Pelt confirms that the campus cafes Connections and Pura Vida get really busy between classes and at meal times and 
+				that there is indeed a need for some solution to the speed of service issue. She gives us a lot of suggestions and raises some concerns, which made us rethink
+				some functionality to make features more realistic and convenient to cafe employees.
+				</p>
+				<p>
+				Dining Services Marketing Manager Kevin Aubrey describes Aramark's goals for improving customer satisfaction with university dining locations. He explains the
+				importance of technology in these aims for improving and affirms that a system like ours could be adopted at the University of Rochester and easily integrated
+				with Declining e-commerce. Kevin tells us about an existing app that Aramark is piloting called <a href="http://nyunews.com/2013/09/30/tap/">Tapingo</a> that 
+				works essentially the same way that the Connections Connection would, confirming the validity and real-world application of our project.
+				</p>
 
 			<h2 id="prototypes"> Prototypes </h2>
 				<h3>Prototype #1</h3>
