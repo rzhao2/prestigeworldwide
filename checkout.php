@@ -30,9 +30,8 @@
 		<script src="script.js"></script>
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<link rel="stylesheet" href="/resources/demos/style.css" />
-		
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.js'></script>
 		<script src= "jquery-ui-timepicker-addon.js"></script>
 		<link rel="stylesheet" href="jquery-ui-timepicker-addon.css" />	
 		
@@ -52,7 +51,13 @@
 			};
 			$( "#accordion" ).accordion({
 				icons: icons,
-				heightStyle: "content"
+				heightStyle: "content",
+				active: 0,
+				change: function (event, ui) {
+                var activeIndex = $("#accordion").accordion("option", "active");
+				alert(activeIndex);
+               // document.getElementById("#accordionIndex").value = activeIndex;
+            }
 			});
 			$( "#toggle" ).button().click(function() {
 				if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
@@ -106,6 +111,91 @@
 					}
 				});
 		}
+		
+		$(document).ready(function () {
+        $("#accordion").accordion({
+            active: 0,
+            change: function (event, ui) {
+                var activeIndex = $("#accordion").accordion("option", "active");
+				//alert(activeIndex);
+                $("#accordionIndex").val(activeIndex);
+            }
+        });
+		});
+		
+		function getRealLocation()
+		{
+			//alert("stuff");
+			if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(calculateRealTime);
+			}
+			else{x.innerHTML="Geolocation is not supported by this browser.";}
+		}
+		
+		function calculateRealTime(position)
+		{
+			var loclat = position.coords.latitude;
+			var loclong =  position.coords.longitude;
+			//alert("stuff");
+			$.ajax({
+					type: "POST",
+					url: "geolocation2.php",
+					data: { loclat:loclat, loclong:loclong },
+					dataType: 'json',
+					cache: false,
+					success: function(result){
+						//alert(result.projectedtime);
+						$('#timeReal').val(result.projectedtime);
+						$("#displayRealTime").html("Thanks, now confirm your request.");
+					}
+				});
+		}
+		
+		$(function() {
+			$('#checkout').submit(function() {
+				if($("#accordionIndex").val() == 0)
+				{
+					if($("#timeFrom").val() == '')
+					{
+						alert("Your input is invalid");
+						return false;
+
+					}
+					else{
+						return true;
+					}
+				}
+				if($("#accordionIndex").val() == 1)
+				{
+					if($("#timeTo").val() == null || $("#timeTo").val() == '')
+					{
+						alert("Your input is invalid");
+						return false;
+
+					}
+					else{
+						return true;
+					}
+				}
+				if($("#accordionIndex").val() == 2)
+				{
+					getRealLocation();
+					if($("#timeReal").val() == '')
+					{
+						alert("You didn't grant us permission to use your location.");
+						return false;
+
+					}
+					else{
+						return true;
+					}
+				}
+			// DO STUFF*/
+			//alert("sup");
+			return true; // return false to cancel form action
+			});
+		});
         </script>
 		
 		
@@ -123,7 +213,7 @@
 <!--<a href="orderform.php?location=connections">Go back</a> -->
 
 <img class="centered" src="images/SetTimeText.png"/>
-<form action="checkoutDB.php" method="post">
+<form id="checkout" action="checkoutDB.php" method="post">
 
 
 <!-- <input type="submit"> -->
@@ -226,10 +316,15 @@
   </div>
   <h3>Real-Time Geolocation</h3>
   <div>
-		</p>Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible. </p>
+		<p id="displayRealTime">Leave your browser open when you click confirm, your location will be automatically be updated to the server and notify the employees. Doing this will provide us better accuracy of your locations and your position in the (virtual) line can be changed. This will allow us to get your food on time as accurate as possible.
+		<br/><br/>
+		<input type="button" onclick="getRealLocation();" value="Grant Us Permission to Use Your Location"/> 
+		</p>
+		<input hidden type="text" name = "timeReal" id="timeReal" class = "rounded1" />
   </div>
 </div></center>
 
+<input id = "accordionIndex" type="hidden" name="accordionIndex" value="0">
 <br/><br/>
 <center> <button class="myButton" type="submit">Confirm</button> </center>
 
