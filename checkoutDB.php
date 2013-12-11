@@ -123,7 +123,7 @@ session_start();
 	
 	
 ?>
-<!-- <br/><br/>
+<br/><br/>
 Thank you for testing out our website. Unfortunately, we are not synced with University of Rochester cafes, but we would love to make that happen. </br>
 As a thank you for your time and support, here's a picture of a red panda. Please give us feedback by taking a quick <a href= https://docs.google.com/forms/d/1oiyagQ2alydwWx94uQwMWNrSLZtIM8W4SyJTsGcA0hI/viewform>survey</a>. -->
 <br/><br/>
