@@ -24,10 +24,13 @@
 						<li><a href="final_report.php#evaluation">Evaluation</a></li>
 						<li><a href="final_report.php#act">Act</a></li>
 					</ul>
-					<li><a href="final_report.php#needfinding">Needfinding</a></li>
+					<li><a href="final_report.php#needfinding">Need-finding</a></li>
 					<li><a href="final_report.php#prototypes">Prototypes</a></li>
-					<li><a href="final_report.php#video">Video</a></li>
+					<li><a href="final_report.php#video">Video Demo</a></li>
+					<li><a href="final_report.php#presentation">Presentation</a></li>
+					<li><a href="final_report.php#poster">Poster</a></li>
 					<li><a href="final_report.php#evaluations">Evaluations</a></li>
+					<li><a href="final_report.php#future">The Future of the Project</a></li>
 				</ul>
 				</br>
 				</br>
@@ -232,7 +235,7 @@
                 </p>
 				<h3 id = "act">Act</h3>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/h_XQG22bP_U?list=PL5aTD63kf1EBNeGyZYlX2N2F4QF61YQW9" frameborder="0" allowfullscreen></iframe>
-			<h2 id = "needfinding">Needfinding</h2>
+			<h2 id = "needfinding">Need-finding</h2>
 				<p>
 				We distributed a survey to UR students, and received nearly 200 responses. Our findings indicate that Connections and Pura Vida are the least visited dining locations 
 				on the campus. This confirms our hypothesis that these two cafes would benefit the most from an online-ordering system, and thus they are our priority locations
@@ -284,11 +287,53 @@
 			<h2 id="presentation">Presentation</h2>
 			<iframe src="https://docs.google.com/a/u.rochester.edu/presentation/d/11YNfIcZHKcGPNM5SBhJ6WWlNanESStdbjZi3V1RS_8s/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			
+			<h2 id="poster">Poster</h2>
+			
 			<h2 id="evaluations">Evaluation</h2>
 			
 			
 			<h2 id="future">The Future of the Project</h2>
-            
+            <ul>
+				<li>Mobile application for Android/iOS</li>
+				<ul>
+					<li>As previously mentioned, we understand the practicality of a mobile application for college students to place orders on-the-go, so this is 
+					something we are working on now.</li>
+				</ul>
+				<li>Geo-Location</li>
+				<ul>
+					<li>This feature is partially in place already, and will allow students to opt to have their food pick-up time set based on a tracking of their
+					mobile phone and calculated estimation of the remaining time it will take them to reach Connections.</li>
+				</ul>
+				<li>Integrate more campus dining locations</li>
+				<ul>
+					<li>Pura Vida</li>
+					<li>Starbucks</li>
+					<li>The Mel's Grab&Go</li>
+				</ul>
+				<li>Access to Declining and Net ID systems</li>
+				<ul>
+					<li>As we described in our proposal, integration of the declining and net ID systems is dependent upon the university's and dining services' willingness
+					to implement our product. We have had preliminary conversations with them and now that our prototype is more functional, we will follow up with them, but it is
+					our understanding that Aramark is already looking to adopt a similar pre-existing product, which only goes to support our initial idea and need-finding.</li>
+				</ul>
+				<li>Recurring orders for frequent customers</li>
+				<ul>
+					<li>Suppose a frequent customer always wants a bagel with cream cheese and a small coffee between 1:45 and 2:00 on Tuesday and Thursday afternoons. We want
+					to provide an option for users to save past orders to order again as well as establish a way to automatically transact the same order on specified weeks of the
+					semester. We will have to adjust the system to accommodate school breaks and to send reminders to the students, allowing them an opportunity to cancel the recurring
+					order for that day if necessary.</li>
+				</ul>
+				<li>Paying online with flex/URos</li>
+				<ul>
+					<li>Campus cafes accept both declining and flex/URos at the register, so students should be able to opt to pay with flex/URos online, like they would with declining. 
+					The same obstacles that exist for immediately implementing payment with declining apply here as well.</li>
+				</ul>
+				<li>Paying online with credit/debit card</li>
+				<ul>
+					<li>Some students don't have declining or flex/URos and many students deplete their account balances before the end of each semester. For this reason, we want to
+					provide the option for students to pay online with a credit or debit card. We are looking into the best ways to ensure secure transactions.</li>
+				</ul>
+			</ul>
 			
 			</div><!-- end content -->
 </html>
