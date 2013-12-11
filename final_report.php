@@ -35,7 +35,7 @@
 				</br>
 				</br>
 				
-				<h2 id="team"> The Team (<a href="f13-csc412-prestige-worldwide@googlegroups.com">f13-csc412-prestige-worldwide@googlegroups.com</a>) </h2>
+				<h2 id="team"> The Team (<a href="mailto:f13-csc412-prestige-worldwide@googlegroups.com">f13-csc412-prestige-worldwide@googlegroups.com</a>) </h2>
 				<table table border="1" bordercolor="#FFFFFF" width="100%">
 				<tr>
 					<td style="vertical-align:top;">
@@ -55,7 +55,7 @@
 						<b>Class Year:</b> MS First Year</br>
 						<b>Major:</b> Computer Science</br>
 						<b>Title:</b> Analyst</br>
-						<b>Contribution:</b> Prototyping, need-finding, evaluations, statistical analysis, menu images, filming, poster
+						<b>Contribution:</b> Prototyping, need-finding, evaluations, menu images,</br>statistical analysis, filming, poster
 						</span>
 					</td>
 				</tr>
@@ -67,7 +67,7 @@
 						<b>Class Year:</b> Sophomore</br>
 						<b>Major:</b> Computer Science &amp; Digital Media</br>
 						<b>Title:</b> Operations Manager</br>
-						<b>Contribution:</b> Prototyping, design, HTML/CSS, interviews, filming/video-editing, poster, presentation, quality assurance
+						<b>Contribution:</b> Prototyping, design, HTML/CSS, interviews, </br>filming/video-editing, poster, presentation, quality assurance
 						</span>
 					</td>
 					<td style="vertical-align:top;">
@@ -77,7 +77,7 @@
 						<b>Class Year:</b> Junior </br>
 						<b>Major:</b> Computer Science, Economics, &amp; International Relations</br>
 						<b>Title:</b> Junior Account Executive</br>
-						<b>Contribution:</b> Corporate relations, data entry, student interviews, evaluations</br>
+						<b>Contribution:</b> Corporate relations, data entry, student interviews, </br>evaluations, statistical analysis
 						</span>
 					</td>
 				</tr>
@@ -99,7 +99,7 @@
 						<b>Class Year:</b> Senior </br>
 						<b>Major:</b> Computer Science</br>
 						<b>Title:</b> Back-end Developer</br>
-						<b>Contribution:</b> Back-end development, database design/implementation, geo-location, menu, cart
+						<b>Contribution:</b> Back-end development, database designand </br>implementation, geo-location
 						</span>
 					</td>
 				</tr>
@@ -131,15 +131,15 @@
 				<h3 id = "requirements">Requirements</h3>
 					<p>
 					<ul>
-					<li>Needfinding survey</li>
+					<li>Need-finding survey</li>
 						<ul>
 						<li type=circle>Online survey</li>
 						<li type=circle>Video interviews</li>
 						</ul>
 					<li>Evaluations</li>
 						<ul>
-						<li type=circle>Student evaluations</li>
-						<li type=circleConnections>Staff evaluations</li>
+						<li type=circle>Customer evaluations - online survey</li>
+						<li type=circle>Staff evaluations - interviews</li>
 						</ul>
 					<li>Prototype</li>
 						<ul>
@@ -282,7 +282,7 @@
 					<img src="images/Screenshot (21).png">
 					<img src="images/Screenshot (22).png">
 			<h2 id="video">Video Demo</h2>	
-				<iframe width="560" height="315" src="//www.youtube.com/watch?v=5Zn7_YaG7V4&list=HL1386720412&feature=mh_lolz" frameborder="0" allowfullscreen></iframe>
+				<iframe width="420" height="315" src="//www.youtube.com/embed/5Zn7_YaG7V4" frameborder="0" allowfullscreen></iframe>
 				
 			<h2 id="presentation">Presentation</h2>
 			<iframe src="https://docs.google.com/a/u.rochester.edu/presentation/d/11YNfIcZHKcGPNM5SBhJ6WWlNanESStdbjZi3V1RS_8s/embed?start=false&loop=false&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
