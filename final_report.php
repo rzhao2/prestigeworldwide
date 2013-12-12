@@ -20,6 +20,7 @@
 					<ul>
 						<li><a href="final_report.php#definition">Definition</a></li>
 						<li><a href="final_report.php#requirements">Requirements</a></li>
+						<li><a href="final_report.php#extra">Extra Features</a></li>
 						<li><a href="final_report.php#system">System</a></li>
 						<li><a href="final_report.php#evaluation">Evaluation</a></li>
 						<li><a href="final_report.php#act">Act</a></li>
@@ -160,7 +161,44 @@
 							<li type=square>Order queue (back-end database keeps track of orders and sends them to order queue page; must also be able to edit queue database)</li>
 							</ul>
 						</ul>
-					</ul>
+						</ul>
+					</p>
+					
+				<h3 id = "extra">Extra Features</h3>
+					<p>
+						<ul>
+						<li>Orderqueue with Long Polling</li> 
+							<ul>
+								<li> To make it convenient for employees to keep track of the orderqueue, we made the ajax connection to the mysql tables order and order_info using long polling, a process that keeps an open connection to the mysql database and  monitor any changes make to it. </li>
+							</ul>
+						</ul>
+						<ul>
+						<li> 3 Options for 3 Types of Users </li>
+						
+							<ul>
+							In our HCI class, we learned that there are many types of users. There are those that opt to use the only the basic features and those who are expert users. Using that principle, we decided to implement multiple ways for the user to signal the employees at Connection when they are picking up their food. 
+							</ul>
+							<ul>
+								<li type=circle>Select a Pick-up Time</li>
+							
+									<ul>The user request a time for the food to be ready, then he/she can pick it up at the requested time.</ul>
+
+								<li type=circle>Geolocation with Time Algorithm</li>
+
+									<ul>The user might be in a hurry, or doesn't know how long it might take to get there. He or she can choose this option and get an estimated arrival time. The time algorithm is created using location tracking from the geolocation feature of html5, google map API's walking routes, and average human walking speed. If the user is not satisfied with the estimated time given, it's very easy to modify it by just clicking on the box, a date/timer picker (similar to the one in option 1) will popup.</ul>
+
+								<li type=circle>Real Time Location Tracking</li>
+									<ul>
+									The user can grant permission to us to track their location, then the employees at connection can get a real-time feedback on their location. What makes this substantially different from the previous approaches is that the user doesn't get an absolute time for when to pick up the food, but a dynamic time that heavily depends on the user's location and rate at which he gets there. If a user stays at the same location, the request time of completion that the employees see does not change, if however, the user is running there, the request time of completion may be earlier than the previous calculated time. This allows the users that opt for this option to be able to jump in front of the line or fall behind in a line. What makes this works and is fair to the other users is that even though the user can jump in front of the line, he may fall behind in a line as well. Additionally, it doesn't change the fact that the other users have a predetermined request time of pick-up. The only time that the other users will be affected is that if the line is incredibly long and the waiting time due to the users that opt for this option makes a significant difference, but since the employees can get a much more concrete evidence that they can get here at the requested time, they should then deserve the advantage. The user can also stop the tracking and "go off the grid" from the employee, the requested completed time seen by the user will be the one calculated from the same algorithm used in the previous option and the user's last seen location. We believe that this is a very convenient option for those people walking between class and needs to quickly grab their food. To accomplish the functionality of this feature, we used the geolocation feature of html5, google map api, average human walking speed, and an incredible amount of AJAX that communicates between the database, the map at the admin page, the user's location tracking page, and a very clever of way of making it work with the long polling (w/jquery) used in the admin page by printing out html hidden fields echoed out from the php during the production of the virtual orderqueue.</ul>
+									
+								</ul>
+		
+								<li type=square> *notes* </li>
+								
+									To see these features on the website, you need to open up an admin page and a user page. Make your order through the user page, and you can see the automatic updates on the admin page without refresh as well as the markers that indicate your location if you decide to use the third option. There is a max 5 second delay for your changes to show up because we made a delay on the queue as it was lagging to press the buttons on that page.
+									
+								</li>
+						</ul>
 					</p>
 				<h3 id = "system">System</h3>
 					<p>
@@ -322,11 +360,6 @@
 				<ul>
 					<li type=square>As previously mentioned, we understand the practicality of a mobile application for college students to place orders on-the-go, so this is 
 					something we are working on now.</li>
-				</ul>
-				<li type=circle>Geo-Location</li>
-				<ul>
-					<li type=square>This feature is partially in place already, and will allow students to opt to have their food pick-up time set based on a tracking of their
-					mobile phone and calculated estimation of the remaining time it will take them to reach Connections.</li>
 				</ul>
 				<li type=circle>Integrate more campus dining locations</li>
 				<ul>
